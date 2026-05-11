@@ -34,24 +34,38 @@ function StatMark({ num, label }: { num: string; label: string }) {
 
 export default function Hero() {
   return (
-    <section className="relative" style={{ padding: "72px 0 96px", minHeight: "calc(100vh - 80px)" }}>
+    <section className="relative" style={{ padding: "72px 0 96px", minHeight: "calc(100vh - 80px)", overflow: "hidden" }}>
+      {/* Bright building's night-purple ambient glow — left-side, behind text */}
+      <span className="hero-twilight-glow" aria-hidden style={{ top: "12%", left: "-15%" }} />
+      <span
+        className="hero-twilight-glow"
+        aria-hidden
+        style={{
+          top: "55%",
+          right: "-12%",
+          width: 360,
+          height: 360,
+          animationDelay: "-3s",
+        }}
+      />
+
       <ScrollIndicator locale="en" />
       <div
-        className="container-page grid items-center gap-16 mobile-stack"
-        style={{ gridTemplateColumns: "1.1fr 0.9fr" }}
+        className="container-page grid items-center gap-16 mobile-stack relative"
+        style={{ gridTemplateColumns: "1.1fr 0.9fr", zIndex: 1 }}
       >
         <div className="fade-up">
           <div className="overline" style={{ color: "#b8935a", marginBottom: 18 }}>
             {clinicConfig.hero.eyebrow.en}
           </div>
-          <h1 className="h-display" style={{ lineHeight: 1.12, paddingBottom: 8 }}>
-            {clinicConfig.hero.headlinePartA.en}
+          <h1 className="h-display hero-line-rise" style={{ lineHeight: 1.12, paddingBottom: 8 }}>
+            <span>{clinicConfig.hero.headlinePartA.en}</span>
             <br />
             <em
+              className="hero-em-underline"
               style={{
                 fontStyle: "italic",
                 color: "#0a1f2e",
-                display: "inline-block",
                 paddingBottom: 4,
               }}
             >
