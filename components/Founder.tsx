@@ -32,7 +32,7 @@ export default function Founder() {
                 textTransform: "uppercase",
               }}
             >
-              Founder
+              Leadership
             </div>
             <div
               className="font-serif"

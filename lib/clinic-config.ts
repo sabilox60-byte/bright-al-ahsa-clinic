@@ -339,15 +339,15 @@ export const clinicConfig: ClinicConfig = {
     pullQuote: { en: "The trusted name across the Eastern Province.", ar: "الاسم الموثوق في المنطقة الشرقية." },
     items: [
       {
-        quote: { en: "\"I came for one consultation and stayed for everything. They explained three options, then said the simplest one suited me best — no upsell, just honest care.\"", ar: "«أتيت لاستشارة واحدة وبقيت لكل شيء. شرحوا ثلاث خيارات، ثم قالوا إنّ الخيار الأبسط هو الأنسب — بلا بيع، رعاية صادقة فقط.»" },
+        quote: { en: "They explained three options, then said the simplest one suited me best. No upsell, just honest care.", ar: "شرحوا لي ثلاث خيارات، ثم قالوا إنّ الخيار الأبسط هو الأنسب. بلا بيع، رعاية صادقة فقط." },
         name: { en: "Patient · Khobar", ar: "مريضة · الخبر" },
-        role: { en: "Filler · Dr. Marina Naddaf", ar: "فيلر · د. مارينا نداف" },
+        role: { en: "Filler with Dr. Marina", ar: "فيلر مع د. مارينا" },
         variant: "terracotta",
       },
       {
-        quote: { en: "\"My mother came with me to the first visit. By the third, she had booked her own. We're now a family of three patients here.\"", ar: "«أمّي أتت معي في الزيارة الأولى. وفي الثالثة، حجزت موعدها الخاص. أصبحنا الآن ثلاث مريضات من نفس العائلة.»" },
+        quote: { en: "My mother came with me to the first visit. By the third, she had booked her own.", ar: "أمّي أتت معي في الزيارة الأولى. وفي الثالثة، حجزت موعدها الخاص." },
         name: { en: "Patient · Al Ahsa", ar: "مريضة · الأحساء" },
-        role: { en: "Hydrafacial · Dr. Wafaa Saeed", ar: "هيدرافيشيال · د. وفاء سعيد" },
+        role: { en: "Hydrafacial with Dr. Wafaa", ar: "هيدرافيشيال مع د. وفاء" },
         variant: "sage",
       },
     ],
