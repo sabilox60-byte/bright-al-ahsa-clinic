@@ -515,20 +515,15 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
    HERO VIDEO — full-width ambient background (Bright Al Ahsa signature)
    Drop bright-hero.mp4 + bright-hero-poster.jpg into /public/hero/
    ═══════════════════════════════════════════════════════════════════════ */
+/* IMPORTANT: never set opacity: 0 on the video — iOS Safari refuses
+   to autoplay videos that start invisible. Keep visible from frame 0. */
 .hero-video {
-  opacity: 0;
-  animation: heroVideoFadeIn 1400ms var(--ease-standard) 200ms forwards;
-}
-@keyframes heroVideoFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 0.95; }
+  opacity: 1;
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
-    animation: none;
-    opacity: 0.95;
+    /* poster image stays as fallback when autoplay is suppressed */
   }
-  .hero-video[autoplay] { /* freeze first frame — poster handles fallback */ }
 }
 
 /* Bright's signature twilight-purple ambient glow (matches night facade) */

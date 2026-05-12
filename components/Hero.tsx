@@ -1,6 +1,7 @@
 import MaaroofRibbon from "./MaaroofRibbon";
 import SisterShare from "./SisterShare";
 import ScrollIndicator from "./ScrollIndicator";
+import HeroVideo from "./HeroVideo";
 import { clinicConfig } from "@/lib/clinic-config";
 
 function StatMark({ num, label }: { num: string; label: string }) {
@@ -41,34 +42,8 @@ export default function Hero() {
         background: "#0a1f2e",
       }}
     >
-      {/* ── Full-width background video (autoplay + mute + loop) ─────────── */}
-      <video
-        className="hero-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        poster="/hero/bright-hero-poster.jpg"
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center right",
-          zIndex: 0,
-        }}
-      >
-        {/* Order = browser preference. Browser picks first source it can decode. */}
-        {/* 1. AV1 WebM — smallest, modern Chrome/FF/Edge/Safari 17+ */}
-        <source src="/hero/bright-hero.webm" type='video/webm; codecs="av01"' />
-        {/* 2. H.265 MP4 — Safari (all versions), Edge on Windows */}
-        <source src="/hero/bright-hero.mp4" type='video/mp4; codecs="hvc1"' />
-        {/* 3. H.264 MP4 — universal fallback for any browser since 2010 */}
-        <source src="/hero/bright-hero-h264.mp4" type='video/mp4; codecs="avc1.4d4029"' />
-      </video>
+      {/* Background video with JS autoplay safety net (HeroVideo client cmp) */}
+      <HeroVideo />
 
       <ScrollIndicator locale="en" />
 
