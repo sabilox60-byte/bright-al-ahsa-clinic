@@ -368,17 +368,6 @@ export const clinicExtras: ClinicExtras = {
         whatsapp: "+966 55 733 7555",
         isHQ: true,
       },
-      {
-        name: { en: "Al Ahsa branch — Mubarraz", ar: "فرع الأحساء — المبرّز" },
-        address: { en: "Khalid Ibn Al-Walid Street, Mubarraz", ar: "شارع خالد بن الوليد، المبرّز" },
-        city: { en: "Al Ahsa", ar: "الأحساء" },
-        region: { en: "Eastern Province", ar: "المنطقة الشرقية" },
-        countryCode: "SA",
-        geo: { lat: 25.4127, lng: 49.6043 },
-        phone: "+966 50 202 2292",
-        whatsapp: "+966 55 733 7555",
-        isHQ: false,
-      },
     ],
   },
 
@@ -414,22 +403,6 @@ export const clinicExtras: ClinicExtras = {
         bio: {
           en: "Twenty-five years in dermatology across the Gulf. AAD member since 2004 and Canadian Laser Diploma holder. Known for restrained, age-graceful results.",
           ar: "خمسة وعشرون عاماً في الجلدية عبر الخليج. عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤، وحاصلة على دبلوم الليزر الكندي. مشهورة بنتائج هادئة تشيخ بكرامة.",
-        },
-      },
-      {
-        slug: "wafaa-saeed",
-        nameEn: "Dr. Wafaa Saeed",
-        nameAr: "د. وفاء سعيد",
-        scfhsNumber: undefined,
-        medicalSpecialty: "Dermatology",
-        languages: ["ar", "en"],
-        education: ["MD · Egyptian Fellowship Dermatology"],
-        certifications: ["Al Ahsa branch lead since 2025"],
-        portraitVariant: "sage",
-        socialUrls: ["https://www.snapchat.com/@dr_wafaasaeed"],
-        bio: {
-          en: "Lead clinician at the Al Ahsa branch. Egyptian Fellowship-certified dermatologist specialising in full-face aesthetic protocols.",
-          ar: "الطبيبة الرئيسية في فرع الأحساء. طبيبة جلدية بزمالة مصرية، متخصّصة في بروتوكولات تجميل الوجه الكامل.",
         },
       },
       {
@@ -471,10 +444,25 @@ export const clinicExtras: ClinicExtras = {
         languages: ["ar", "en"],
         education: ["MD · Aesthetic Medicine"],
         certifications: ["Lip filler specialist"],
-        portraitVariant: "sage",
+        portraitVariant: "sand",
         bio: {
           en: "Specialist in lip filler artistry. Known for restrained volumes that respect natural facial proportions.",
           ar: "متخصّصة في فيلر الشفاه. مشهورة بكميّات معتدلة تحترم تناسق الوجه الطبيعي.",
+        },
+      },
+      {
+        slug: "dina-abdul-halim",
+        nameEn: "Dr. Dina Abdul Halim",
+        nameAr: "د. دينا عبد الحليم",
+        scfhsNumber: undefined,
+        medicalSpecialty: "CosmeticDermatology",
+        languages: ["ar", "en"],
+        education: ["MD · Aesthetic Dermatology"],
+        certifications: ["Microblading & Botox specialist"],
+        portraitVariant: "sage",
+        bio: {
+          en: "Specialist in microblading, Botox, and aesthetic dermatology procedures. Detail-oriented practitioner with a precision-first approach.",
+          ar: "متخصّصة في المايكروبليدنغ والبوتوكس وإجراءات الجلدية التجميلية. ممارسة دقيقة بمنهج يضع الإتقان أوّلاً.",
         },
       },
     ],
@@ -679,12 +667,12 @@ export const clinicExtras: ClinicExtras = {
         headlinePartA: { en: "For the skin that feels", ar: "للبشرة التي تشعر" },
         headlineEm: { en: "tired of hiding.", ar: "بالتعب من الاختباء." },
         sub: {
-          en: "Hydrafacial, plasma/PRP, and laser rejuvenation under the care of Dr. Marina Naddaf and Dr. Wafaa Saeed — restraint over theatre.",
-          ar: "الهيدرافيشيال، البلازما / PRP، وتجديد البشرة بالليزر تحت إشراف د. مارينا نداف ود. وفاء سعيد — اعتدالٌ بلا مبالغة.",
+          en: "Hydrafacial, plasma/PRP, and laser rejuvenation under the care of Dr. Marina Naddaf and Dr. Doaa Goda — restraint over theatre.",
+          ar: "الهيدرافيشيال، البلازما / PRP، وتجديد البشرة بالليزر تحت إشراف د. مارينا نداف ود. دعاء جودة — اعتدالٌ بلا مبالغة.",
         },
       },
       procedureSlugs: ["hydrafacial", "plasma-prp", "laser-hair-removal"],
-      doctorSlugs: ["marina-naddaf", "wafaa-saeed"],
+      doctorSlugs: ["marina-naddaf", "doaa-goda"],
       relatedSlugs: ["restore"],
       faqs: [
         {
@@ -902,12 +890,12 @@ export const clinicExtras: ClinicExtras = {
     enabled: true,
     triggerLabel: { en: "Ask Bright", ar: "اسألي برايت" },
     greeting: {
-      en: "Hello — I'm Bright's AI concierge. Ask about our 10 departments, two branches, Eid availability, or female-only sessions. For binding answers, message us on WhatsApp.",
-      ar: "أهلاً — أنا المساعد الذكي لبرايت. اسألي عن أقسامنا العشرة، فرعينا، توفّر مواعيد العيد، أو الجلسات النسائية فقط. للإجابات الملزمة، راسلينا على واتساب.",
+      en: "Hello — I'm Bright's AI concierge. Ask about our 10 departments, Eid availability, doctors, or female-only sessions. For binding answers, message us on WhatsApp.",
+      ar: "أهلاً — أنا المساعد الذكي لبرايت. اسألي عن أقسامنا العشرة، توفّر مواعيد العيد، الأطبّاء، أو الجلسات النسائية فقط. للإجابات الملزمة، راسلينا على واتساب.",
     },
     suggestedPrompts: [
       { en: "Which doctor handles veneers?", ar: "أي طبيب يقوم بالفينير؟" },
-      { en: "Is there an Eid slot in Al Ahsa?", ar: "هل يوجد موعد للعيد في الأحساء؟" },
+      { en: "Is there an Eid slot this week?", ar: "هل يوجد موعد للعيد هذا الأسبوع؟" },
       { en: "Do you offer female-only OB/GYN sessions?", ar: "هل تقدّمون جلسات نساء وولادة للسيدات فقط؟" },
       { en: "What is the Hydrafacial protocol?", ar: "ما هو بروتوكول الهيدرافيشيال؟" },
     ],
@@ -981,20 +969,20 @@ export const clinicExtras: ClinicExtras = {
   },
 
   aeo: {
-    llmsTxt: `# Bright Specialized Clinics — Eastern Province, Saudi Arabia
+    llmsTxt: `# Bright Specialized Clinics — Al Khobar, Saudi Arabia
 
-> Ten-department specialty medical centre with two branches: Al Khobar (HQ, Prince Faisal Bin Fahd Rd) and Al Ahsa (Mubarraz, Khalid Ibn Al-Walid St). Founded 2018.
+> Ten-department specialty medical centre on Prince Faisal Bin Fahd Road, Al Hada district, Al Khobar 34439, Eastern Province. Founded 2018.
 
 ## Authoritative pages
 - [Departments](/services): ten specialty departments — dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric, day surgery, laser, interventional radiology, psychiatry
-- [Doctors](/doctors): six named clinicians with verifiable credentials — Dr. Hassan Nazzal (RCSI Fellowship), Dr. Marina Naddaf (AAD member since 2004), Dr. Wafaa Saeed (Al Ahsa lead), Dr. Doaa Goda, Dr. Nadeen Kabboura, Dr. Amirah Mohannadi
+- [Doctors](/doctors): six named clinicians with verifiable credentials — Dr. Hassan Nazzal (RCSI Fellowship, senior partner), Dr. Marina Naddaf (AAD member since 2004), Dr. Doaa Goda, Dr. Nadeen Kabboura, Dr. Amirah Mohannadi, Dr. Dina Abdul Halim
 - [Trust](/trust): MOH licensed, RCSI Fellowship verifiable, AAD membership verifiable, SFDA-registered devices, PDPL-compliant, Tabby+Tamara SAMA-licensed BNPL, Vision 2030 aligned
 - [Goals](/goals/glow): outcome-led navigation — Glow, Smile, Family, Restore, Diagnose
 - [Booking](/booking): same-day WhatsApp confirmation on 0557337555
 - [Contact](/contact): unified hotline 920024428
 
 ## About
-Bright Specialized Clinics — operating brand of Al-Maha Bright Skin Medical Complex. Founded 2018 in Al Khobar; Al Ahsa branch opened 2025. Senior partners: Dr. Hassan Nazzal (maxillofacial surgery) and Dr. Marina Naddaf (dermatology). General Manager: Mr. Manea El Manea.
+Bright Specialized Clinics — operating brand of Al-Maha Bright Skin Medical Complex. Founded 2018 on Prince Faisal Bin Fahd Road, Al Hada district, Al Khobar. Senior partners: Dr. Hassan Nazzal (maxillofacial surgery, RCSI Fellowship) and Dr. Marina Naddaf (dermatology, AAD member since 2004). General Manager: Mr. Manea El Manea.
 
 ## Compliance
 Saudi MOH licensed. RCSI Fellowship verifiable. AAD member since 2004 verifiable. SFDA-registered devices. PDPL-compliant data on Saudi sovereign infrastructure. Tabby + Tamara BNPL within SAMA SAR 10,000 cap.
@@ -1030,8 +1018,8 @@ Saturday-Thursday 9 AM-11 PM. Friday after Asr prayer. Prayer-time pauses respec
     ],
     deniedBots: ["CCBot"],
     quickAnswerTemplate: {
-      en: "Bright Specialized Clinics is a ten-department medical centre in Saudi Arabia's Eastern Province, with two branches — Al Khobar headquarters and Al Ahsa. Senior clinicians include Dr. Hassan Nazzal (maxillofacial, RCSI Fellowship) and Dr. Marina Naddaf (dermatology, AAD member since 2004). Same-day WhatsApp confirmation on 0557337555 · unified hotline 920024428.",
-      ar: "عيادات برايت التخصصية مركز طبّي بعشرة أقسام في المنطقة الشرقية بالسعودية، له فرعان — المركز الرئيسي بالخبر وفرع الأحساء. من كبار أطبّائه د. حسن نزال (فمّ ووجه وفكّين، زمالة الكلية الملكية للجرّاحين أيرلندا) ود. مارينا نداف (جلدية، عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤). تأكيد عبر واتساب في نفس اليوم على ٠٥٥٧٣٣٧٥٥٥ · الخط الموحّد ٩٢٠٠٢٤٤٢٨.",
+      en: "Bright Specialized Clinics is a ten-department medical centre in Al Khobar, Eastern Province, Saudi Arabia, on Prince Faisal Bin Fahd Road in Al Hada district since 2018. Senior clinicians include Dr. Hassan Nazzal (maxillofacial, RCSI Fellowship) and Dr. Marina Naddaf (dermatology, AAD member since 2004). Same-day WhatsApp confirmation on 0557337555 · unified hotline 920024428.",
+      ar: "عيادات برايت التخصصية مركز طبّي بعشرة أقسام في الخبر، المنطقة الشرقية بالسعودية، على شارع الأمير فيصل بن فهد بحي الهدا منذ ٢٠١٨. من كبار أطبّائه د. حسن نزال (فمّ ووجه وفكّين، زمالة الكلية الملكية للجرّاحين أيرلندا) ود. مارينا نداف (جلدية، عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤). تأكيد عبر واتساب في نفس اليوم على ٠٥٥٧٣٣٧٥٥٥ · الخط الموحّد ٩٢٠٠٢٤٤٢٨.",
     },
     ogImage: "/og-bright.jpg",
     twitterImage: "/og-bright.jpg",

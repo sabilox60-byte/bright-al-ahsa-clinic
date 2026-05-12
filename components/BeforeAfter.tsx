@@ -34,8 +34,8 @@ const testimonials = [
     quote:
       "My mother came with me to the first visit. By the third, she had booked her own.",
     initials: "R.K.",
-    location: "Al Ahsa",
-    treatment: "Filler · Dr. Wafaa Saeed",
+    location: "Khobar",
+    treatment: "Filler · Dr. Doaa Goda",
     days: "Day 1 · Day 14",
   },
 ];

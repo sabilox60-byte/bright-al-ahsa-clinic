@@ -182,17 +182,17 @@ export const clinicConfig: ClinicConfig = {
     whatsapp: "+966 55 733 7555",
     whatsappLink: "https://wa.me/966557337555",
     email: "info@brightclinics.sa",
-    address: { en: "Prince Faisal Bin Fahd Rd, Al Hada District, Al Khobar 34439 — branch in Al Ahsa (Mubarraz)", ar: "شارع الأمير فيصل بن فهد، حي الهدا، الخبر ٣٤٤٣٩ — وفرع في الأحساء (المبرز)" },
+    address: { en: "Prince Faisal Bin Fahd Rd, Al Hada District, Al Khobar 34439", ar: "شارع الأمير فيصل بن فهد، حي الهدا، الخبر ٣٤٤٣٩" },
     hours: { en: "Sat – Thu · 9 AM – 11 PM · Friday after Asr prayer", ar: "السبت – الخميس · ٩ صباحاً – ١١ مساءً · الجمعة بعد صلاة العصر" },
-    parking: { en: "Dedicated parking at both branches", ar: "مواقف خاصة في كلا الفرعين" },
+    parking: { en: "Dedicated patient parking on site", ar: "مواقف خاصة بالمراجعين داخل المجمّع" },
   },
   seo: {
-    title: { en: "Bright Specialized Clinics — Eastern Province, Saudi Arabia", ar: "عيادات برايت التخصصية — المنطقة الشرقية، السعودية" },
+    title: { en: "Bright Specialized Clinics — Al Khobar, Saudi Arabia", ar: "عيادات برايت التخصصية — الخبر، السعودية" },
     description: {
-      en: "Ten specialty departments under one roof — dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric, day surgery, laser, and more. Two branches: Al Khobar HQ + Al Ahsa.",
-      ar: "عشرة أقسام تخصّصية تحت سقف واحد — الجلدية، التجميل، الأسنان، النساء والولادة، الأطفال، السمنة، الجراحة، الليزر، وأكثر. فرعان: المركز الرئيسي في الخبر + الأحساء.",
+      en: "Ten specialty departments under one roof in Al Khobar — dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric, day surgery, laser, and more. On Prince Faisal Bin Fahd Road since 2018.",
+      ar: "عشرة أقسام تخصّصية تحت سقفٍ واحدٍ في الخبر — الجلدية، التجميل، الأسنان، النساء والولادة، الأطفال، السمنة، الجراحة، الليزر، وأكثر. على شارع الأمير فيصل بن فهد منذ ٢٠١٨.",
     },
-    keywords: ["عيادات برايت", "Bright Specialized Clinics", "الخبر", "Al Khobar", "الأحساء", "Al Ahsa", "تجميل", "Eastern Province aesthetic", "cosmetic dentistry", "dermatology Khobar", "veneers Saudi", "filler Eastern Province"],
+    keywords: ["عيادات برايت", "Bright Specialized Clinics", "الخبر", "Al Khobar", "الخبر الهدا", "عيادات الخبر", "تجميل الخبر", "Eastern Province aesthetic", "cosmetic dentistry Khobar", "dermatology Khobar", "veneers Khobar", "filler Khobar", "Prince Faisal Bin Fahd Khobar"],
   },
   navigation: {
     items: [
@@ -207,12 +207,12 @@ export const clinicConfig: ClinicConfig = {
   },
   footer: {
     tagline: {
-      en: "Ten specialty departments. Two branches. One promise: excellence as the only standard.",
-      ar: "عشرة أقسام تخصّصية. فرعان. وعدٌ واحد: التميّز كمعيارٍ وحيد.",
+      en: "Ten specialty departments. One quiet roof in Al Khobar. One promise: excellence as the only standard.",
+      ar: "عشرة أقسام تخصّصية. سقفٌ هادئٌ واحد في الخبر. وعدٌ واحد: التميّز كمعيارٍ وحيد.",
     },
     chips: [
       { en: "MOH Licensed", ar: "مرخّصة من وزارة الصحة" },
-      { en: "Saudi Arabia · Eastern Province", ar: "المملكة العربية السعودية · المنطقة الشرقية" },
+      { en: "Al Khobar · Eastern Province", ar: "الخبر · المنطقة الشرقية" },
     ],
     columns: [
       {
@@ -229,7 +229,7 @@ export const clinicConfig: ClinicConfig = {
       {
         title: { en: "The Clinic", ar: "العيادة" },
         links: [
-          { label: { en: "Branches", ar: "الفروع" }, href: "/about" },
+          { label: { en: "About", ar: "عن العيادة" }, href: "/about" },
           { label: { en: "Our Clinicians", ar: "أطبّاؤنا" }, href: "/doctors" },
           { label: { en: "Trust & Credentials", ar: "موثوقية وشهادات" }, href: "/trust" },
           { label: { en: "Journal", ar: "المجلّة" }, href: "/journal" },
@@ -239,9 +239,9 @@ export const clinicConfig: ClinicConfig = {
         title: { en: "Reach Us", ar: "تواصل" },
         links: [
           { label: { en: "Book on WhatsApp", ar: "احجزي عبر واتساب" }, href: "/booking" },
-          { label: { en: "Khobar HQ", ar: "الخبر — المركز الرئيسي" }, href: "/about" },
-          { label: { en: "Al Ahsa branch", ar: "فرع الأحساء" }, href: "/about" },
+          { label: { en: "Visit us · Al Hada", ar: "زورونا · الهدا" }, href: "/about" },
           { label: { en: "Call 920024428", ar: "اتصل ٩٢٠٠٢٤٤٢٨" }, href: "tel:920024428" },
+          { label: { en: "WhatsApp 0557337555", ar: "واتساب ٠٥٥٧٣٣٧٥٥٥" }, href: "https://wa.me/966557337555" },
         ],
       },
     ],
@@ -253,28 +253,28 @@ export const clinicConfig: ClinicConfig = {
 
   // ══ HOMEPAGE SECTIONS ═══════════════════════════════════════════════════
   hero: {
-    eyebrow: { en: "✦ Eastern Province · Since 2018", ar: "✦ المنطقة الشرقية · منذ ٢٠١٨" },
+    eyebrow: { en: "✦ Al Khobar · Since 2018", ar: "✦ الخبر · منذ ٢٠١٨" },
     headlinePartA: { en: "Excellence", ar: "للتميّز" },
     headlineEm: { en: "is our only title.", ar: "عنوانٌ واحد." },
     headlinePartB: { en: "", ar: "" },
-    leadItalic: { en: "Ten specialty departments. Two branches. One standard.", ar: "عشرة أقسام تخصّصية. فرعان. ومعيارٌ واحد." },
+    leadItalic: { en: "Ten specialty departments. One quiet roof. One standard.", ar: "عشرة أقسام تخصّصية. سقفٌ هادئٌ واحد. ومعيارٌ واحد." },
     lead: {
-      en: "Dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric and more — under one quiet roof in Al Khobar and Al Ahsa.",
-      ar: "الجلدية وجراحة التجميل وتجميل الأسنان والنساء والولادة وطب الأطفال وجراحة السمنة — تحت سقف هادئٍ واحد في الخبر والأحساء.",
+      en: "Dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric and more — on Prince Faisal Bin Fahd Road in Al Khobar, since 2018.",
+      ar: "الجلدية وجراحة التجميل وتجميل الأسنان والنساء والولادة وطب الأطفال وجراحة السمنة — على شارع الأمير فيصل بن فهد بالخبر، منذ ٢٠١٨.",
     },
     primaryCta: { en: "Book on WhatsApp", ar: "احجزي عبر واتساب" },
     secondaryCta: { en: "Our departments", ar: "أقسامنا" },
     pullQuote: { en: "\"They explained three options, then said the simplest one suited me best.\"", ar: "«شرحوا لي ثلاث خيارات، ثم قالوا إنّ الخيار الأبسط هو الأنسب لي.»" },
-    pullQuoteAttribution: { en: "Patient · Khobar", ar: "مريضة · الخبر" },
+    pullQuoteAttribution: { en: "Patient · Al Khobar", ar: "مريضة · الخبر" },
     stats: [
       { value: { en: "10 departments", ar: "١٠ أقسام" }, label: { en: "Under one roof", ar: "تحت سقفٍ واحد" } },
       { value: { en: "4.4 ★", ar: "٤٫٤ ★" }, label: { en: "1,500+ patient reviews", ar: "أكثر من ١٬٥٠٠ تقييم" } },
-      { value: { en: "2 branches", ar: "فرعان" }, label: { en: "Al Khobar · Al Ahsa", ar: "الخبر · الأحساء" } },
+      { value: { en: "Since 2018", ar: "منذ ٢٠١٨" }, label: { en: "Al Hada · Al Khobar", ar: "الهدا · الخبر" } },
     ],
   },
   marqueeStrip: {
     line1: { en: "Dermatology · Plastic Surgery · Cosmetic Dentistry · OB/GYN · Paediatrics · Bariatric · Day Surgery · Laser", ar: "الجلدية · التجميل · الأسنان · النساء والولادة · الأطفال · السمنة · الجراحة · الليزر" },
-    line2: { en: "Al Khobar HQ · Al Ahsa branch · One hotline 920024428", ar: "المركز الرئيسي في الخبر · فرع الأحساء · الخط الموحّد ٩٢٠٠٢٤٤٢٨" },
+    line2: { en: "Prince Faisal Bin Fahd Road · Al Hada · Al Khobar · Hotline 920024428", ar: "شارع الأمير فيصل بن فهد · الهدا · الخبر · الخط الموحّد ٩٢٠٠٢٤٤٢٨" },
   },
   founder: {
     chapterRoman: "II",
@@ -283,12 +283,12 @@ export const clinicConfig: ClinicConfig = {
     headlineEm: { en: "around the patient.", ar: "حول المريضة." },
     paragraphs: [
       {
-        en: "Bright Specialized Clinics opened in Al Khobar with a single principle: treat every patient like the only patient. From a small dermatology practice, we grew into ten specialty departments — dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric, day surgery, laser, interventional radiology, and psychiatry — all in one place.",
-        ar: "افتُتحت عيادات برايت التخصصية في الخبر بمبدأٍ واحد: عاملي كل مريضة كأنّها المريضة الوحيدة. من ممارسة جلدية صغيرة، نمونا إلى عشرة أقسام تخصّصية — الجلدية، التجميل، الأسنان، النساء والولادة، الأطفال، السمنة، الجراحة اليومية، الليزر، الأشعّة التداخلية، والطب النفسي — كلّها في مكانٍ واحد.",
+        en: "Bright Specialized Clinics opened in Al Khobar with a single principle: treat every patient like the only patient. From a small dermatology practice on Prince Faisal Bin Fahd Road, we grew into ten specialty departments — dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric, day surgery, laser, interventional radiology, and psychiatry — all in one quiet building in Al Hada district.",
+        ar: "افتُتحت عيادات برايت التخصصية في الخبر بمبدأٍ واحد: عاملي كل مريضة كأنّها المريضة الوحيدة. من ممارسة جلدية صغيرة على شارع الأمير فيصل بن فهد، نمونا إلى عشرة أقسام تخصّصية — الجلدية، التجميل، الأسنان، النساء والولادة، الأطفال، السمنة، الجراحة اليومية، الليزر، الأشعّة التداخلية، والطب النفسي — كلّها في مبنى هادئٍ واحد في حي الهدا.",
       },
       {
-        en: "In 2025 we opened a second branch in Al Ahsa to serve the families of Mubarraz, with the same standard. The promise hasn't changed since day one: excellence is our only title.",
-        ar: "وفي عام ٢٠٢٥ افتتحنا فرعنا الثاني في الأحساء لخدمة عوائل المبرّز بنفس المعيار. الوعد لم يتغيّر منذ اليوم الأول: للتميّز عنوانٌ واحد.",
+        en: "Since day one our promise has not changed: excellence is our only title. The same doctors who treated the first hundred patients still see patients today — and the same standard we set in 2018 is the standard we hold ourselves to in 2026.",
+        ar: "منذ اليوم الأوّل لم يتغيّر الوعد: للتميّز عنوانٌ واحد. الأطبّاء الذين عالجوا أوّل مئة مريضة لا يزالون يستقبلون المريضات اليوم — والمعيار الذي وضعناه في ٢٠١٨ هو نفسه المعيار الذي نُحاسب أنفسنا عليه في ٢٠٢٦.",
       },
     ],
     name: "Mr. Manea El Manea",
@@ -329,7 +329,7 @@ export const clinicConfig: ClinicConfig = {
     chapterTitle: { en: "The journey", ar: "الرحلة" },
     headlinePartA: { en: "Real change,", ar: "تغييرٌ حقيقي،" },
     headlineEm: { en: "documented with words and time.", ar: "موثَّق بالكلمات والزمن." },
-    description: { en: "Saudi privacy by default — we publish the journey, not the face. Time-anchored testimonials from real patients across both branches.", ar: "خصوصية سعودية كافتراضٍ أوّل — ننشر الرحلة، لا الوجه. شهاداتٌ موثَّقة بالزمن من مريضات حقيقيات عبر الفرعين." },
+    description: { en: "Saudi privacy by default — we publish the journey, not the face. Time-anchored testimonials from real patients at our Khobar clinic.", ar: "خصوصية سعودية كافتراضٍ أوّل — ننشر الرحلة، لا الوجه. شهاداتٌ موثَّقة بالزمن من مريضات حقيقيات في عيادتنا بالخبر." },
     cta: { en: "See the full gallery", ar: "اطّلعي على المعرض كاملاً" },
     beforeLabel: { en: "Before", ar: "قبل" },
     afterLabel: { en: "After · 8 weeks", ar: "بعد · ٨ أسابيع" },
@@ -340,14 +340,14 @@ export const clinicConfig: ClinicConfig = {
     items: [
       {
         quote: { en: "They explained three options, then said the simplest one suited me best. No upsell, just honest care.", ar: "شرحوا لي ثلاث خيارات، ثم قالوا إنّ الخيار الأبسط هو الأنسب. بلا بيع، رعاية صادقة فقط." },
-        name: { en: "Patient · Khobar", ar: "مريضة · الخبر" },
+        name: { en: "Patient · Al Khobar", ar: "مريضة · الخبر" },
         role: { en: "Filler with Dr. Marina", ar: "فيلر مع د. مارينا" },
         variant: "terracotta",
       },
       {
-        quote: { en: "My mother came with me to the first visit. By the third, she had booked her own.", ar: "أمّي أتت معي في الزيارة الأولى. وفي الثالثة، حجزت موعدها الخاص." },
-        name: { en: "Patient · Al Ahsa", ar: "مريضة · الأحساء" },
-        role: { en: "Hydrafacial with Dr. Wafaa", ar: "هيدرافيشيال مع د. وفاء" },
+        quote: { en: "My mother came with me to the first visit. By the third, she had booked her own — three departments in one day.", ar: "أمّي أتت معي في الزيارة الأولى. وفي الثالثة، حجزت موعدها الخاص — ثلاثة أقسام في يومٍ واحد." },
+        name: { en: "Patient · Al Khobar", ar: "مريضة · الخبر" },
+        role: { en: "Dental + Dermatology with Dr. Hassan", ar: "أسنان وجلدية مع د. حسن" },
         variant: "sage",
       },
     ],
@@ -360,13 +360,13 @@ export const clinicConfig: ClinicConfig = {
     items: [
       { name: "Dr. Hassan Nazzal", tag: { en: "Maxillofacial Surgery · Jordanian Board + RCSI Fellowship", ar: "جراحة الفم والوجه · زمالة الكلية الملكية للجرّاحين أيرلندا" }, variant: "terracotta" },
       { name: "Dr. Marina Naddaf", tag: { en: "Senior Dermatology · AAD member since 2004", ar: "الجلدية · عضوة الأكاديمية الأمريكية للأمراض الجلدية" }, variant: "sand" },
-      { name: "Dr. Wafaa Saeed", tag: { en: "Dermatology · Al Ahsa branch lead", ar: "الجلدية · رئيسة فرع الأحساء" }, variant: "sage" },
+      { name: "Dr. Doaa Goda", tag: { en: "Cosmetic & Aesthetic Dermatology · Filler · Botox", ar: "الجلدية التجميلية · فيلر · بوتوكس" }, variant: "sage" },
     ],
   },
   bookCta: {
-    eyebrow: { en: "✦ Two branches. One number.", ar: "✦ فرعان. خطٌّ موحَّد." },
+    eyebrow: { en: "✦ One destination. One number.", ar: "✦ مكانٌ واحد. خطٌّ موحَّد." },
     headline: { en: "Reach us today.", ar: "تواصلي معنا اليوم." },
-    description: { en: "Al Khobar HQ · Al Ahsa branch · Saturday – Thursday 9 AM – 11 PM · Friday after Asr. Same-day WhatsApp confirmation.", ar: "المركز الرئيسي في الخبر · فرع الأحساء · السبت – الخميس ٩ صباحاً – ١١ مساءً · الجمعة بعد العصر. تأكيد عبر واتساب في نفس اليوم." },
+    description: { en: "Prince Faisal Bin Fahd Road · Al Hada · Al Khobar · Saturday – Thursday 9 AM – 11 PM · Friday after Asr. Same-day WhatsApp confirmation.", ar: "شارع الأمير فيصل بن فهد · الهدا · الخبر · السبت – الخميس ٩ صباحاً – ١١ مساءً · الجمعة بعد العصر. تأكيد عبر واتساب في نفس اليوم." },
     primary: { en: "Book on WhatsApp", ar: "احجزي عبر واتساب" },
     secondary: { en: "Call 920024428", ar: "اتصلي ٩٢٠٠٢٤٤٢٨" },
   },
@@ -378,7 +378,7 @@ export const clinicConfig: ClinicConfig = {
     cta: { en: "WhatsApp us", ar: "تواصل عبر واتساب" },
     items: [
       { q: { en: "What departments do you offer?", ar: "ما الأقسام التي تقدّمونها؟" }, a: { en: "Ten specialty departments under one roof: dermatology and laser, plastic and aesthetic surgery, cosmetic dentistry and maxillofacial, OB/GYN, paediatrics, bariatric surgery, day surgery, interventional radiology, psychiatry, and a dedicated laser center.", ar: "عشرة أقسام تخصّصية تحت سقف واحد: الجلدية والليزر، جراحة التجميل، الأسنان والفم والوجه، النساء والولادة، طب الأطفال، جراحة السمنة، الجراحة اليومية، الأشعّة التداخلية، الطب النفسي، ومركز ليزر متخصّص." } },
-      { q: { en: "Which branches do you have?", ar: "ما هي فروعكم؟" }, a: { en: "Two confirmed branches in Saudi Arabia's Eastern Province: Al Khobar headquarters (Prince Faisal Bin Fahd Road, Al Hada district) and Al Ahsa branch (Khalid Ibn Al-Walid Street, Mubarraz).", ar: "فرعان مؤكّدان في المنطقة الشرقية بالسعودية: المركز الرئيسي في الخبر (شارع الأمير فيصل بن فهد، حي الهدا) وفرع الأحساء (شارع خالد بن الوليد، المبرّز)." } },
+      { q: { en: "Where are you located?", ar: "أين تقعون؟" }, a: { en: "Prince Faisal Bin Fahd Road, Al Hada district, Al Khobar 34439 — opposite Toyota agency. Dedicated patient parking on site.", ar: "شارع الأمير فيصل بن فهد، حي الهدا، الخبر ٣٤٤٣٩ — مقابل وكالة تويوتا. مواقف خاصّة بالمراجعين داخل المجمّع." } },
       { q: { en: "How do I book?", ar: "كيف أحجز؟" }, a: { en: "WhatsApp 0557337555, call our unified hotline 920024428, or use the booking form. Same-day confirmation on WhatsApp during business hours.", ar: "راسلينا على واتساب ٠٥٥٧٣٣٧٥٥٥، أو اتّصلي على الخط الموحّد ٩٢٠٠٢٤٤٢٨، أو استخدمي نموذج الحجز. التأكيد عبر واتساب في نفس اليوم خلال ساعات العمل." } },
       { q: { en: "What should I expect on my first visit?", ar: "ماذا أتوقّع في زيارتي الأولى؟" }, a: { en: "A consultation with the specialist of the relevant department. We listen first, run any needed diagnostics, then propose a written plan. No commitment to treatment on the first visit.", ar: "استشارة مع أخصّائي القسم المعني. نُصغي أوّلاً، نُجري التشخيص اللازم، ثم نقترح خطّة مكتوبة. لا التزام بالعلاج في الزيارة الأولى." } },
       { q: { en: "What are your hours?", ar: "ما هي ساعات العمل؟" }, a: { en: "Saturday – Thursday, 9 AM to 11 PM. Friday after Asr prayer for selected clinics. Prayer-time pauses respected.", ar: "السبت – الخميس، من ٩ صباحاً إلى ١١ مساءً. الجمعة بعد صلاة العصر لبعض العيادات. نحترم أوقات الصلاة." } },
@@ -403,8 +403,8 @@ export const clinicConfig: ClinicConfig = {
       roman: "I",
       eyebrow: { en: "✦ Departments", ar: "✦ الأقسام" },
       title: { en: "Ten specialties,", ar: "عشرة تخصّصات،" },
-      titleEm: { en: "two branches.", ar: "فرعان." },
-      sub: { en: "A full index of what Bright Specialized Clinics offers across the Eastern Province — Al Khobar HQ and Al Ahsa branch, since 2018.", ar: "فهرس كامل لما تقدّمه عيادات برايت التخصصية عبر المنطقة الشرقية — المركز الرئيسي بالخبر وفرع الأحساء، منذ ٢٠١٨." },
+      titleEm: { en: "one quiet building.", ar: "مبنى هادئٌ واحد." },
+      sub: { en: "A full index of what Bright Specialized Clinics offers on Prince Faisal Bin Fahd Road in Al Khobar, since 2018.", ar: "فهرس كامل لما تقدّمه عيادات برايت التخصصية على شارع الأمير فيصل بن فهد بالخبر، منذ ٢٠١٨." },
     },
     items: [
       {
@@ -573,13 +573,13 @@ export const clinicConfig: ClinicConfig = {
       eyebrow: { en: "✦ Our Clinicians", ar: "✦ أطبّاؤنا" },
       title: { en: "Named clinicians.", ar: "أطبّاءٌ بأسمائهم." },
       titleEm: { en: "Verifiable credentials.", ar: "شهاداتٌ قابلة للتحقّق." },
-      sub: { en: "Eight specialist physicians and a full medical team across two branches. Every name listed here is publicly verifiable.", ar: "ثمانية أطبّاء تخصّصيين وفريق طبّي كامل عبر فرعين. كل اسم هنا قابل للتحقّق علناً." },
+      sub: { en: "Six specialist physicians and a full medical team under one roof in Al Khobar. Every name listed here is publicly verifiable.", ar: "ستة أطبّاء تخصّصيين وفريق طبّي كامل تحت سقفٍ واحد في الخبر. كل اسم هنا قابل للتحقّق علناً." },
     },
     items: [
       {
         name: "Dr. Hassan Nazzal",
         role: { en: "Maxillofacial Surgery · Senior partner", ar: "جراحة الفم والوجه والفكين · شريك أول" },
-        bio: { en: "Jordanian Board–certified maxillofacial surgeon with Fellowship from the Royal College of Surgeons in Ireland. Featured as the senior partner of the Khobar HQ.", ar: "جرّاح فم ووجه وفكّين معتمَد من المجلس الأردني، حاصل على زمالة الكلية الملكية للجرّاحين في أيرلندا. الشريك الأوّل في المركز الرئيسي بالخبر." },
+        bio: { en: "Jordanian Board–certified maxillofacial surgeon with Fellowship from the Royal College of Surgeons in Ireland. Senior partner of Bright Specialized Clinics since the early years.", ar: "جرّاح فم ووجه وفكّين معتمَد من المجلس الأردني، حاصل على زمالة الكلية الملكية للجرّاحين في أيرلندا. الشريك الأوّل في عيادات برايت التخصصية منذ السنوات الأولى." },
         credentials: ["MD · Jordanian Board of Maxillofacial Surgery", "FRCS · Royal College of Surgeons in Ireland", "Senior partner · Bright Specialized Clinics"],
         variant: "terracotta",
       },
@@ -591,31 +591,31 @@ export const clinicConfig: ClinicConfig = {
         variant: "sand",
       },
       {
-        name: "Dr. Wafaa Saeed",
-        role: { en: "Dermatology · Al Ahsa branch lead", ar: "الجلدية · رئيسة فرع الأحساء" },
-        bio: { en: "Egyptian Fellowship in dermatology. Leads the Al Ahsa branch as its face and primary clinician. Specialises in full-face aesthetic protocols.", ar: "زمالة مصرية في الأمراض الجلدية. تقود فرع الأحساء كوجهه الأوّل وطبيبته الرئيسية. متخصّصة في بروتوكولات تجميل الوجه الكامل." },
-        credentials: ["MD · Egyptian Fellowship Dermatology", "Al Ahsa branch lead since 2025"],
-        variant: "sage",
-      },
-      {
         name: "Dr. Doaa Goda",
         role: { en: "Cosmetic Aesthetics · Injectables", ar: "تجميل · حقن" },
         bio: { en: "Specialist in fillers, Botox, and body cosmetic procedures. Patient-favourite for natural, undetectable results.", ar: "متخصّصة في الفيلر والبوتوكس والإجراءات التجميلية للجسم. مفضّلة المريضات للنتائج الطبيعية غير الملحوظة." },
         credentials: ["MD · Cosmetic Aesthetics", "Filler & Botox specialist"],
-        variant: "terracotta",
+        variant: "sage",
       },
       {
         name: "Dr. Nadeen Kabboura",
         role: { en: "OB/GYN · Intimate health", ar: "النساء والولادة · الصحّة الحميمة" },
         bio: { en: "Consultant in gynecology and intimate health. Provides discreet, women-only consultations.", ar: "استشاريّة في النساء والولادة والصحّة الحميمة. تقدّم استشارات نسائية بسرية تامّة." },
         credentials: ["MD · OB/GYN Consultant"],
-        variant: "sand",
+        variant: "terracotta",
       },
       {
         name: "Dr. Amirah Mohannadi",
         role: { en: "Aesthetic injectables · Lip work", ar: "حقن تجميلية · شفاه" },
         bio: { en: "Specialist in lip filler artistry. Known for restrained volumes that respect natural facial proportions.", ar: "متخصّصة في فيلر الشفاه. مشهورة بكميّات معتدلة تحترم تناسق الوجه الطبيعي." },
         credentials: ["MD · Aesthetic Medicine"],
+        variant: "sand",
+      },
+      {
+        name: "Dr. Dina Abdul Halim",
+        role: { en: "Aesthetic Dermatology · Microblading", ar: "الجلدية التجميلية · مايكروبليدنغ" },
+        bio: { en: "Specialist in microblading, Botox, and aesthetic dermatology procedures. Detail-oriented practitioner with a precision-first approach.", ar: "متخصّصة في المايكروبليدنغ والبوتوكس وإجراءات الجلدية التجميلية. ممارسة دقيقة بمنهج يضع الإتقان أوّلاً." },
+        credentials: ["MD · Aesthetic Dermatology", "Microblading & Botox specialist"],
         variant: "sage",
       },
     ],
@@ -625,27 +625,27 @@ export const clinicConfig: ClinicConfig = {
     hero: {
       roman: "I",
       eyebrow: { en: "✦ About Bright", ar: "✦ عن برايت" },
-      title: { en: "Two branches.", ar: "فرعان." },
+      title: { en: "Al Khobar, since 2018.", ar: "الخبر، منذ ٢٠١٨." },
       titleEm: { en: "One standard.", ar: "ومعيارٌ واحد." },
-      sub: { en: "Bright Specialized Clinics opened in Al Khobar in 2018. Today we serve Eastern Province families across ten specialty departments and two branches — Al Khobar HQ and Al Ahsa.", ar: "افتُتحت عيادات برايت التخصصية في الخبر عام ٢٠١٨. اليوم نخدم عوائل المنطقة الشرقية عبر عشرة أقسام تخصّصية وفرعين — المركز الرئيسي بالخبر والأحساء." },
+      sub: { en: "Bright Specialized Clinics opened in Al Khobar in 2018. Today we serve Eastern Province families across ten specialty departments — all under one quiet roof on Prince Faisal Bin Fahd Road.", ar: "افتُتحت عيادات برايت التخصصية في الخبر عام ٢٠١٨. اليوم نخدم عوائل المنطقة الشرقية عبر عشرة أقسام تخصّصية — كلّها تحت سقفٍ هادئٍ واحد على شارع الأمير فيصل بن فهد." },
     },
     chapters: [
       { n: "I", title: { en: "Khobar, 2018", ar: "الخبر، ٢٠١٨" }, body: { en: "Bright opened on Prince Faisal Bin Fahd Road in Al Hada district with a simple operational principle: treat every patient as if she were the only patient. The first department was dermatology, under the eye of Dr. Marina Naddaf, already an American Academy of Dermatology member since 2004.", ar: "افتُتحت برايت في شارع الأمير فيصل بن فهد بحي الهدا بمبدأٍ تشغيليّ بسيط: عاملي كل مريضة كأنّها المريضة الوحيدة. القسم الأوّل كان الجلدية، تحت إشراف د. مارينا نداف، التي كانت آنذاك عضوة الأكاديمية الأمريكية للأمراض الجلدية منذ ٢٠٠٤." }, variant: "sand" },
       { n: "II", title: { en: "Ten departments", ar: "عشرة أقسام" }, body: { en: "Over the next years, the clinic expanded into ten specialty departments under one roof — dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric surgery, day surgery, interventional radiology, psychiatry, and a dedicated laser centre. Dr. Hassan Nazzal joined as senior partner, bringing his Royal College of Surgeons in Ireland Fellowship to the maxillofacial wing.", ar: "وعلى مدى السنوات التالية، توسّعت العيادة لتشمل عشرة أقسام تخصّصية تحت سقفٍ واحد — الجلدية، التجميل، الأسنان، النساء والولادة، الأطفال، السمنة، الجراحة اليومية، الأشعّة التداخلية، الطب النفسي، ومركز ليزر متخصّص. د. حسن نزال انضمّ شريكاً أوّل، حاملاً معه زمالته من الكلية الملكية للجرّاحين في أيرلندا إلى قسم الفمّ والوجه." }, variant: "terracotta" },
-      { n: "III", title: { en: "Al Ahsa, 2025", ar: "الأحساء، ٢٠٢٥" }, body: { en: "In January 2025, Bright opened its second branch in Al Ahsa — on Khalid Ibn Al-Walid Street in Mubarraz — under the clinical leadership of Dr. Wafaa Saeed. The promise: same standard as Khobar, closer to the families of Hofuf and Mubarraz.", ar: "في يناير ٢٠٢٥، افتتحت برايت فرعها الثاني في الأحساء — على شارع خالد بن الوليد في المبرّز — تحت إشراف د. وفاء سعيد سريرياً. الوعد: نفس معيار الخبر، أقرب لعوائل الهفوف والمبرّز." }, variant: "sage" },
-      { n: "IV", title: { en: "What stays the same", ar: "ما يبقى ثابتاً" }, body: { en: "Across two branches, ten departments, six named clinicians, and thousands of patients — the promise hasn't moved. Excellence is our only title. We listen first, run diagnostics second, treat third, and follow up always. No upsell. No theatre. No claim we cannot verify.", ar: "عبر فرعين، عشرة أقسام، ستة أطبّاء بأسمائهم، وآلاف المريضات — الوعد لم يتحرّك. للتميّز عنوانٌ واحد. نُصغي أولاً، نُشخّص ثانياً، نُعالج ثالثاً، ونتابع دائماً. لا بيع. لا استعراض. لا ادّعاء لا نستطيع إثباته." }, variant: "dark" },
+      { n: "III", title: { en: "The team grew", ar: "الفريق توسّع" }, body: { en: "Dr. Doaa Goda joined the aesthetic injectables team. Dr. Nadeen Kabboura built out women's health with a discreet, women-only consultation flow. Dr. Amirah Mohannadi brought a lip-filler precision style that respects natural face proportions. Dr. Dina Abdul Halim added microblading and aesthetic dermatology. A complete clinical team — every doctor named, every credential verifiable.", ar: "د. دعاء جودة انضمّت لفريق الحقن التجميلية. د. نادين كبورا بنت قسم صحّة المرأة باستشارات نسائية سرّية. د. أميرة المهنّدي جاءت بأسلوب فيلر شفاه دقيق يحترم تناسق الوجه. د. دينا عبد الحليم أضافت المايكروبليدنغ والجلدية التجميلية. فريق سريريّ كامل — كل طبيبة باسمها، كل شهادة قابلة للتحقّق." }, variant: "sage" },
+      { n: "IV", title: { en: "What stays the same", ar: "ما يبقى ثابتاً" }, body: { en: "Ten departments, six named clinicians, and thousands of patients — the promise hasn't moved since day one. Excellence is our only title. We listen first, run diagnostics second, treat third, and follow up always. No upsell. No theatre. No claim we cannot verify.", ar: "عشرة أقسام، ستة أطبّاء بأسمائهم، وآلاف المريضات — الوعد لم يتحرّك منذ اليوم الأوّل. للتميّز عنوانٌ واحد. نُصغي أولاً، نُشخّص ثانياً، نُعالج ثالثاً، ونتابع دائماً. لا بيع. لا استعراض. لا ادّعاء لا نستطيع إثباته." }, variant: "dark" },
     ],
     commitments: [
       { n: "I", title: { en: "Specialist-led", ar: "بإشراف الأخصّائيين" }, description: { en: "Every department led by a board-certified or fellowship-trained specialist physician — not a general practitioner.", ar: "كل قسم يقوده طبيب أخصّائي معتمَد أو حاصل على زمالة — لا طبيب عام." } },
       { n: "II", title: { en: "Verifiable credentials", ar: "شهادات قابلة للتحقّق" }, description: { en: "Every credential we display is independently checkable through the issuing authority — RCSI, AAD, SCFHS, SFDA.", ar: "كل شهادة نعرضها قابلة للتحقّق المستقل عبر الجهة المُصدِرة — RCSI، AAD، الهيئة السعودية للتخصّصات الصحية، الهيئة العامة للغذاء والدواء." } },
       { n: "III", title: { en: "Saudi privacy first", ar: "الخصوصية السعودية أولاً" }, description: { en: "No patient face photographs. No biometric data. Female-only sessions on request. PDPL-compliant data handling.", ar: "لا صور وجوه مريضات. لا بيانات حيوية. جلسات نسائية فقط عند الطلب. تعامل مع البيانات متوافق مع قانون حماية البيانات الشخصية." } },
-      { n: "IV", title: { en: "Same standard, both branches", ar: "نفس المعيار، في كلا الفرعين" }, description: { en: "Khobar HQ and Al Ahsa operate to the same clinical and service standard. The Al Ahsa team is led by Dr. Wafaa Saeed.", ar: "المركز الرئيسي بالخبر وفرع الأحساء يعملان بنفس المعيار السريري والخدمي. فريق الأحساء بقيادة د. وفاء سعيد." } },
+      { n: "IV", title: { en: "Same standard, every visit", ar: "نفس المعيار، في كل زيارة" }, description: { en: "From first consultation to follow-up, the standard does not bend. Whether you visit dermatology, OB/GYN, or dental — the same listen-first, written-plan, follow-up-always protocol applies.", ar: "من الاستشارة الأولى إلى المتابعة، المعيار لا ينحني. سواء زرتِ الجلدية، النساء والولادة، أو الأسنان — نفس بروتوكول الإصغاء أوّلاً، الخطّة المكتوبة، والمتابعة الدائمة." } },
     ],
     location: {
       eyebrow: { en: "✦ Visit", ar: "✦ زورونا" },
-      headlinePartA: { en: "Two branches.", ar: "فرعان." },
-      headlineEm: { en: "Same standard.", ar: "نفس المعيار." },
-      description: { en: "Khobar HQ — Prince Faisal Bin Fahd Rd, Al Hada district (opposite Toyota agency), Al Khobar 34439. Al Ahsa branch — Khalid Ibn Al-Walid Street, Mubarraz. Unified hotline 920024428. Same-day WhatsApp confirmation on 0557337555.", ar: "المركز الرئيسي بالخبر — شارع الأمير فيصل بن فهد، حي الهدا (مقابل وكالة تويوتا)، الخبر ٣٤٤٣٩. فرع الأحساء — شارع خالد بن الوليد، المبرّز. الخط الموحّد ٩٢٠٠٢٤٤٢٨. تأكيد عبر واتساب في نفس اليوم على ٠٥٥٧٣٣٧٥٥٥." },
+      headlinePartA: { en: "Al Hada district.", ar: "حي الهدا." },
+      headlineEm: { en: "Al Khobar.", ar: "الخبر." },
+      description: { en: "Prince Faisal Bin Fahd Road, Al Hada district (opposite Toyota agency), Al Khobar 34439. Dedicated patient parking on site. Unified hotline 920024428. Same-day WhatsApp confirmation on 0557337555.", ar: "شارع الأمير فيصل بن فهد، حي الهدا (مقابل وكالة تويوتا)، الخبر ٣٤٤٣٩. مواقف خاصّة بالمراجعين داخل المجمّع. الخط الموحّد ٩٢٠٠٢٤٤٢٨. تأكيد عبر واتساب في نفس اليوم على ٠٥٥٧٣٣٧٥٥٥." },
     },
   },
 
@@ -690,10 +690,10 @@ export const clinicConfig: ClinicConfig = {
     reviewCount: { en: "From 1,500+ Google reviews", ar: "من أكثر من ١٬٥٠٠ تقييم جوجل" },
     items: [
       { shortQuote: { en: "\"They explained three options, then said the simplest one suited me best.\"", ar: "«شرحوا لي ثلاث خيارات، ثم قالوا إنّ الخيار الأبسط هو الأنسب لي.»" }, longQuote: { en: "No upsell, no pressure. Dr. Marina walked me through three filler approaches, then recommended the most conservative one. Six weeks later my husband noticed I 'looked rested' — that's the whole point.", ar: "لا بيع، لا ضغط. د. مارينا شرحت لي ثلاثة أساليب للفيلر، ثم اقترحت الأكثر اعتدالاً. بعد ستة أسابيع لاحظ زوجي أنّي «أبدو مرتاحة» — هذا هو الهدف كلّه." }, name: "Patient · Khobar", date: { en: "Apr 2026", ar: "أبريل ٢٠٢٦" }, variant: "terracotta", stars: 5 },
-      { shortQuote: { en: "\"My mother came with me, then she booked for herself.\"", ar: "«أمّي أتت معي، ثم حجزت موعدها.»" }, longQuote: { en: "First visit was for me — Hydrafacial with Dr. Wafaa at the Al Ahsa branch. By my third visit my mother had her own appointment. We're now three patients from the same family.", ar: "الزيارة الأولى كانت لي — هيدرافيشيال مع د. وفاء في فرع الأحساء. بحلول زيارتي الثالثة كانت أمّي قد حجزت موعدها. أصبحنا الآن ثلاث مريضات من نفس العائلة." }, name: "Patient · Al Ahsa", date: { en: "Mar 2026", ar: "مارس ٢٠٢٦" }, variant: "sage", stars: 5 },
+      { shortQuote: { en: "\"My mother came with me, then she booked for herself.\"", ar: "«أمّي أتت معي، ثم حجزت موعدها.»" }, longQuote: { en: "First visit was for me — Hydrafacial with Dr. Marina. By my third visit my mother had her own appointment with Dr. Doaa. We're now three patients from the same family.", ar: "الزيارة الأولى كانت لي — هيدرافيشيال مع د. مارينا. بحلول زيارتي الثالثة كانت أمّي قد حجزت موعدها مع د. دعاء. أصبحنا الآن ثلاث مريضات من نفس العائلة." }, name: "Patient · Al Khobar", date: { en: "Mar 2026", ar: "مارس ٢٠٢٦" }, variant: "sage", stars: 5 },
       { shortQuote: { en: "\"Dr. Hassan rebuilt my smile around my face, not a template.\"", ar: "«د. حسن أعاد بناء ابتسامتي حول وجهي، لا حول قالب.»" }, longQuote: { en: "I went to two clinics for veneer consultations — both showed me the same six-shape templates. Dr. Hassan Nazzal photographed my face and designed the veneers around my actual proportions. Different conversation.", ar: "ذهبت إلى عيادتين لاستشارات الفينير — كلتاهما عرضت عليّ نفس الستّة قوالب. د. حسن نزال صوّر وجهي وصمّم الفينير حول تناسقي الفعلي. محادثة مختلفة." }, name: "Patient · Khobar", date: { en: "Feb 2026", ar: "فبراير ٢٠٢٦" }, variant: "sand", stars: 5 },
-      { shortQuote: { en: "\"I came for a consult, stayed for ten years.\"", ar: "«جئت لاستشارة، بقيت عشر سنوات.»" }, longQuote: { en: "Started at Bright with Dr. Marina before they had the Al Ahsa branch. Watched the chain grow — same hands, same standard. That kind of continuity is rare in this market.", ar: "بدأت في برايت مع د. مارينا قبل أن يكون لديهم فرع الأحساء. شاهدت السلسلة تنمو — نفس الأيدي، نفس المعيار. هذه الاستمرارية نادرة في هذا السوق." }, name: "Patient · Khobar", date: { en: "Jan 2026", ar: "يناير ٢٠٢٦" }, variant: "terracotta", stars: 5 },
-      { shortQuote: { en: "\"They accept Tabby — that mattered.\"", ar: "«يقبلون تابي — هذا فرّق معي.»" }, longQuote: { en: "Full Hollywood Smile would have been impossible to budget in one payment. The coordinator quietly mentioned Tabby and Tamara, both within the SAR 10K cap. Made everything possible.", ar: "ابتسامة هوليوود الكاملة كانت مستحيلة بدفعة واحدة في ميزانيتي. المنسّقة ذكرت بهدوء تابي وتمارا، كلاهما ضمن سقف ١٠ آلاف ريال. جعلت كل شيء ممكناً." }, name: "Patient · Al Ahsa", date: { en: "Mar 2026", ar: "مارس ٢٠٢٦" }, variant: "sage", stars: 5 },
+      { shortQuote: { en: "\"I came for a consult, stayed for ten years.\"", ar: "«جئت لاستشارة، بقيت عشر سنوات.»" }, longQuote: { en: "Started at Bright with Dr. Marina back in 2018. The same hands, the same standard, year after year. That kind of continuity is rare in this market.", ar: "بدأت في برايت مع د. مارينا منذ ٢٠١٨. نفس الأيدي، نفس المعيار، عاماً بعد عام. هذه الاستمرارية نادرة في هذا السوق." }, name: "Patient · Al Khobar", date: { en: "Jan 2026", ar: "يناير ٢٠٢٦" }, variant: "terracotta", stars: 5 },
+      { shortQuote: { en: "\"They accept Tabby — that mattered.\"", ar: "«يقبلون تابي — هذا فرّق معي.»" }, longQuote: { en: "Full Hollywood Smile would have been impossible to budget in one payment. The coordinator quietly mentioned Tabby and Tamara, both within the SAR 10K cap. Made everything possible.", ar: "ابتسامة هوليوود الكاملة كانت مستحيلة بدفعة واحدة في ميزانيتي. المنسّقة ذكرت بهدوء تابي وتمارا، كلاهما ضمن سقف ١٠ آلاف ريال. جعلت كل شيء ممكناً." }, name: "Patient · Al Khobar", date: { en: "Mar 2026", ar: "مارس ٢٠٢٦" }, variant: "sage", stars: 5 },
       { shortQuote: { en: "\"Female-only session — they made it normal, not exceptional.\"", ar: "«جلسة نسائية فقط — جعلوها طبيعية، لا استثناء.»" }, longQuote: { en: "Asked for an all-female team at booking. The receptionist confirmed without questions. Female specialist, female nurse, female receptionist on the floor that day. No drama, no extra fee.", ar: "طلبت فريقاً نسائياً كاملاً عند الحجز. الاستقبال أكّدت بدون أسئلة. أخصّائية، ممرّضة، استقبال — كلهنّ نساء في ذلك اليوم. بلا دراما، بلا رسوم إضافية." }, name: "Patient · Khobar", date: { en: "Feb 2026", ar: "فبراير ٢٠٢٦" }, variant: "sand", stars: 5 },
     ],
   },
@@ -720,7 +720,7 @@ export const clinicConfig: ClinicConfig = {
       { tag: { en: "Dermatology", ar: "جلدية" }, title: { en: "Laser hair removal in summer — what actually works in Saudi heat", ar: "إزالة الشعر بالليزر في الصيف — ما يعمل فعلاً في حرارة السعودية" }, author: "Dr. Marina Naddaf", date: { en: "14 Mar 2026", ar: "١٤ مارس ٢٠٢٦" }, variant: "terracotta" },
       { tag: { en: "Aesthetics", ar: "تجميل" }, title: { en: "Lip filler — three volumes I recommend, and the one I refuse", ar: "فيلر الشفاه — ثلاثة أحجام أوصي بها، وحجمٌ واحد أرفضه" }, author: "Dr. Amirah Mohannadi", date: { en: "01 Mar 2026", ar: "١ مارس ٢٠٢٦" }, variant: "sand" },
       { tag: { en: "Practice", ar: "ممارسة" }, title: { en: "When we say no — three cases we declined this month", ar: "متى نقول «لا» — ثلاث حالات رفضناها هذا الشهر" }, author: "Bright Clinical Team", date: { en: "14 Feb 2026", ar: "١٤ فبراير ٢٠٢٦" }, variant: "dark" },
-      { tag: { en: "Saudi Care", ar: "رعاية سعودية" }, title: { en: "What our Al Ahsa patients taught us in year one", ar: "ما علّمتنا إيّاه مريضات الأحساء في عامنا الأوّل" }, author: "Dr. Wafaa Saeed", date: { en: "28 Jan 2026", ar: "٢٨ يناير ٢٠٢٦" }, variant: "sage" },
+      { tag: { en: "Saudi Care", ar: "رعاية سعودية" }, title: { en: "Cross-department visits — what we learned from 1,500 patients", ar: "زيارات متعدّدة الأقسام — ما تعلّمناه من ١٬٥٠٠ مريضة" }, author: "Bright Clinical Team", date: { en: "28 Jan 2026", ar: "٢٨ يناير ٢٠٢٦" }, variant: "sage" },
     ],
     newsletter: {
       headline: { en: "A letter, once a month.", ar: "رسائل، مرة كل شهر." },
