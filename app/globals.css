@@ -531,11 +531,6 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
   .hero-twilight-glow { animation: none; }
 }
 
-/* Floating Est. badge + pull-quote card — luxury micro-rise on load */
-.hero-est-badge,
-.hero-quote-card {
-  animation: fadeUp 900ms var(--ease-standard) 600ms both;
-}
 
 /* ═══════════════════════════════════════════════════════════════════════
    MOBILE LUXURY LAYER — premium fashion-brand feel, NOT shrunk desktop
@@ -772,10 +767,6 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
     );
     pointer-events: none;
   }
-
-  /* Hide floating overlay cards on mobile — they collide with content */
-  .hero-est-badge,
-  .hero-quote-card { display: none !important; }
 
   /* Shrink twilight glow on mobile so it doesn't overwhelm */
   .hero-twilight-glow {
