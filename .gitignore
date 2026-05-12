@@ -52,3 +52,12 @@ Thumbs.db
 
 # Sentry
 .sentryclirc
+
+# Raw video sources — encoded outputs go in /public/hero/ (committed)
+# This prevents accidentally pushing 50+ MB Canva/source files to git.
+public/brand/*.mp4
+public/brand/*.mov
+public/brand/*.webm
+public/brand/*.mkv
+public/brand/*.avi
+
