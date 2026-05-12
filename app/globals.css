@@ -531,6 +531,28 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
   .hero-twilight-glow { animation: none; }
 }
 
+/* Floating Est. badge + pull-quote card — luxury micro-rise on load */
+.hero-est-badge,
+.hero-quote-card {
+  animation: fadeUp 900ms var(--ease-standard) 600ms both;
+}
+
+/* Tablet (768–1023): keep cards visible but pull them closer to edge */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-est-badge {
+    top: 100px !important;
+    right: 24px !important;
+    width: 78px !important;
+    height: 78px !important;
+  }
+  .hero-quote-card {
+    bottom: 64px !important;
+    right: 24px !important;
+    max-width: 260px !important;
+    font-size: 14px !important;
+  }
+}
+
 
 /* ═══════════════════════════════════════════════════════════════════════
    MOBILE LUXURY LAYER — premium fashion-brand feel, NOT shrunk desktop
@@ -767,6 +789,10 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
     );
     pointer-events: none;
   }
+
+  /* Hide floating overlay cards on mobile — they would collide with content */
+  .hero-est-badge,
+  .hero-quote-card { display: none !important; }
 
   /* Shrink twilight glow on mobile so it doesn't overwhelm */
   .hero-twilight-glow {

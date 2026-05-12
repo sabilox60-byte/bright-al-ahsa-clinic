@@ -180,6 +180,72 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* ── Floating Est. badge — top-right of section (over the video) ──── */}
+      <div
+        className="hero-est-badge"
+        style={{
+          position: "absolute",
+          top: 120,
+          right: "5%",
+          background: "#0a1f2e",
+          color: "#fdfbf6",
+          borderRadius: 999,
+          width: 92,
+          height: 92,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          boxShadow: "0 0 0 4px rgba(248,246,240,0.6), 0 12px 32px rgba(10,31,46,0.25)",
+          zIndex: 4,
+        }}
+      >
+        <span
+          className="font-prose italic"
+          style={{ fontSize: 11, color: "#b8935a", letterSpacing: "0.06em" }}
+        >
+          est.
+        </span>
+        <span className="font-serif" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1 }}>
+          {clinicConfig.brand.established}
+        </span>
+      </div>
+
+      {/* ── Floating pull-quote card — bottom-right of section ───────────── */}
+      <div
+        className="hero-quote-card"
+        style={{
+          position: "absolute",
+          bottom: 96,
+          right: "5%",
+          maxWidth: 300,
+          background: "#fdfbf6",
+          borderRadius: 14,
+          padding: "18px 22px",
+          boxShadow: "0 0 0 1px rgba(212,205,184,0.7), 0 12px 32px rgba(10,31,46,0.12)",
+          zIndex: 4,
+        }}
+      >
+        <div
+          className="font-prose italic"
+          style={{ color: "#0a1f2e", fontSize: 16, lineHeight: 1.45 }}
+        >
+          {clinicConfig.hero.pullQuote.en}
+        </div>
+        <div
+          style={{
+            fontSize: 11,
+            color: "#6a7785",
+            marginTop: 10,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            fontWeight: 600,
+          }}
+        >
+          {clinicConfig.hero.pullQuoteAttribution.en}
+        </div>
+      </div>
     </section>
   );
 }
