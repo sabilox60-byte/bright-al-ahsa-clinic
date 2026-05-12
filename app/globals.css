@@ -782,33 +782,12 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
   /* Hide secondary CTA on mobile — primary + sister-share + ribbon are enough */
   .hero-cta-secondary { display: none !important; }
 
-  /* ── Hero video — keep visible on mobile (it's the closing shot) ─── */
-  /* Recenter crop so subject stays in frame (mobile = portrait-ish viewport) */
+  /* ── Hero video on mobile — FULL visibility, no overlay ─────────────
+     Text is now white with dark-navy text-shadow halo, so video stays
+     untouched. Recenter crop so the subject stays in frame. */
   .hero-video {
     object-position: center center !important;
-    opacity: 0.85 !important; /* slightly dimmer so text reads cleanly */
-  }
-
-  /* Stronger top-down readability gradient on mobile — text sits on top */
-  .hero-section::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(
-      180deg,
-      rgba(246, 245, 244, 0.94) 0%,
-      rgba(246, 245, 244, 0.82) 35%,
-      rgba(246, 245, 244, 0.52) 70%,
-      rgba(246, 245, 244, 0.25) 100%
-    );
-    pointer-events: none;
-  }
-
-  /* Shrink twilight glow on mobile so it doesn't overwhelm */
-  .hero-twilight-glow {
-    width: 280px !important;
-    height: 280px !important;
+    opacity: 1 !important;
   }
 
   /* ── Snap-scroll strips on mobile (Outcome Compass + Journal + Team + Services) ── */
