@@ -38,7 +38,7 @@ export default function Hero() {
       style={{
         minHeight: "calc(100vh - 80px)",
         overflow: "hidden",
-        background: "#f8f6f0",
+        background: "#fbf9f4",
       }}
     >
       {/* ── Full-width background video (autoplay + mute + loop) ─────────── */}
@@ -74,7 +74,7 @@ export default function Hero() {
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(90deg, rgba(248,246,240,0.96) 0%, rgba(248,246,240,0.88) 35%, rgba(248,246,240,0.55) 60%, rgba(248,246,240,0.15) 100%)",
+            "linear-gradient(90deg, rgba(251,249,244,0.96) 0%, rgba(251,249,244,0.88) 35%, rgba(251,249,244,0.55) 60%, rgba(251,249,244,0.15) 100%)",
           zIndex: 1,
         }}
       />

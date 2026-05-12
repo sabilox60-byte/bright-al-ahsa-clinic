@@ -11,21 +11,34 @@
    to <html> via clinicConfig (e.g. <html className="theme-linen">).
    ──────────────────────────────────────────────────────────────────────── */
 :root {
-  --canvas: #f8f6f0;
-  --canvas-soft: #fdfbf6;
-  --canvas-ultra: #fefcf7;       /* lighter still — for nested sections */
+  /* CANVAS — refined: kept warm undertone, lifted toward near-white for LA-clinic
+     cleanliness. Background gets a tonal lift without going sterile-white. */
+  --canvas: #fbf9f4;             /* was #f8f6f0 — lighter, cleaner */
+  --canvas-soft: #ffffff;        /* was #fdfbf6 — pure white surfaces */
+  --canvas-ultra: #ffffff;       /* nested sections — clinical breathing room */
+
+  /* INK — kept Bright's navy (medical authority + facade identity) */
   --ink: #0a1f2e;
   --ink-soft: #2a3f4f;
-  --muted: #6a7785;
-  --primary: #b8935a;
-  --primary-deep: #9a7847;
-  --accent-warm: #d4b87a;
-  --surface-sand: #ede5d3;
-  --surface-sand-soft: #f3ecdb;  /* lighter sand for layered sections */
-  --surface-card: #f0ead8;
-  --border-warm: #d4cdb8;
+  --muted: #7a8290;              /* slightly cooler, more refined */
+
+  /* GOLD — sharper, closer to true luxury gold without being LA-identical */
+  --primary: #c8a04e;            /* was #b8935a (bronze) — push to truer gold */
+  --primary-deep: #a8843a;       /* was #9a7847 — deeper, richer */
+  --accent-warm: #e8d4b8;        /* champagne (LA-inspired soft accent) */
+
+  /* SURFACES — pure white cards, refined sand for layered sections */
+  --surface-sand: #f5efe1;       /* was #ede5d3 — lighter, cleaner */
+  --surface-sand-soft: #faf5e8;  /* was #f3ecdb */
+  --surface-card: #ffffff;       /* was #f0ead8 — pure white cards (LA move) */
+
+  /* BORDERS — much lighter, refined hairlines */
+  --border-warm: #ece5d4;        /* was #d4cdb8 — minimal divider line */
+
+  /* DARK SURFACE — keep navy (not LA's charcoal) — Bright's signature */
   --dark-surface: #0a1f2e;
-  --on-dark: #f8f6f0;
+  --on-dark: #fbf9f4;
+
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --dur-fast: 150ms;
   --dur-base: 250ms;
@@ -99,13 +112,14 @@ html.theme-olive {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(180deg, var(--canvas) 0%, var(--surface-card) 100%);
+    /* CLEANER: subtle warm-cream → white wash instead of cream-to-sand */
+    background: linear-gradient(180deg, var(--canvas) 0%, var(--canvas-soft) 100%);
     background-color: var(--canvas);
   }
 
-  /* Lighter alternating-section utility — eases visual rhythm down the page */
+  /* Lighter alternating-section utility — LA-clinic clean rhythm */
   .section-air      { background: var(--canvas-ultra); }
-  .section-cream    { background: linear-gradient(180deg, var(--canvas-soft) 0%, var(--canvas) 100%); }
+  .section-cream    { background: var(--canvas); }
   .section-sand-soft{ background: linear-gradient(180deg, var(--surface-sand-soft) 0%, var(--surface-sand) 100%); }
 
   /* Subtle paper grain — GPU-composited, no fixed attachment */
@@ -201,12 +215,12 @@ html.theme-olive {
     line-height: 1.2;
   }
 
-  /* Buttons — luxury gold with soft inner highlight */
+  /* Buttons — sharper luxury gold (closer to LA Clinic's #D4AF37) */
   .btn-primary {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(180deg, #c9a570 0%, #b8935a 50%, #9a7847 100%);
+    background: linear-gradient(180deg, #d4b061 0%, #c8a04e 50%, #a8843a 100%);
     color: var(--canvas-soft);
     border: none;
     padding: 14px 26px;
@@ -216,17 +230,17 @@ html.theme-olive {
     text-transform: uppercase;
     border-radius: 4px;
     box-shadow:
-      0 0 0 1px rgba(154, 120, 71, 0.6),
-      0 1px 0 rgba(255, 240, 210, 0.4) inset,
-      0 4px 14px rgba(184, 147, 90, 0.28);
+      0 0 0 1px rgba(168, 132, 58, 0.55),
+      0 1px 0 rgba(255, 240, 200, 0.5) inset,
+      0 4px 14px rgba(200, 160, 78, 0.28);
     transition: all var(--dur-base) var(--ease-standard);
     cursor: pointer;
   }
   .btn-primary:hover {
-    background: linear-gradient(180deg, #b8935a 0%, #9a7847 100%);
+    background: linear-gradient(180deg, #c8a04e 0%, #a8843a 100%);
     box-shadow:
-      0 0 0 1px rgba(154, 120, 71, 0.75),
-      0 6px 20px rgba(184, 147, 90, 0.4);
+      0 0 0 1px rgba(168, 132, 58, 0.75),
+      0 6px 20px rgba(200, 160, 78, 0.4);
     transform: translateY(-1px);
   }
 
@@ -306,22 +320,20 @@ html.theme-olive {
   .chip-dark { background: rgba(10, 31, 46, 0.92); color: var(--accent-warm); box-shadow: none; }
   .chip-sage { background: rgba(212, 205, 184, 0.5); color: var(--ink-soft); box-shadow: 0 0 0 1px rgba(122, 132, 113, 0.3); }
 
-  /* Cards — warmer ivory with luxury shadow */
+  /* Cards — LA-clinic clean: pure white surface with refined hairline shadow */
   .card {
-    background: linear-gradient(180deg, #fdfbf6 0%, #f0ead8 100%);
+    background: #ffffff;
     border-radius: 16px;
     box-shadow:
-      0 0 0 1px rgba(212, 205, 184, 0.6),
-      0 1px 0 rgba(255, 255, 255, 0.6) inset,
-      0 12px 36px rgba(10, 31, 46, 0.06);
+      0 0 0 1px rgba(236, 229, 212, 0.9),
+      0 12px 36px rgba(10, 31, 46, 0.04);
     transition: all var(--dur-base) var(--ease-standard);
   }
   .card-interactive { cursor: pointer; }
   .card-interactive:hover {
     box-shadow:
-      0 0 0 1px rgba(184, 147, 90, 0.5),
-      0 1px 0 rgba(255, 255, 255, 0.6) inset,
-      0 18px 56px rgba(10, 31, 46, 0.12);
+      0 0 0 1px rgba(200, 160, 78, 0.45),
+      0 18px 56px rgba(10, 31, 46, 0.10);
     transform: translateY(-2px);
   }
 
