@@ -555,6 +555,19 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
   .hero-twilight-glow { animation: none; }
 }
 
+/* Hero text readability — soft cream halo behind navy text so it reads
+   over any frame of the background video. No washed-out overlay needed. */
+.hero-textreadable .h-display,
+.hero-textreadable .h-display em,
+.hero-textreadable .hero-lead-italic,
+.hero-textreadable .hero-lead,
+.hero-textreadable .overline {
+  text-shadow:
+    0 0 18px rgba(246, 245, 244, 0.92),
+    0 0 6px rgba(246, 245, 244, 0.85),
+    0 1px 2px rgba(246, 245, 244, 0.6);
+}
+
 /* Floating Est. badge + pull-quote card — luxury micro-rise on load */
 .hero-est-badge,
 .hero-quote-card {

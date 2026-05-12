@@ -67,32 +67,8 @@ export default function Hero() {
         <source src="/hero/bright-hero.webm" type="video/webm" />
       </video>
 
-      {/* ── Readability overlay — gradient ensures text stays legible ───── */}
-      <div
-        aria-hidden
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "linear-gradient(90deg, rgba(246,245,244,0.96) 0%, rgba(246,245,244,0.88) 35%, rgba(246,245,244,0.55) 60%, rgba(246,245,244,0.15) 100%)",
-          zIndex: 1,
-        }}
-      />
-
-      {/* ── Bright building's night-purple ambient glow ──────────────────── */}
-      <span className="hero-twilight-glow" aria-hidden style={{ top: "12%", left: "-15%", zIndex: 2 }} />
-      <span
-        className="hero-twilight-glow"
-        aria-hidden
-        style={{
-          top: "55%",
-          right: "-12%",
-          width: 360,
-          height: 360,
-          animationDelay: "-3s",
-          zIndex: 2,
-        }}
-      />
+      {/* Overlay + twilight glows removed — video is the visual hero now.
+          Text readability is handled via .hero-textreadable text-shadow below. */}
 
       <ScrollIndicator locale="en" />
 
@@ -105,11 +81,11 @@ export default function Hero() {
           paddingBottom: 96,
         }}
       >
-        <div className="fade-up" style={{ maxWidth: 620 }}>
+        <div className="fade-up hero-textreadable" style={{ maxWidth: 620 }}>
           <div className="overline" style={{ color: "#b29362", marginBottom: 18 }}>
             {clinicConfig.hero.eyebrow.en}
           </div>
-          <h1 className="h-display hero-line-rise" style={{ lineHeight: 1.12, paddingBottom: 8 }}>
+          <h1 className="h-display hero-line-rise" style={{ lineHeight: 1.12, paddingBottom: 8, color: "#0a1f2e" }}>
             <span>{clinicConfig.hero.headlinePartA.en}</span>
             <br />
             <em
@@ -128,7 +104,7 @@ export default function Hero() {
             style={{
               fontSize: 22,
               lineHeight: 1.5,
-              color: "#2a3f4f",
+              color: "#0a1f2e",
               marginTop: 48,
               maxWidth: 540,
             }}
@@ -140,7 +116,7 @@ export default function Hero() {
             style={{
               fontSize: 18,
               lineHeight: 1.6,
-              color: "#2a3f4f",
+              color: "#0a1f2e",
               marginTop: 18,
               marginBottom: 32,
               maxWidth: 540,
