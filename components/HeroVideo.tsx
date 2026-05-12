@@ -3,59 +3,50 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Hero background video — simplified to single H.264 source for maximum
- * iOS Safari autoplay reliability.
+ * Hero background video — written as raw HTML to guarantee the `muted`
+ * attribute is in the DOM at parse time.
  *
- * Why the simplification (after 3 failed attempts with multi-source):
- *  - Multiple <source> children with codec hints (av01, hvc1, avc1) can
- *    confuse iOS Safari into picking a source it cannot reliably decode,
- *    and Safari does NOT always fall back to the next source on decode
- *    failure — it just stalls.
- *  - Single H.264 .mp4 via direct `src` attribute is the pattern Apple,
- *    Tesla, and most premium sites use because it has the strongest
- *    autoplay-on-iOS track record.
+ * THE BUG WE'RE FIXING: React's <video muted /> renders the muted state
+ * as a JS property on the element, not always as an HTML attribute in the
+ * parsed DOM. iOS Safari checks the attribute at HTML parse time to
+ * decide whether to allow autoplay — if the attribute isn't there at
+ * parse time, Safari decides "this video has audio, autoplay denied"
+ * BEFORE React hydrates or our useEffect runs. No amount of JS .play()
+ * can recover from that initial deny.
  *
- * H.264 file is 7.5 MB (vs 3.9 MB H.265) — extra 3.6 MB is the price for
- * guaranteed autoplay. Vercel CDN caches it 30 days so subsequent visits
- * are instant.
+ * By using dangerouslySetInnerHTML, the <video> element is parsed by
+ * the browser EXACTLY as written — autoplay + muted + playsinline are
+ * all literal HTML attributes, satisfying Safari's parse-time check.
  *
- * JS retry loop kept as defense against slow buffering / LPM / strict
- * Safari "Auto-Play" setting.
+ * Source: https://medium.com/@BoltAssaults/autoplay-muted-html5-video-safari-ios-10-in-react-673ae50ba1f5
  */
 export default function HeroVideo() {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const v = videoRef.current;
+    const v = containerRef.current?.querySelector("video") as HTMLVideoElement | null;
     if (!v) return;
 
-    // Properties (not just attributes) — Safari edge cases need these set in JS
+    // Belt-and-braces: also set properties (some Safari edges only check these)
     v.muted = true;
     v.defaultMuted = true;
     v.playsInline = true;
-    v.setAttribute("webkit-playsinline", "true");
-    v.setAttribute("x-webkit-airplay", "deny");
 
     let cancelled = false;
 
     const tryPlay = () => {
       if (cancelled || !v.paused) return;
       const p = v.play();
-      if (p !== undefined) {
-        p.catch(() => {});
-      }
+      if (p !== undefined) p.catch(() => {});
     };
 
-    // Immediate + repeated attempts during first 4 seconds
     tryPlay();
     const retryTimer = setInterval(tryPlay, 250);
     const stopRetry = setTimeout(() => clearInterval(retryTimer), 4000);
 
-    // Hook every readiness event
     const events = ["loadedmetadata", "loadeddata", "canplay", "canplaythrough"];
     events.forEach((e) => v.addEventListener(e, tryPlay));
 
-    // Final fallback: first interaction unblocks
     const onGesture = () => {
       tryPlay();
       ["touchstart", "click", "scroll"].forEach((e) =>
@@ -78,25 +69,24 @@ export default function HeroVideo() {
   }, []);
 
   return (
-    <video
-      ref={videoRef}
-      className="hero-video"
-      src="/hero/bright-hero-h264.mp4"
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="auto"
-      poster="/hero/bright-hero-poster.jpg"
-      aria-hidden="true"
-      style={{
-        position: "absolute",
-        inset: 0,
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        objectPosition: "center right",
-        zIndex: 0,
+    <div
+      ref={containerRef}
+      style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}
+      dangerouslySetInnerHTML={{
+        __html: `<video
+          class="hero-video"
+          src="/hero/bright-hero-h264.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="/hero/bright-hero-poster.jpg"
+          aria-hidden="true"
+          webkit-playsinline="true"
+          x-webkit-airplay="deny"
+          style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center right;z-index:0;"
+        ></video>`,
       }}
     />
   );
