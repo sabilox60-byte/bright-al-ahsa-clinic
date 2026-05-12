@@ -11,7 +11,7 @@ export default function BookCta() {
       >
         <Portrait
           variant="sand"
-          style={{ width: 200, height: 240, background: "#ede5d3" }}
+          style={{ width: 200, height: 240, background: "#f0ece1" }}
           rounded={20}
         />
         <div className="text-center">
@@ -27,7 +27,7 @@ export default function BookCta() {
           >
             {b.eyebrow.en}
           </div>
-          <h2 className="h-xl" style={{ color: "#fdfbf6" }}>
+          <h2 className="h-xl" style={{ color: "#ffffff" }}>
             {b.headline.en}
           </h2>
           <p
@@ -48,7 +48,7 @@ export default function BookCta() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                background: "#fdfbf6",
+                background: "#ffffff",
                 color: "#0a1f2e",
                 padding: "14px 28px",
                 borderRadius: 4,
@@ -65,7 +65,7 @@ export default function BookCta() {
               href={`tel:${clinicConfig.contact.phone}`}
               style={{
                 background: "transparent",
-                color: "#fdfbf6",
+                color: "#ffffff",
                 padding: "14px 28px",
                 borderRadius: 4,
                 fontWeight: 600,
@@ -82,7 +82,7 @@ export default function BookCta() {
         </div>
         <Portrait
           variant="terracotta"
-          style={{ width: 200, height: 240, background: "#d4b87a" }}
+          style={{ width: 200, height: 240, background: "#d4b899" }}
           rounded={20}
         />
       </div>

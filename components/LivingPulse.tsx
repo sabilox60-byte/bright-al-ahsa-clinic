@@ -58,8 +58,8 @@ export default async function LivingPulse({ locale = "en" }: { locale?: Locale }
         zIndex: 2,
         background: "rgba(253, 251, 246, 0.88)",
         backdropFilter: "blur(8px)",
-        borderTop: "1px solid rgba(184, 147, 90, 0.18)",
-        borderBottom: "1px solid rgba(184, 147, 90, 0.18)",
+        borderTop: "1px solid rgba(178, 147, 98, 0.18)",
+        borderBottom: "1px solid rgba(178, 147, 98, 0.18)",
         padding: "10px 0",
         fontSize: 12,
         letterSpacing: "0.04em",
@@ -81,7 +81,7 @@ export default async function LivingPulse({ locale = "en" }: { locale?: Locale }
           style={{
             fontSize: 10,
             letterSpacing: "0.32em",
-            color: "#9a7847",
+            color: "#8f7548",
             whiteSpace: "nowrap",
             flex: "0 0 auto",
           }}
@@ -106,7 +106,7 @@ export default async function LivingPulse({ locale = "en" }: { locale?: Locale }
             >
               <span
                 className="living-pulse-label"
-                style={{ color: "#6a7785", textTransform: "uppercase", fontSize: 10, letterSpacing: "0.2em" }}
+                style={{ color: "#7f8487", textTransform: "uppercase", fontSize: 10, letterSpacing: "0.2em" }}
               >
                 {item.label}
               </span>

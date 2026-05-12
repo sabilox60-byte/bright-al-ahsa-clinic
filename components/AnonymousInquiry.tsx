@@ -47,12 +47,12 @@ export default function AnonymousInquiry({ locale = "en" }: { locale?: Locale })
       className="card"
       style={{
         padding: 28,
-        background: "rgba(184,147,90,0.04)",
-        border: "1px dotted rgba(184,147,90,0.4)",
+        background: "rgba(178,147,98,0.04)",
+        border: "1px dotted rgba(178,147,98,0.4)",
         boxShadow: "none",
       }}
     >
-      <div className="overline" style={{ color: "#9a7847", marginBottom: 12 }}>
+      <div className="overline" style={{ color: "#8f7548", marginBottom: 12 }}>
         ✦ {locale === "ar" ? "استفسار مجهول" : "Anonymous inquiry"}
       </div>
       <h3 className="font-serif" style={{ fontSize: 22, color: "#0a1f2e", marginBottom: 8 }}>

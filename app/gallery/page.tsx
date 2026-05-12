@@ -32,8 +32,8 @@ export default function GalleryPage() {
         <section
           style={{
             padding: "32px 0",
-            background: "#f8f6f0",
-            borderBottom: "1px dotted #9a7847",
+            background: "#f6f5f4",
+            borderBottom: "1px dotted #8f7548",
             position: "relative",
             zIndex: 2,
           }}
@@ -49,9 +49,9 @@ export default function GalleryPage() {
                   fontSize: 13,
                   fontWeight: 500,
                   background: filter === cat.id ? "#0a1f2e" : "transparent",
-                  color: filter === cat.id ? "#fdfbf6" : "#2a3f4f",
+                  color: filter === cat.id ? "#ffffff" : "#2a3f4f",
                   border: "none",
-                  boxShadow: filter === cat.id ? "none" : "0 0 0 1px #ede5d3",
+                  boxShadow: filter === cat.id ? "none" : "0 0 0 1px #f0ece1",
                   cursor: "pointer",
                   fontFamily: "var(--font-inter-tight), 'Inter Tight', system-ui, sans-serif",
                   transition: "all 150ms cubic-bezier(0.4,0,0.2,1)",
@@ -105,7 +105,7 @@ export default function GalleryPage() {
                         top: 10,
                         left: 10,
                         background: "#0a1f2e",
-                        color: "#fdfbf6",
+                        color: "#ffffff",
                       }}
                     >
                       After · {c.weeks} wks
@@ -128,7 +128,7 @@ export default function GalleryPage() {
                   </div>
                   <span
                     className="font-prose italic"
-                    style={{ color: "#b8935a" }}
+                    style={{ color: "#b29362" }}
                   >
                     {c.weeks} weeks
                   </span>
@@ -142,7 +142,7 @@ export default function GalleryPage() {
             style={{
               marginTop: 40,
               textAlign: "center",
-              color: "#6a7785",
+              color: "#7f8487",
               fontSize: 13,
             }}
           >

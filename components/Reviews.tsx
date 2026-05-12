@@ -7,7 +7,7 @@ export default function Reviews() {
     <section className="section" id="reviews">
       <div className="container-page">
         <div className="text-center" style={{ marginBottom: 48 }}>
-          <div className="overline" style={{ color: "#b8935a" }}>
+          <div className="overline" style={{ color: "#b29362" }}>
             {r.eyebrow.en}
           </div>
           <p
@@ -36,10 +36,10 @@ export default function Reviews() {
               className="m-0"
               style={{
                 padding: 32,
-                background: "#fdfbf6",
+                background: "#ffffff",
                 borderRadius: 16,
                 boxShadow:
-                  "0 0 0 1px rgba(184,147,90,0.3), 0 12px 32px rgba(10,31,46,0.06)",
+                  "0 0 0 1px rgba(178,147,98,0.3), 0 12px 32px rgba(10,31,46,0.06)",
                 display: "flex",
                 flexDirection: "column",
                 gap: 20,
@@ -60,14 +60,14 @@ export default function Reviews() {
                   style={{
                     fontSize: 64,
                     lineHeight: 0.6,
-                    color: "rgba(184,147,90,0.55)",
+                    color: "rgba(178,147,98,0.55)",
                   }}
                 >
                   &ldquo;
                 </span>
                 <span
                   style={{
-                    color: "#b8935a",
+                    color: "#b29362",
                     letterSpacing: "2px",
                     fontSize: 13,
                     marginTop: 8,
@@ -98,7 +98,7 @@ export default function Reviews() {
                   alignItems: "center",
                   gap: 14,
                   paddingTop: 18,
-                  borderTop: "1px dotted rgba(184,147,90,0.4)",
+                  borderTop: "1px dotted rgba(178,147,98,0.4)",
                 }}
               >
                 <Portrait
@@ -122,7 +122,7 @@ export default function Reviews() {
                   <div
                     style={{
                       fontSize: 12,
-                      color: "#6a7785",
+                      color: "#7f8487",
                       marginTop: 3,
                       letterSpacing: "0.02em",
                     }}

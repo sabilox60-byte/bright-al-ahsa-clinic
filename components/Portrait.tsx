@@ -3,10 +3,10 @@ import type { CSSProperties } from "react";
 type Variant = "terracotta" | "sand" | "sage" | "dark";
 
 const palettes: Record<Variant, { skin: string; line: string; accent: string; bg: string }> = {
-  terracotta: { skin: "#ede5d3", line: "#0a1f2e", accent: "#b8935a", bg: "#f0ead8" },
-  sand: { skin: "#ede5d3", line: "#0a1f2e", accent: "#b8935a", bg: "#ede5d3" },
-  sage: { skin: "#d4cdb8", line: "#0a1f2e", accent: "#6a7785", bg: "#d4cdb8" },
-  dark: { skin: "#2a3f4f", line: "#fdfbf6", accent: "#b8935a", bg: "#0a1f2e" },
+  terracotta: { skin: "#f0ece1", line: "#0a1f2e", accent: "#b29362", bg: "#ffffff" },
+  sand: { skin: "#f0ece1", line: "#0a1f2e", accent: "#b29362", bg: "#f0ece1" },
+  sage: { skin: "#ece5d4", line: "#0a1f2e", accent: "#7f8487", bg: "#ece5d4" },
+  dark: { skin: "#2a3f4f", line: "#ffffff", accent: "#b29362", bg: "#0a1f2e" },
 };
 
 export default function Portrait({

@@ -5,9 +5,9 @@ export default function HeroIllustration({ maxSize = 460 }: { maxSize?: number }
       style={{
         maxWidth: maxSize,
         aspectRatio: "1 / 1.1",
-        background: "#f0ead8",
+        background: "#ffffff",
         borderRadius: 32,
-        boxShadow: "0 0 0 1px #ede5d3",
+        boxShadow: "0 0 0 1px #f0ece1",
       }}
     >
       <svg
@@ -24,11 +24,11 @@ export default function HeroIllustration({ maxSize = 460 }: { maxSize?: number }
         </defs>
         <g clipPath="url(#cardClip)">
           {/* Background sand disk */}
-          <circle cx="360" cy="110" r="160" fill="#d4cdb8" opacity="0.7" />
+          <circle cx="360" cy="110" r="160" fill="#ece5d4" opacity="0.7" />
           {/* Face silhouette */}
           <path
             d="M 110 484 C 110 400 120 370 140 360 C 125 330 120 290 140 250 C 170 200 220 180 265 195 C 320 214 348 270 340 330 C 338 348 330 365 320 378 C 345 390 365 420 370 484 Z"
-            fill="#ede5d3"
+            fill="#f0ece1"
             stroke="#0a1f2e"
             strokeWidth="2"
           />
@@ -40,7 +40,7 @@ export default function HeroIllustration({ maxSize = 460 }: { maxSize?: number }
           {/* Hand to cheek */}
           <path
             d="M 280 340 C 295 330 315 328 325 340 C 332 348 332 360 326 372 C 320 380 306 386 294 384 C 280 382 272 372 272 360 C 272 352 274 346 280 340 Z"
-            fill="#ede5d3"
+            fill="#f0ece1"
             stroke="#0a1f2e"
             strokeWidth="1.8"
           />
@@ -70,23 +70,23 @@ export default function HeroIllustration({ maxSize = 460 }: { maxSize?: number }
           <circle cx="274" cy="275" r="2.5" fill="#0a1f2e" />
           <path
             d="M 225 318 Q 246 326 270 316"
-            stroke="#b8935a"
+            stroke="#b29362"
             strokeWidth="2"
             fill="none"
             strokeLinecap="round"
           />
           {/* Floating marks */}
-          <circle cx="70" cy="80" r="4" fill="#b8935a" />
+          <circle cx="70" cy="80" r="4" fill="#b29362" />
           <path
             d="M 60 180 q 10 -6 20 0"
-            stroke="#6a7785"
+            stroke="#7f8487"
             strokeWidth="1.5"
             fill="none"
             strokeLinecap="round"
           />
           <path
             d="M 380 400 q -10 10 -22 4"
-            stroke="#6a7785"
+            stroke="#7f8487"
             strokeWidth="1.5"
             fill="none"
             strokeLinecap="round"

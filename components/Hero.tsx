@@ -20,7 +20,7 @@ function StatMark({ num, label }: { num: string; label: string }) {
       <div
         style={{
           fontSize: 12,
-          color: "#6a7785",
+          color: "#7f8487",
           marginTop: 6,
           letterSpacing: "0.3px",
         }}
@@ -38,7 +38,7 @@ export default function Hero() {
       style={{
         minHeight: "calc(100vh - 80px)",
         overflow: "hidden",
-        background: "#fbf9f4",
+        background: "#f6f5f4",
       }}
     >
       {/* ── Full-width background video (autoplay + mute + loop) ─────────── */}
@@ -74,7 +74,7 @@ export default function Hero() {
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(90deg, rgba(251,249,244,0.96) 0%, rgba(251,249,244,0.88) 35%, rgba(251,249,244,0.55) 60%, rgba(251,249,244,0.15) 100%)",
+            "linear-gradient(90deg, rgba(246,245,244,0.96) 0%, rgba(246,245,244,0.88) 35%, rgba(246,245,244,0.55) 60%, rgba(246,245,244,0.15) 100%)",
           zIndex: 1,
         }}
       />
@@ -106,7 +106,7 @@ export default function Hero() {
         }}
       >
         <div className="fade-up" style={{ maxWidth: 620 }}>
-          <div className="overline" style={{ color: "#b8935a", marginBottom: 18 }}>
+          <div className="overline" style={{ color: "#b29362", marginBottom: 18 }}>
             {clinicConfig.hero.eyebrow.en}
           </div>
           <h1 className="h-display hero-line-rise" style={{ lineHeight: 1.12, paddingBottom: 8 }}>
@@ -170,7 +170,7 @@ export default function Hero() {
               <div key={i} className="flex items-center gap-9">
                 {i > 0 && (
                   <span
-                    style={{ width: 1, height: 40, background: "#d4cdb8" }}
+                    style={{ width: 1, height: 40, background: "#ece5d4" }}
                     aria-hidden
                   />
                 )}
@@ -189,7 +189,7 @@ export default function Hero() {
           top: 120,
           right: "5%",
           background: "#0a1f2e",
-          color: "#fdfbf6",
+          color: "#ffffff",
           borderRadius: 999,
           width: 92,
           height: 92,
@@ -197,13 +197,13 @@ export default function Hero() {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          boxShadow: "0 0 0 4px rgba(248,246,240,0.6), 0 12px 32px rgba(10,31,46,0.25)",
+          boxShadow: "0 0 0 4px rgba(246,245,244,0.6), 0 12px 32px rgba(10,31,46,0.25)",
           zIndex: 4,
         }}
       >
         <span
           className="font-prose italic"
-          style={{ fontSize: 11, color: "#b8935a", letterSpacing: "0.06em" }}
+          style={{ fontSize: 11, color: "#b29362", letterSpacing: "0.06em" }}
         >
           est.
         </span>
@@ -220,10 +220,10 @@ export default function Hero() {
           bottom: 96,
           right: "5%",
           maxWidth: 300,
-          background: "#fdfbf6",
+          background: "#ffffff",
           borderRadius: 14,
           padding: "18px 22px",
-          boxShadow: "0 0 0 1px rgba(212,205,184,0.7), 0 12px 32px rgba(10,31,46,0.12)",
+          boxShadow: "0 0 0 1px rgba(236,229,212,0.7), 0 12px 32px rgba(10,31,46,0.12)",
           zIndex: 4,
         }}
       >
@@ -236,7 +236,7 @@ export default function Hero() {
         <div
           style={{
             fontSize: 11,
-            color: "#6a7785",
+            color: "#7f8487",
             marginTop: 10,
             letterSpacing: "0.12em",
             textTransform: "uppercase",

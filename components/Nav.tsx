@@ -28,9 +28,9 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
 
   const bg = dark
     ? scrolled ? "rgba(10,31,46,0.95)" : "rgba(10,31,46,0.6)"
-    : scrolled ? "rgba(248,246,240,0.95)" : "rgba(248,246,240,0.6)";
-  const borderColor = dark ? "#14283a" : "#d4cdb8";
-  const linkColor = dark ? "#d4cdb8" : "#2a3f4f";
+    : scrolled ? "rgba(246,245,244,0.95)" : "rgba(246,245,244,0.6)";
+  const borderColor = dark ? "#14283a" : "#ece5d4";
+  const linkColor = dark ? "#ece5d4" : "#2a3f4f";
 
   return (
     <>
@@ -61,7 +61,7 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
                   href={item.href}
                   style={{
                     fontSize: 14,
-                    color: active ? (dark ? "#fdfbf6" : "#0a1f2e") : linkColor,
+                    color: active ? (dark ? "#ffffff" : "#0a1f2e") : linkColor,
                     fontWeight: active ? 500 : 400,
                     padding: "4px 0",
                     position: "relative",
@@ -78,7 +78,7 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
                         right: 0,
                         bottom: -4,
                         height: 2,
-                        background: "#b8935a",
+                        background: "#b29362",
                         borderRadius: 2,
                       }}
                     />
@@ -127,7 +127,7 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
                   display: "block",
                   width: menuOpen ? 22 : 22,
                   height: 1.5,
-                  background: dark ? "#fdfbf6" : "#0a1f2e",
+                  background: dark ? "#ffffff" : "#0a1f2e",
                   borderRadius: 2,
                   transition: "transform 200ms, opacity 200ms",
                   transform: menuOpen ? "translateY(6.5px) rotate(45deg)" : "none",
@@ -138,7 +138,7 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
                   display: "block",
                   width: 16,
                   height: 1.5,
-                  background: dark ? "#fdfbf6" : "#0a1f2e",
+                  background: dark ? "#ffffff" : "#0a1f2e",
                   borderRadius: 2,
                   transition: "opacity 200ms",
                   opacity: menuOpen ? 0 : 1,
@@ -149,7 +149,7 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
                   display: "block",
                   width: menuOpen ? 22 : 22,
                   height: 1.5,
-                  background: dark ? "#fdfbf6" : "#0a1f2e",
+                  background: dark ? "#ffffff" : "#0a1f2e",
                   borderRadius: 2,
                   transition: "transform 200ms, opacity 200ms",
                   transform: menuOpen ? "translateY(-6.5px) rotate(-45deg)" : "none",
@@ -164,7 +164,7 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
       {menuOpen && (
         <div
           className="mobile-menu lg:hidden"
-          style={{ background: dark ? "#0a1f2e" : "#f8f6f0" }}
+          style={{ background: dark ? "#0a1f2e" : "#f6f5f4" }}
         >
           <nav style={{ flex: 1 }}>
             {clinicConfig.navigation.items.map((item) => {
@@ -176,7 +176,7 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
                   className="mobile-menu-link"
                   onClick={() => setMenuOpen(false)}
                   style={{
-                    color: active ? "#b8935a" : (dark ? "#fdfbf6" : "#0a1f2e"),
+                    color: active ? "#b29362" : (dark ? "#ffffff" : "#0a1f2e"),
                   }}
                 >
                   {item.label.en}
@@ -197,7 +197,7 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
             <div
               style={{
                 fontSize: 13,
-                color: dark ? "#6a7785" : "#6a7785",
+                color: dark ? "#7f8487" : "#7f8487",
                 textAlign: "center",
               }}
             >

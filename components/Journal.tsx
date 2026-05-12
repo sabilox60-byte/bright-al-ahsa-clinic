@@ -11,7 +11,7 @@ export default function Journal() {
           style={{ marginBottom: 40 }}
         >
           <div>
-            <div className="overline" style={{ color: "#b8935a" }}>
+            <div className="overline" style={{ color: "#b29362" }}>
               {j.eyebrow.en}
             </div>
             <h2 className="h-xl" style={{ marginTop: 14 }}>
@@ -22,7 +22,7 @@ export default function Journal() {
             className="font-prose italic"
             style={{
               maxWidth: 440,
-              color: "#6a7785",
+              color: "#7f8487",
               fontSize: 17,
             }}
           >
@@ -43,7 +43,7 @@ export default function Journal() {
                 rounded={0}
               />
               <div style={{ padding: 24 }}>
-                <div className="overline" style={{ color: "#6a7785" }}>
+                <div className="overline" style={{ color: "#7f8487" }}>
                   {post.tag.en} · {post.date.en}
                 </div>
                 <h3
@@ -56,7 +56,7 @@ export default function Journal() {
                   style={{
                     marginTop: 14,
                     fontSize: 12,
-                    color: "#b8935a",
+                    color: "#b29362",
                     fontWeight: 600,
                     letterSpacing: "0.6px",
                     textTransform: "uppercase",

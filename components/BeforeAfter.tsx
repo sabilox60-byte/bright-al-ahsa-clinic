@@ -47,7 +47,7 @@ export default function BeforeAfter() {
     <section
       className="section"
       id="gallery"
-      style={{ background: "#ede5d3", position: "relative", zIndex: 2 }}
+      style={{ background: "#f0ece1", position: "relative", zIndex: 2 }}
     >
       <div className="container-page">
         {/* Header */}
@@ -61,7 +61,7 @@ export default function BeforeAfter() {
               <h2 className="h-xl" style={{ marginTop: 24 }}>
                 {b.headlinePartA.en}
                 <br />
-                <em style={{ fontStyle: "italic", color: "#b8935a" }}>
+                <em style={{ fontStyle: "italic", color: "#b29362" }}>
                   {b.headlineEm.en}
                 </em>
               </h2>
@@ -82,7 +82,7 @@ export default function BeforeAfter() {
               style={{
                 fontSize: 17,
                 lineHeight: 1.55,
-                color: "#6a7785",
+                color: "#7f8487",
                 maxWidth: 380,
               }}
             >
@@ -129,7 +129,7 @@ export default function BeforeAfter() {
                   color: "#0a1f2e",
                 }}
               >
-                <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: 10, color: "#9a7847", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: 10, color: "#8f7548", letterSpacing: "0.08em", textTransform: "uppercase" }}>
                   Day 1 · Consultation
                 </span>
                 <div style={{ marginTop: 4, fontFamily: "var(--font-source-serif), serif", fontSize: 15, fontStyle: "italic" }}>
@@ -168,7 +168,7 @@ export default function BeforeAfter() {
                   color: "#0a1f2e",
                 }}
               >
-                <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: 10, color: "#9a7847", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: 10, color: "#8f7548", letterSpacing: "0.08em", textTransform: "uppercase" }}>
                   Day 28 · Follow-up
                 </span>
                 <div style={{ marginTop: 4, fontFamily: "var(--font-source-serif), serif", fontSize: 15, fontStyle: "italic" }}>
@@ -191,18 +191,18 @@ export default function BeforeAfter() {
             <ScrollReveal key={i} variant="fade-up" delay={i * 100}>
               <article
                 style={{
-                  background: "#fdfbf6",
+                  background: "#ffffff",
                   borderRadius: 12,
                   overflow: "hidden",
                   boxShadow:
-                    "0 0 0 1px rgba(184,147,90,0.25), 0 18px 56px rgba(10,31,46,0.08)",
+                    "0 0 0 1px rgba(178,147,98,0.25), 0 18px 56px rgba(10,31,46,0.08)",
                   padding: 28,
                 }}
               >
                 <header
                   style={{
                     paddingBottom: 14,
-                    borderBottom: "1px dotted rgba(184,147,90,0.4)",
+                    borderBottom: "1px dotted rgba(178,147,98,0.4)",
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "baseline",
@@ -213,7 +213,7 @@ export default function BeforeAfter() {
                     className="font-mono"
                     style={{
                       fontSize: 11,
-                      color: "#9a7847",
+                      color: "#8f7548",
                       letterSpacing: "0.08em",
                       textTransform: "uppercase",
                     }}
@@ -224,7 +224,7 @@ export default function BeforeAfter() {
                     className="font-mono"
                     style={{
                       fontSize: 10,
-                      color: "#6a7785",
+                      color: "#7f8487",
                       letterSpacing: "0.06em",
                     }}
                   >
@@ -248,7 +248,7 @@ export default function BeforeAfter() {
                       top: -16,
                       left: -8,
                       fontSize: 48,
-                      color: "rgba(184,147,90,0.35)",
+                      color: "rgba(178,147,98,0.35)",
                       fontFamily: "var(--font-source-serif), serif",
                       lineHeight: 1,
                     }}
@@ -259,7 +259,7 @@ export default function BeforeAfter() {
                 </blockquote>
                 <footer
                   style={{
-                    borderTop: "1px dotted rgba(184,147,90,0.4)",
+                    borderTop: "1px dotted rgba(178,147,98,0.4)",
                     paddingTop: 14,
                     marginTop: 18,
                   }}
@@ -277,7 +277,7 @@ export default function BeforeAfter() {
                   <div
                     style={{
                       fontSize: 11,
-                      color: "#6a7785",
+                      color: "#7f8487",
                       marginTop: 4,
                       letterSpacing: "0.04em",
                     }}
@@ -301,14 +301,14 @@ export default function BeforeAfter() {
               flexWrap: "wrap",
               gap: 20,
               paddingTop: 32,
-              borderTop: "1px dotted rgba(184,147,90,0.45)",
+              borderTop: "1px dotted rgba(178,147,98,0.45)",
             }}
           >
             <p
               className="font-prose italic"
               style={{
                 fontSize: 14,
-                color: "#6a7785",
+                color: "#7f8487",
                 maxWidth: 540,
                 lineHeight: 1.5,
                 margin: 0,

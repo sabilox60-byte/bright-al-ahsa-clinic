@@ -43,7 +43,7 @@ export default function ScrollIndicator({ locale = "en" }: { locale?: Locale }) 
           fontSize: 10,
           letterSpacing: "0.32em",
           textTransform: "uppercase",
-          color: "#9a7847",
+          color: "#8f7548",
         }}
       >
         {locale === "ar" ? "اسحبي" : "Scroll"}
@@ -52,7 +52,7 @@ export default function ScrollIndicator({ locale = "en" }: { locale?: Locale }) 
         style={{
           width: 1,
           height: 32,
-          background: "linear-gradient(180deg, rgba(184,147,90,0.6) 0%, transparent 100%)",
+          background: "linear-gradient(180deg, rgba(178,147,98,0.6) 0%, transparent 100%)",
           animation: "scrollPulse 2.4s ease-in-out infinite",
         }}
       />

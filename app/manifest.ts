@@ -8,7 +8,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: clinicConfig.seo.description.en,
     start_url: "/",
     display: "standalone",
-    background_color: "#f8f6f0",
+    background_color: "#f6f5f4",
     theme_color: "#0a1f2e",
     orientation: "portrait",
     icons: [

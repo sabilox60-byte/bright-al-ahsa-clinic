@@ -51,13 +51,13 @@ export default function ReviewsPage() {
                 >
                   {rp.rating}
                 </div>
-                <div style={{ color: "#b8935a", letterSpacing: 3, fontSize: 16, marginTop: 4 }}>
+                <div style={{ color: "#b29362", letterSpacing: 3, fontSize: 16, marginTop: 4 }}>
                   ★★★★★
                 </div>
               </div>
               <div
                 style={{
-                  borderLeft: "1px solid #ede5d3",
+                  borderLeft: "1px solid #f0ece1",
                   paddingLeft: 20,
                 }}
               >
@@ -94,7 +94,7 @@ export default function ReviewsPage() {
                   gap: 16,
                 }}
               >
-                <div style={{ color: "#b8935a", letterSpacing: 2, fontSize: 14 }}>
+                <div style={{ color: "#b29362", letterSpacing: 2, fontSize: 14 }}>
                   {"★".repeat(r.stars)}
                 </div>
                 <blockquote
@@ -108,7 +108,7 @@ export default function ReviewsPage() {
                 >
                   {r.shortQuote.en}
                 </blockquote>
-                <p style={{ fontSize: 14, color: "#6a7785", lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: 14, color: "#7f8487", lineHeight: 1.6, margin: 0 }}>
                   {r.longQuote.en}
                 </p>
                 <figcaption
@@ -118,7 +118,7 @@ export default function ReviewsPage() {
                     gap: 12,
                     marginTop: "auto",
                     paddingTop: 16,
-                    borderTop: "1px dotted #9a7847",
+                    borderTop: "1px dotted #8f7548",
                   }}
                 >
                   <Portrait
@@ -130,7 +130,7 @@ export default function ReviewsPage() {
                     <div style={{ fontSize: 14, fontWeight: 500, color: "#0a1f2e" }}>
                       {r.name}
                     </div>
-                    <div style={{ fontSize: 12, color: "#6a7785", marginTop: 2 }}>
+                    <div style={{ fontSize: 12, color: "#7f8487", marginTop: 2 }}>
                       {r.date.en}
                     </div>
                   </div>

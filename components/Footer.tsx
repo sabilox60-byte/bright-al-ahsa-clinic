@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <footer
       style={{
-        borderTop: "1px solid #ede5d3",
+        borderTop: "1px solid #f0ece1",
         padding: "72px 0 32px",
-        background: "#f8f6f0",
+        background: "#f6f5f4",
         position: "relative",
         zIndex: 2,
       }}
@@ -25,7 +25,7 @@ export default function Footer() {
               style={{
                 fontSize: 17,
                 lineHeight: 1.6,
-                color: "#6a7785",
+                color: "#7f8487",
                 marginTop: 14,
                 maxWidth: 320,
               }}
@@ -64,9 +64,9 @@ export default function Footer() {
         <div
           className="mt-14 pt-5 flex justify-between flex-wrap items-center gap-3"
           style={{
-            borderTop: "1px dotted #9a7847",
+            borderTop: "1px dotted #8f7548",
             fontSize: 12,
-            color: "#6a7785",
+            color: "#7f8487",
           }}
         >
           <span className="font-prose italic">
@@ -75,15 +75,15 @@ export default function Footer() {
           </span>
           <Vision2030Mark locale="en" />
           <span>
-            <a href="/privacy" className="tlink" style={{ color: "#6a7785" }}>
+            <a href="/privacy" className="tlink" style={{ color: "#7f8487" }}>
               Privacy
             </a>
             <span style={{ padding: "0 8px" }}>·</span>
-            <a href="/terms" className="tlink" style={{ color: "#6a7785" }}>
+            <a href="/terms" className="tlink" style={{ color: "#7f8487" }}>
               Terms
             </a>
             <span style={{ padding: "0 8px" }}>·</span>
-            <a href="/accessibility" className="tlink" style={{ color: "#6a7785" }}>
+            <a href="/accessibility" className="tlink" style={{ color: "#7f8487" }}>
               Accessibility
             </a>
           </span>

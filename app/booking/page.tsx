@@ -58,7 +58,7 @@ export default function BookingPage() {
                       flex: 1,
                       height: 4,
                       borderRadius: 2,
-                      background: s <= step ? "#b8935a" : "#ede5d3",
+                      background: s <= step ? "#b29362" : "#f0ece1",
                       transition: "background 250ms cubic-bezier(0.4,0,0.2,1)",
                     }}
                   />
@@ -91,9 +91,9 @@ export default function BookingPage() {
                           padding: 18,
                           borderRadius: 12,
                           background: service === s.id ? "#0a1f2e" : "#fff",
-                          color: service === s.id ? "#fdfbf6" : "#0a1f2e",
+                          color: service === s.id ? "#ffffff" : "#0a1f2e",
                           border: "none",
-                          boxShadow: service === s.id ? "none" : "0 0 0 1px #ede5d3",
+                          boxShadow: service === s.id ? "none" : "0 0 0 1px #f0ece1",
                           cursor: "pointer",
                           transition: "all 150ms cubic-bezier(0.4,0,0.2,1)",
                           fontFamily: "inherit",
@@ -133,10 +133,10 @@ export default function BookingPage() {
                           textAlign: "start",
                           padding: 14,
                           borderRadius: 12,
-                          background: slot === s ? "#b8935a" : "#fff",
-                          color: slot === s ? "#fdfbf6" : "#0a1f2e",
+                          background: slot === s ? "#b29362" : "#fff",
+                          color: slot === s ? "#ffffff" : "#0a1f2e",
                           border: "none",
-                          boxShadow: slot === s ? "none" : "0 0 0 1px #ede5d3",
+                          boxShadow: slot === s ? "none" : "0 0 0 1px #f0ece1",
                           cursor: "pointer",
                           fontSize: 14,
                           fontFamily: "var(--font-mono), 'JetBrains Mono', monospace",
@@ -159,7 +159,7 @@ export default function BookingPage() {
                     <Field label={labels.phone.en} value={phone} onChange={setPhone} placeholder="+966 5x xxx xxxx" />
                     <Field label={labels.email.en} value={email} onChange={setEmail} placeholder={labels.emailPrompt.en} type="email" />
                     <div>
-                      <label style={{ fontSize: 12, fontWeight: 500, color: "#6a7785", marginBottom: 6, display: "block" }}>
+                      <label style={{ fontSize: 12, fontWeight: 500, color: "#7f8487", marginBottom: 6, display: "block" }}>
                         {labels.note.en}
                       </label>
                       <textarea
@@ -178,7 +178,7 @@ export default function BookingPage() {
               {/* Step 3 — confirmed */}
               {step === 3 && (
                 <div style={{ textAlign: "center", padding: "20px 0" }}>
-                  <div className="font-prose" style={{ fontSize: 72, color: "#b8935a", lineHeight: 1 }}>
+                  <div className="font-prose" style={{ fontSize: 72, color: "#b29362", lineHeight: 1 }}>
                     ✓
                   </div>
                   <h2 className="h-lg" style={{ marginTop: 16 }}>
@@ -186,7 +186,7 @@ export default function BookingPage() {
                   </h2>
                   <p
                     className="font-prose"
-                    style={{ fontSize: 17, color: "#6a7785", marginTop: 14, maxWidth: 380, marginInline: "auto" }}
+                    style={{ fontSize: 17, color: "#7f8487", marginTop: 14, maxWidth: 380, marginInline: "auto" }}
                   >
                     We'll see you {slot}. {bp.confirmed.body.en}
                   </p>
@@ -248,7 +248,7 @@ export default function BookingPage() {
                 style={{
                   marginTop: 32,
                   padding: 20,
-                  background: "#ede5d3",
+                  background: "#f0ece1",
                   borderRadius: 14,
                 }}
               >
@@ -287,7 +287,7 @@ function Field({
         style={{
           fontSize: 12,
           fontWeight: 500,
-          color: "#6a7785",
+          color: "#7f8487",
           marginBottom: 6,
           display: "block",
         }}
@@ -322,7 +322,7 @@ function ContactItem({
         justifyContent: "space-between",
         gap: 14,
         padding: "12px 0",
-        borderBottom: "1px dotted #9a7847",
+        borderBottom: "1px dotted #8f7548",
       }}
     >
       <span className="overline">{label}</span>
@@ -330,7 +330,7 @@ function ContactItem({
         className="font-prose"
         style={{
           fontSize: highlight ? 18 : 15,
-          color: highlight ? "#b8935a" : "#0a1f2e",
+          color: highlight ? "#b29362" : "#0a1f2e",
         }}
       >
         {value}

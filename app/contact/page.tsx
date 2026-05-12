@@ -38,7 +38,7 @@ export default function ContactPage() {
           sub="Most patients reach us on WhatsApp — messages are read the same day. For something private, voicemail or in-person."
         />
 
-        <section className="section" style={{ background: "#f8f6f0", position: "relative", zIndex: 2 }}>
+        <section className="section" style={{ background: "#f6f5f4", position: "relative", zIndex: 2 }}>
           <div className="container-page">
             <div
               className="grid gap-10 items-start mobile-stack"
@@ -46,11 +46,11 @@ export default function ContactPage() {
             >
               {/* Channels */}
               <ScrollReveal variant="slide-right">
-                <div className="overline" style={{ color: "#b8935a", marginBottom: 18 }}>
+                <div className="overline" style={{ color: "#b29362", marginBottom: 18 }}>
                   ✦ Channels
                 </div>
                 <h2 className="h-lg" style={{ marginBottom: 32 }}>
-                  Pick the door <em style={{ fontStyle: "italic", color: "#b8935a" }}>that fits.</em>
+                  Pick the door <em style={{ fontStyle: "italic", color: "#b29362" }}>that fits.</em>
                 </h2>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
@@ -82,11 +82,11 @@ export default function ContactPage() {
 
               {/* Branches */}
               <ScrollReveal variant="slide-left">
-                <div className="overline" style={{ color: "#b8935a", marginBottom: 18 }}>
+                <div className="overline" style={{ color: "#b29362", marginBottom: 18 }}>
                   ✦ Locations
                 </div>
                 <h2 className="h-lg" style={{ marginBottom: 32 }}>
-                  Where to <em style={{ fontStyle: "italic", color: "#b8935a" }}>find us.</em>
+                  Where to <em style={{ fontStyle: "italic", color: "#b29362" }}>find us.</em>
                 </h2>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
@@ -106,7 +106,7 @@ export default function ContactPage() {
                         {b.address.en}
                       </p>
                       <hr className="rule-dotted" style={{ margin: "14px 0" }} />
-                      <div style={{ display: "flex", gap: 18, fontSize: 13, color: "#6a7785", flexWrap: "wrap" }}>
+                      <div style={{ display: "flex", gap: 18, fontSize: 13, color: "#7f8487", flexWrap: "wrap" }}>
                         <span>📞 {b.phone}</span>
                         <span>WhatsApp {b.whatsapp}</span>
                       </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="tlink"
-                          style={{ marginTop: 12, display: "inline-block", fontSize: 12, color: "#9a7847", letterSpacing: "0.06em", textTransform: "uppercase" }}
+                          style={{ marginTop: 12, display: "inline-block", fontSize: 12, color: "#8f7548", letterSpacing: "0.06em", textTransform: "uppercase" }}
                         >
                           Open in Google Maps ↗
                         </a>
@@ -129,7 +129,7 @@ export default function ContactPage() {
                   style={{
                     marginTop: 24,
                     padding: 18,
-                    background: "rgba(184,147,90,0.08)",
+                    background: "rgba(178,147,98,0.08)",
                     borderRadius: 8,
                     fontSize: 13,
                     color: "#2a3f4f",
@@ -180,22 +180,22 @@ function ChannelCard({
         alignItems: "center",
         gap: 16,
         background: primary ? "linear-gradient(180deg, #14283a 0%, #0a1f2e 100%)" : undefined,
-        color: primary ? "#fdfbf6" : "inherit",
+        color: primary ? "#ffffff" : "inherit",
         textDecoration: "none",
       }}
     >
       <div>
         <div
           className="overline"
-          style={{ color: primary ? "#b8935a" : "#9a7847", marginBottom: 4, fontSize: 10 }}
+          style={{ color: primary ? "#b29362" : "#8f7548", marginBottom: 4, fontSize: 10 }}
         >
           ✦ {label}
         </div>
-        <div className="font-serif" style={{ fontSize: 18, color: primary ? "#fdfbf6" : "#0a1f2e" }}>
+        <div className="font-serif" style={{ fontSize: 18, color: primary ? "#ffffff" : "#0a1f2e" }}>
           {description}
         </div>
       </div>
-      <span style={{ color: primary ? "#b8935a" : "#9a7847", fontSize: 18 }}>→</span>
+      <span style={{ color: primary ? "#b29362" : "#8f7548", fontSize: 18 }}>→</span>
     </a>
   );
 }

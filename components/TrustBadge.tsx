@@ -30,7 +30,7 @@ export default function TrustBadge({ badge, locale = "en" }: { badge: Badge; loc
             fontFamily: "var(--font-italiana), serif",
             fontSize: 32,
             lineHeight: 1,
-            color: "#9a7847",
+            color: "#8f7548",
           }}
         >
           {symbol}
@@ -40,7 +40,7 @@ export default function TrustBadge({ badge, locale = "en" }: { badge: Badge; loc
             style={{
               fontFamily: "var(--font-mono), monospace",
               fontSize: 11,
-              color: "#6a7785",
+              color: "#7f8487",
               letterSpacing: "0.05em",
             }}
           >
@@ -66,7 +66,7 @@ export default function TrustBadge({ badge, locale = "en" }: { badge: Badge; loc
       </p>
 
       <footer style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 8 }}>
-        <span style={{ fontSize: 11, color: "#6a7785", letterSpacing: "0.04em" }}>
+        <span style={{ fontSize: 11, color: "#7f8487", letterSpacing: "0.04em" }}>
           {locale === "ar" ? "الجهة المُصدِرة" : "Issued by"}
           <br />
           <span style={{ color: "#0a1f2e", fontWeight: 500, fontSize: 12 }}>{badge.issuer[locale]}</span>
@@ -79,7 +79,7 @@ export default function TrustBadge({ badge, locale = "en" }: { badge: Badge; loc
             className="tlink"
             style={{
               fontSize: 11,
-              color: "#9a7847",
+              color: "#8f7548",
               fontWeight: 600,
               letterSpacing: "0.06em",
               textTransform: "uppercase",

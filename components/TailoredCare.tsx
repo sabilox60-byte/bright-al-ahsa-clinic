@@ -17,8 +17,8 @@ export default function TailoredCare() {
               position: "absolute",
               top: 20,
               left: 20,
-              background: "#b8935a",
-              color: "#fdfbf6",
+              background: "#b29362",
+              color: "#ffffff",
               borderRadius: 20,
               padding: "6px 14px",
               fontSize: 11,
@@ -32,15 +32,15 @@ export default function TailoredCare() {
         </div>
         <div>
           <ChapterMark roman={c.chapterRoman} title={c.chapterTitle.en} dark />
-          <h2 className="h-xl" style={{ marginTop: 24, color: "#fdfbf6" }}>
+          <h2 className="h-xl" style={{ marginTop: 24, color: "#ffffff" }}>
             {c.headlinePartA.en}
             <br />
-            <em style={{ fontStyle: "italic", color: "#b8935a" }}>{c.headlineEm.en}</em>
+            <em style={{ fontStyle: "italic", color: "#b29362" }}>{c.headlineEm.en}</em>
           </h2>
           <p
             className="font-prose"
             style={{
-              color: "#d4cdb8",
+              color: "#ece5d4",
               fontSize: 18,
               lineHeight: 1.65,
               marginTop: 20,
@@ -71,11 +71,11 @@ export default function TailoredCare() {
               >
                 <span
                   className="font-prose italic"
-                  style={{ color: "#b8935a", fontSize: 15, width: 28 }}
+                  style={{ color: "#b29362", fontSize: 15, width: 28 }}
                 >
                   {p.num}.
                 </span>
-                <span style={{ color: "#fdfbf6", fontSize: 16 }}>{p.label.en}</span>
+                <span style={{ color: "#ffffff", fontSize: 16 }}>{p.label.en}</span>
               </li>
             ))}
           </ul>

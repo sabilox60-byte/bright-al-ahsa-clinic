@@ -39,7 +39,7 @@ export default async function GoalPage(props: { params: Promise<{ goal: string }
   );
   const related = clinicExtras.goals.filter((x) => g.relatedSlugs?.includes(x.slug));
 
-  const accent = g.accentColor || "#b8935a";
+  const accent = g.accentColor || "#b29362";
 
   return (
     <>
@@ -64,7 +64,7 @@ export default async function GoalPage(props: { params: Promise<{ goal: string }
         />
 
         {/* Procedures grid */}
-        <section className="section" style={{ background: "#f8f6f0", position: "relative", zIndex: 2 }}>
+        <section className="section" style={{ background: "#f6f5f4", position: "relative", zIndex: 2 }}>
           <div className="container-page">
             <ScrollReveal variant="fade-up">
               <div className="overline" style={{ color: accent, marginBottom: 14 }}>
@@ -88,13 +88,13 @@ export default async function GoalPage(props: { params: Promise<{ goal: string }
                         {p.nameEn}
                       </h3>
                       {p.estimatedPriceMin && (
-                        <span style={{ fontSize: 12, color: "#6a7785", fontFamily: "var(--font-mono), monospace" }}>
+                        <span style={{ fontSize: 12, color: "#7f8487", fontFamily: "var(--font-mono), monospace" }}>
                           {p.estimatedPriceMin}–{p.estimatedPriceMax} {p.currency || "SAR"}
                         </span>
                       )}
                     </div>
                     <hr className="rule-dotted" style={{ margin: "12px 0" }} />
-                    <div style={{ display: "flex", gap: 16, fontSize: 13, color: "#6a7785", marginTop: 12 }}>
+                    <div style={{ display: "flex", gap: 16, fontSize: 13, color: "#7f8487", marginTop: 12 }}>
                       {p.typicalDurationMinutes && <span>{p.typicalDurationMinutes} min</span>}
                       <span>{p.procedureType}</span>
                       {p.bodyLocation && <span>{p.bodyLocation}</span>}
@@ -143,7 +143,7 @@ export default async function GoalPage(props: { params: Promise<{ goal: string }
                       <Portrait variant={d.portraitVariant || "terracotta"} style={{ width: "100%", height: 240 }} />
                       <div style={{ padding: 20 }}>
                         <h3 className="font-serif" style={{ fontSize: 19, color: "#0a1f2e" }}>{d.nameEn}</h3>
-                        <p style={{ fontSize: 13, color: "#6a7785", marginTop: 4 }}>{d.medicalSpecialty}</p>
+                        <p style={{ fontSize: 13, color: "#7f8487", marginTop: 4 }}>{d.medicalSpecialty}</p>
                       </div>
                     </Link>
                   </ScrollReveal>
@@ -155,7 +155,7 @@ export default async function GoalPage(props: { params: Promise<{ goal: string }
 
         {/* Goal-specific FAQs */}
         {g.faqs.length > 0 && (
-          <section className="section" style={{ background: "#ede5d3", position: "relative", zIndex: 2 }}>
+          <section className="section" style={{ background: "#f0ece1", position: "relative", zIndex: 2 }}>
             <div className="container-page" style={{ maxWidth: 820 }}>
               <ScrollReveal variant="fade-up">
                 <div className="overline" style={{ color: accent, marginBottom: 14 }}>
@@ -170,7 +170,7 @@ export default async function GoalPage(props: { params: Promise<{ goal: string }
                   <details
                     key={i}
                     style={{
-                      borderTop: "1px dotted rgba(184,147,90,0.45)",
+                      borderTop: "1px dotted rgba(178,147,98,0.45)",
                       padding: "22px 0",
                     }}
                   >
@@ -191,7 +191,7 @@ export default async function GoalPage(props: { params: Promise<{ goal: string }
                     </p>
                   </details>
                 ))}
-                <div style={{ borderTop: "1px dotted rgba(184,147,90,0.45)" }} />
+                <div style={{ borderTop: "1px dotted rgba(178,147,98,0.45)" }} />
               </dl>
             </div>
           </section>
@@ -207,7 +207,7 @@ export default async function GoalPage(props: { params: Promise<{ goal: string }
               <div className="grid gap-4 mobile-stack" style={{ gridTemplateColumns: `repeat(${related.length}, 1fr)` }}>
                 {related.map((r) => (
                   <Link key={r.slug} href={`/goals/${r.slug}`} className="card card-interactive" style={{ padding: 24, display: "block", textDecoration: "none", color: "inherit" }}>
-                    <div className="overline" style={{ color: r.accentColor || "#b8935a", fontSize: 10 }}>Goal</div>
+                    <div className="overline" style={{ color: r.accentColor || "#b29362", fontSize: 10 }}>Goal</div>
                     <h3 className="font-serif" style={{ fontSize: 22, marginTop: 8, color: "#0a1f2e" }}>
                       {r.name.en}
                     </h3>
@@ -224,10 +224,10 @@ export default async function GoalPage(props: { params: Promise<{ goal: string }
         {/* Book CTA */}
         <section className="section section-dark">
           <div className="container-page" style={{ textAlign: "center", maxWidth: 720 }}>
-            <h2 className="h-xl" style={{ color: "#fdfbf6", marginBottom: 18 }}>
+            <h2 className="h-xl" style={{ color: "#ffffff", marginBottom: 18 }}>
               Begin your <em style={{ fontStyle: "italic", color: accent }}>{g.name.en.toLowerCase()}</em> path.
             </h2>
-            <p className="font-prose" style={{ fontSize: 18, color: "#d4cdb8", marginBottom: 32 }}>
+            <p className="font-prose" style={{ fontSize: 18, color: "#ece5d4", marginBottom: 32 }}>
               First a consultation. Then a written plan. No commitment.
             </p>
             <a

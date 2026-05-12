@@ -6,8 +6,8 @@ export default function MarqueeBand({ dark = true }: { dark?: boolean }) {
     <div
       className="overflow-hidden"
       style={{
-        background: dark ? "#0a1f2e" : "#b8935a",
-        color: "#fdfbf6",
+        background: dark ? "#0a1f2e" : "#b29362",
+        color: "#ffffff",
         padding: "20px 0",
         borderTop: dark ? "1px solid #14283a" : "none",
         borderBottom: dark ? "1px solid #14283a" : "none",
@@ -22,7 +22,7 @@ export default function MarqueeBand({ dark = true }: { dark?: boolean }) {
             {items.map((item, j) => (
               <span key={j} className="inline-flex items-center gap-12">
                 <span style={{ padding: "0 24px" }}>{item}</span>
-                <span style={{ color: "#b8935a" }}>❊</span>
+                <span style={{ color: "#b29362" }}>❊</span>
               </span>
             ))}
           </span>

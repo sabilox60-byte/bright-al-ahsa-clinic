@@ -7,7 +7,7 @@ export default function Team() {
     <section className="section" id="doctors">
       <div className="container-page">
         <div className="text-center" style={{ marginBottom: 48 }}>
-          <div className="overline" style={{ color: "#b8935a" }}>
+          <div className="overline" style={{ color: "#b29362" }}>
             {t.eyebrow.en}
           </div>
           <h2 className="h-xl" style={{ marginTop: 16 }}>
@@ -45,8 +45,8 @@ export default function Team() {
                     width: 40,
                     height: 40,
                     borderRadius: 999,
-                    background: "#b8935a",
-                    color: "#fdfbf6",
+                    background: "#b29362",
+                    color: "#ffffff",
                     fontSize: 18,
                     flexShrink: 0,
                   }}

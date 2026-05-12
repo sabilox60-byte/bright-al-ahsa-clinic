@@ -42,7 +42,7 @@ export default function AccessibilityPage() {
               Found something off?
             </h3>
             <p className="font-prose" style={{ fontSize: 17, lineHeight: 1.6, color: "#2a3f4f", marginBottom: 24 }}>
-              Email <a href={`mailto:${clinicConfig.contact.email}`} className="tlink" style={{ color: "#9a7847" }}>{clinicConfig.contact.email}</a> — we treat accessibility issues as bugs and fix within 14 days.
+              Email <a href={`mailto:${clinicConfig.contact.email}`} className="tlink" style={{ color: "#8f7548" }}>{clinicConfig.contact.email}</a> — we treat accessibility issues as bugs and fix within 14 days.
             </p>
           </article>
         </section>

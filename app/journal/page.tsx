@@ -48,7 +48,7 @@ export default function JournalPage() {
                     justifyContent: "center",
                   }}
                 >
-                  <div className="overline" style={{ color: "#b8935a" }}>
+                  <div className="overline" style={{ color: "#b29362" }}>
                     {jp.featured.tag.en}
                   </div>
                   <h2
@@ -59,20 +59,20 @@ export default function JournalPage() {
                   </h2>
                   <p
                     className="font-prose"
-                    style={{ fontSize: 17, color: "#6a7785", marginTop: 16, lineHeight: 1.6 }}
+                    style={{ fontSize: 17, color: "#7f8487", marginTop: 16, lineHeight: 1.6 }}
                   >
                     {jp.featured.excerpt.en}
                   </p>
                   <div
                     className="font-mono"
-                    style={{ fontSize: 13, color: "#6a7785", marginTop: 20 }}
+                    style={{ fontSize: 13, color: "#7f8487", marginTop: 20 }}
                   >
                     {jp.featured.author} · {jp.featured.date.en}
                   </div>
                   <div
                     style={{
                       marginTop: 24,
-                      color: "#b8935a",
+                      color: "#b29362",
                       fontWeight: 500,
                       fontSize: 14,
                     }}
@@ -106,7 +106,7 @@ export default function JournalPage() {
                     rounded={0}
                   />
                   <div style={{ padding: 22 }}>
-                    <div className="overline" style={{ color: "#6a7785" }}>
+                    <div className="overline" style={{ color: "#7f8487" }}>
                       {post.tag.en} · {post.date.en}
                     </div>
                     <h3 className="h-md" style={{ fontSize: 20, marginTop: 10, lineHeight: 1.3 }}>
@@ -114,7 +114,7 @@ export default function JournalPage() {
                     </h3>
                     <div
                       className="font-mono"
-                      style={{ fontSize: 12, color: "#6a7785", marginTop: 14 }}
+                      style={{ fontSize: 12, color: "#7f8487", marginTop: 14 }}
                     >
                       {post.author}
                     </div>
@@ -140,7 +140,7 @@ export default function JournalPage() {
                 className="font-prose"
                 style={{
                   fontSize: 17,
-                  color: "#6a7785",
+                  color: "#7f8487",
                   marginTop: 12,
                   maxWidth: 460,
                 }}
@@ -156,7 +156,7 @@ export default function JournalPage() {
               }}
             >
               {subscribed ? (
-                <p className="font-prose italic" style={{ color: "#b8935a", fontSize: 16 }}>
+                <p className="font-prose italic" style={{ color: "#b29362", fontSize: 16 }}>
                   Thank you — we'll be in touch.
                 </p>
               ) : (

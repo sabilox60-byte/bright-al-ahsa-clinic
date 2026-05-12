@@ -18,16 +18,16 @@ export default function Founder() {
               bottom: -20,
               right: -20,
               background: "#0a1f2e",
-              color: "#fdfbf6",
+              color: "#ffffff",
               borderRadius: 14,
               padding: "16px 20px",
-              boxShadow: "0 0 0 6px #f8f6f0",
+              boxShadow: "0 0 0 6px #f6f5f4",
             }}
           >
             <div
               style={{
                 fontSize: 11,
-                color: "#d4cdb8",
+                color: "#ece5d4",
                 letterSpacing: "0.5px",
                 textTransform: "uppercase",
               }}
@@ -42,7 +42,7 @@ export default function Founder() {
             </div>
             <div
               className="font-prose italic"
-              style={{ fontSize: 12, color: "#d4b87a", marginTop: 4 }}
+              style={{ fontSize: 12, color: "#d4b899", marginTop: 4 }}
             >
               {f.role.en}
             </div>
@@ -53,7 +53,7 @@ export default function Founder() {
           <h2 className="h-xl" style={{ marginTop: 24 }}>
             {f.headlinePartA.en}
             <br />
-            <em style={{ fontStyle: "italic", color: "#b8935a" }}>{f.headlineEm.en}</em>
+            <em style={{ fontStyle: "italic", color: "#b29362" }}>{f.headlineEm.en}</em>
           </h2>
           <div className="prose mt-6" style={{ maxWidth: 540 }}>
             {f.paragraphs.map((p, i) => (

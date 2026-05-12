@@ -16,8 +16,8 @@ export default function PageHero({ roman, eyebrow, title, titleEm, sub, variant 
     <section
       style={{
         padding: "64px 0 56px",
-        background: "#f8f6f0",
-        borderBottom: "1px solid #d4cdb8",
+        background: "#f6f5f4",
+        borderBottom: "1px solid #ece5d4",
         position: "relative",
         zIndex: 2,
       }}
@@ -34,7 +34,7 @@ export default function PageHero({ roman, eyebrow, title, titleEm, sub, variant 
           >
             {title}
             <br />
-            <em style={{ fontStyle: "italic", color: "#b8935a" }}>{titleEm}</em>
+            <em style={{ fontStyle: "italic", color: "#b29362" }}>{titleEm}</em>
           </h1>
           <p
             className="font-prose italic"

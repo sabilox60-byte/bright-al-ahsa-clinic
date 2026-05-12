@@ -19,19 +19,19 @@ export default function OutcomeCompass({ locale = "en" }: { locale?: Locale }) {
       className="section"
       id="goals"
       style={{
-        background: "linear-gradient(180deg, #fdfbf6 0%, #f0ead8 100%)",
+        background: "linear-gradient(180deg, #ffffff 0%, #ffffff 100%)",
         position: "relative",
         zIndex: 2,
       }}
     >
       <div className="container-page">
         <div style={{ textAlign: "center", marginBottom: 56 }}>
-          <div className="overline" style={{ color: "#b8935a", marginBottom: 14 }}>
+          <div className="overline" style={{ color: "#b29362", marginBottom: 14 }}>
             ✦ {locale === "ar" ? "ابدئي بهدفكِ" : "Begin with your goal"}
           </div>
           <h2 className="h-xl" style={{ maxWidth: 680, margin: "0 auto", lineHeight: 1.12 }}>
             {locale === "ar" ? "ماذا تريدين أن " : "What do you want to "}
-            <em style={{ fontStyle: "italic", color: "#b8935a" }}>
+            <em style={{ fontStyle: "italic", color: "#b29362" }}>
               {locale === "ar" ? "تشعري به؟" : "feel?"}
             </em>
           </h2>
@@ -39,7 +39,7 @@ export default function OutcomeCompass({ locale = "en" }: { locale?: Locale }) {
             className="font-prose"
             style={{
               fontSize: 18,
-              color: "#6a7785",
+              color: "#7f8487",
               marginTop: 16,
               maxWidth: 540,
               marginLeft: "auto",
@@ -82,14 +82,14 @@ export default function OutcomeCompass({ locale = "en" }: { locale?: Locale }) {
                   top: 14,
                   right: 14,
                   fontSize: 28,
-                  color: g.accentColor || "#b8935a",
+                  color: g.accentColor || "#b29362",
                   opacity: 0.6,
                   fontFamily: "var(--font-italiana), serif",
                 }}
               >
                 {g.symbol}
               </span>
-              <div className="overline" style={{ fontSize: 10, color: g.accentColor || "#9a7847" }}>
+              <div className="overline" style={{ fontSize: 10, color: g.accentColor || "#8f7548" }}>
                 {locale === "ar" ? "هدف" : "Goal"}
               </div>
               <h3
@@ -118,7 +118,7 @@ export default function OutcomeCompass({ locale = "en" }: { locale?: Locale }) {
                 className="tlink"
                 style={{
                   fontSize: 12,
-                  color: g.accentColor || "#b8935a",
+                  color: g.accentColor || "#b29362",
                   fontWeight: 500,
                   letterSpacing: "0.04em",
                   textTransform: "uppercase",

@@ -55,7 +55,7 @@ export default function DoctorsPage() {
                       flexDirection: "column",
                     }}
                   >
-                    <div className="overline" style={{ color: "#b8935a" }}>
+                    <div className="overline" style={{ color: "#b29362" }}>
                       {member.role.en}
                     </div>
                     <h3 className="h-md" style={{ fontSize: 26, marginTop: 10 }}>
@@ -66,7 +66,7 @@ export default function DoctorsPage() {
                       style={{
                         fontSize: 15,
                         lineHeight: 1.6,
-                        color: "#6a7785",
+                        color: "#7f8487",
                         marginTop: 12,
                       }}
                     >
@@ -88,12 +88,12 @@ export default function DoctorsPage() {
                           className="font-mono"
                           style={{
                             fontSize: 13,
-                            color: "#6a7785",
+                            color: "#7f8487",
                             display: "flex",
                             gap: 10,
                           }}
                         >
-                          <span style={{ color: "#b8935a" }}>—</span>
+                          <span style={{ color: "#b29362" }}>—</span>
                           {cred}
                         </li>
                       ))}

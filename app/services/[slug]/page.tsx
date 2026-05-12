@@ -90,10 +90,10 @@ export default async function TreatmentPage(props: { params: Promise<{ slug: str
         />
 
         {/* Quick-answer callout — AI extraction unit */}
-        <section style={{ background: "#ede5d3", padding: "32px 0", position: "relative", zIndex: 2 }}>
+        <section style={{ background: "#f0ece1", padding: "32px 0", position: "relative", zIndex: 2 }}>
           <div className="container-page" style={{ maxWidth: 760 }}>
             <ScrollReveal variant="fade-up">
-              <div className="overline" style={{ color: "#9a7847", marginBottom: 10 }}>
+              <div className="overline" style={{ color: "#8f7548", marginBottom: 10 }}>
                 ✦ Quick answer
               </div>
               <p className="font-prose italic" style={{ fontSize: 22, color: "#2a3f4f", lineHeight: 1.5 }}>
@@ -108,7 +108,7 @@ export default async function TreatmentPage(props: { params: Promise<{ slug: str
           <div className="container-page" style={{ maxWidth: 820 }}>
             <ScrollReveal variant="fade-up">
               <h2 className="h-lg" style={{ marginBottom: 24 }}>
-                Clinical <em style={{ fontStyle: "italic", color: "#b8935a" }}>detail</em>
+                Clinical <em style={{ fontStyle: "italic", color: "#b29362" }}>detail</em>
               </h2>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }} className="mobile-stack">
                 <DetailRow label="Type" value={p.procedureType} />
@@ -136,7 +136,7 @@ export default async function TreatmentPage(props: { params: Promise<{ slug: str
         </section>
 
         {/* FAQs (AI-extractable) */}
-        <section className="section-sm" style={{ background: "#f8f6f0", position: "relative", zIndex: 2 }}>
+        <section className="section-sm" style={{ background: "#f6f5f4", position: "relative", zIndex: 2 }}>
           <div className="container-page" style={{ maxWidth: 820 }}>
             <ScrollReveal variant="fade-up">
               <h2 className="h-md" style={{ marginBottom: 32 }}>
@@ -147,7 +147,7 @@ export default async function TreatmentPage(props: { params: Promise<{ slug: str
                   <details
                     key={i}
                     style={{
-                      borderTop: "1px dotted rgba(184,147,90,0.45)",
+                      borderTop: "1px dotted rgba(178,147,98,0.45)",
                       padding: "18px 0",
                     }}
                   >
@@ -168,7 +168,7 @@ export default async function TreatmentPage(props: { params: Promise<{ slug: str
                     </p>
                   </details>
                 ))}
-                <div style={{ borderTop: "1px dotted rgba(184,147,90,0.45)" }} />
+                <div style={{ borderTop: "1px dotted rgba(178,147,98,0.45)" }} />
               </dl>
             </ScrollReveal>
           </div>
@@ -179,7 +179,7 @@ export default async function TreatmentPage(props: { params: Promise<{ slug: str
           <section className="section-sm" style={{ position: "relative", zIndex: 2 }}>
             <div className="container-page" style={{ maxWidth: 820 }}>
               <div className="card" style={{ padding: 32 }}>
-                <div className="overline" style={{ color: "#b8935a", marginBottom: 12 }}>
+                <div className="overline" style={{ color: "#b29362", marginBottom: 12 }}>
                   ✦ Aftercare preview
                 </div>
                 <h3 className="font-serif" style={{ fontSize: 22, color: "#0a1f2e", marginBottom: 18 }}>
@@ -197,7 +197,7 @@ export default async function TreatmentPage(props: { params: Promise<{ slug: str
         {linkingGoals.length > 0 && (
           <section className="section-sm" style={{ position: "relative", zIndex: 2 }}>
             <div className="container-page">
-              <div className="overline" style={{ color: "#b8935a", marginBottom: 14 }}>
+              <div className="overline" style={{ color: "#b29362", marginBottom: 14 }}>
                 ✦ Goals served
               </div>
               <div className="grid gap-4 mobile-stack" style={{ gridTemplateColumns: `repeat(${linkingGoals.length}, 1fr)` }}>
@@ -224,10 +224,10 @@ export default async function TreatmentPage(props: { params: Promise<{ slug: str
         {/* Final CTA */}
         <section className="section section-dark">
           <div className="container-page" style={{ textAlign: "center", maxWidth: 720 }}>
-            <h2 className="h-xl" style={{ color: "#fdfbf6", marginBottom: 18 }}>
-              Discuss <em style={{ fontStyle: "italic", color: "#b8935a" }}>{p.nameEn.toLowerCase()}</em> with a clinician.
+            <h2 className="h-xl" style={{ color: "#ffffff", marginBottom: 18 }}>
+              Discuss <em style={{ fontStyle: "italic", color: "#b29362" }}>{p.nameEn.toLowerCase()}</em> with a clinician.
             </h2>
-            <p className="font-prose" style={{ fontSize: 18, color: "#d4cdb8", marginBottom: 32 }}>
+            <p className="font-prose" style={{ fontSize: 18, color: "#ece5d4", marginBottom: 32 }}>
               Free consultation first. No commitment to treatment.
             </p>
             <a
@@ -248,8 +248,8 @@ export default async function TreatmentPage(props: { params: Promise<{ slug: str
 
 function DetailRow({ label, value }: { label: string; value: string | number }) {
   return (
-    <div style={{ borderBottom: "1px dotted rgba(184,147,90,0.4)", paddingBottom: 12 }}>
-      <div className="overline" style={{ color: "#9a7847", marginBottom: 4, fontSize: 10 }}>
+    <div style={{ borderBottom: "1px dotted rgba(178,147,98,0.4)", paddingBottom: 12 }}>
+      <div className="overline" style={{ color: "#8f7548", marginBottom: 4, fontSize: 10 }}>
         {label}
       </div>
       <div className="font-serif" style={{ fontSize: 18, color: "#0a1f2e" }}>
@@ -262,7 +262,7 @@ function DetailRow({ label, value }: { label: string; value: string | number }) 
 function DetailBlock({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div style={{ marginTop: 32 }}>
-      <h3 className="font-serif" style={{ fontSize: 19, color: "#9a7847", marginBottom: 10, fontWeight: 600, letterSpacing: "0.04em", textTransform: "uppercase" }}>
+      <h3 className="font-serif" style={{ fontSize: 19, color: "#8f7548", marginBottom: 10, fontWeight: 600, letterSpacing: "0.04em", textTransform: "uppercase" }}>
         {title}
       </h3>
       <p className="font-prose" style={{ fontSize: 17, lineHeight: 1.6, color: "#2a3f4f" }}>

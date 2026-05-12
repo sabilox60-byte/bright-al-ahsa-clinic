@@ -48,7 +48,7 @@ export default function SisterShare({ locale = "en" }: { locale?: Locale }) {
           if (!shareUrl) e.preventDefault();
         }}
       >
-        <span aria-hidden style={{ color: "#9a7847", marginRight: 6 }}>
+        <span aria-hidden style={{ color: "#8f7548", marginRight: 6 }}>
           ✦
         </span>
         {locale === "ar" ? "أرسلي لأخت" : "Send to a sister"}

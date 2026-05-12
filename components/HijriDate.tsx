@@ -39,7 +39,7 @@ export default function HijriDate({ date, locale = "en", separator = "·", forma
   }
 
   return (
-    <time dateTime={d.toISOString()} style={{ fontSize: 13, color: "#6a7785", letterSpacing: "0.03em" }}>
+    <time dateTime={d.toISOString()} style={{ fontSize: 13, color: "#7f8487", letterSpacing: "0.03em" }}>
       {gregorian}
       {hijri && (
         <>

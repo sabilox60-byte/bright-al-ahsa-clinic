@@ -40,7 +40,7 @@ export default function AftercareCheckIn({ token }: { token: string }) {
 
   return (
     <article className="card" style={{ padding: 28 }}>
-      <div className="overline" style={{ color: "#b8935a", marginBottom: 12 }}>
+      <div className="overline" style={{ color: "#b29362", marginBottom: 12 }}>
         ✦ Daily check-in
       </div>
       <h3 className="font-serif" style={{ fontSize: 22, color: "#0a1f2e", marginBottom: 18 }}>
@@ -54,8 +54,8 @@ export default function AftercareCheckIn({ token }: { token: string }) {
             style={{
               padding: "12px 18px",
               borderRadius: 999,
-              border: selected === o.value ? "1px solid #b8935a" : "1px solid #d4cdb8",
-              background: selected === o.value ? "rgba(184,147,90,0.15)" : "#fdfbf6",
+              border: selected === o.value ? "1px solid #b29362" : "1px solid #ece5d4",
+              background: selected === o.value ? "rgba(178,147,98,0.15)" : "#ffffff",
               cursor: "pointer",
               fontSize: 14,
               color: "#0a1f2e",

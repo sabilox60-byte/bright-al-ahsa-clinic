@@ -13,19 +13,19 @@ export default function Faq() {
         style={{ gridTemplateColumns: "0.9fr 1.3fr" }}
       >
         <div>
-          <div className="overline" style={{ color: "#b8935a" }}>
+          <div className="overline" style={{ color: "#b29362" }}>
             {f.eyebrow.en}
           </div>
           <h2 className="h-xl" style={{ marginTop: 16 }}>
             {f.headlinePartA.en}
             <br />
-            <em style={{ fontStyle: "italic", color: "#b8935a" }}>
+            <em style={{ fontStyle: "italic", color: "#b29362" }}>
               {f.headlineEm.en}
             </em>
           </h2>
           <p
             className="font-prose"
-            style={{ fontSize: 18, color: "#6a7785", marginTop: 16 }}
+            style={{ fontSize: 18, color: "#7f8487", marginTop: 16 }}
           >
             {f.description.en}
           </p>
@@ -46,11 +46,11 @@ export default function Faq() {
               <div
                 key={i}
                 style={{
-                  background: isOpen ? "#0a1f2e" : "#fdfbf6",
-                  color: isOpen ? "#fdfbf6" : "#0a1f2e",
+                  background: isOpen ? "#0a1f2e" : "#ffffff",
+                  color: isOpen ? "#ffffff" : "#0a1f2e",
                   borderRadius: 12,
                   marginBottom: 8,
-                  boxShadow: isOpen ? "none" : "0 0 0 1px #d4cdb8",
+                  boxShadow: isOpen ? "none" : "0 0 0 1px #ece5d4",
                   transition: "background 250ms cubic-bezier(0.4,0,0.2,1)",
                 }}
               >
@@ -73,8 +73,8 @@ export default function Faq() {
                       width: 28,
                       height: 28,
                       borderRadius: 999,
-                      background: isOpen ? "#b8935a" : "transparent",
-                      color: isOpen ? "#fdfbf6" : "#0a1f2e",
+                      background: isOpen ? "#b29362" : "transparent",
+                      color: isOpen ? "#ffffff" : "#0a1f2e",
                       fontSize: 18,
                       lineHeight: 1,
                     }}

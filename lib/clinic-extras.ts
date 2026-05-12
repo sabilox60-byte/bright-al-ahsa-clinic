@@ -696,7 +696,7 @@ export const clinicExtras: ClinicExtras = {
           a: { en: "Yes — Hydrafacial is the safest option in the final week before Eid. Book it 3–5 days before for the calmest glow.", ar: "نعم — الهيدرافيشيال هو الخيار الأكثر أماناً في الأسبوع الأخير قبل العيد. احجزيه قبل ٣–٥ أيام للإشراقة الأهدأ." },
         },
       ],
-      accentColor: "#d4b87a",
+      accentColor: "#d4b899",
       variant: "sand",
     },
     {
@@ -722,7 +722,7 @@ export const clinicExtras: ClinicExtras = {
           a: { en: "Yes. We design around YOUR face proportions — not a template. Dr. Hassan Nazzal's signature is restraint: the smile fits, you don't fit the smile.", ar: "نعم. نصمّم حول تناسق وجهكِ — لا حول قالب. بصمة د. حسن نزال هي الاعتدال: الابتسامة تليق بكِ، لا أن تلائمي الابتسامة." },
         },
       ],
-      accentColor: "#9a7847",
+      accentColor: "#8f7548",
       variant: "sand",
     },
     {

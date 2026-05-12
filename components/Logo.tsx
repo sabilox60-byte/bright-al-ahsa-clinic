@@ -2,7 +2,7 @@ import Link from "next/link";
 import { clinicConfig } from "@/lib/clinic-config";
 
 export default function Logo({ dark = false, size = 22 }: { dark?: boolean; size?: number }) {
-  const color = dark ? "#fdfbf6" : "#0a1f2e";
+  const color = dark ? "#ffffff" : "#0a1f2e";
   return (
     <Link href="/" className="inline-flex items-center gap-2.5 no-underline">
       <svg width={size + 4} height={size + 4} viewBox="0 0 32 32" fill="none" aria-hidden>
@@ -14,7 +14,7 @@ export default function Logo({ dark = false, size = 22 }: { dark?: boolean; size
         />
         <path
           d="M14 19 C 18 16, 23 17, 25 22 C 26 26, 22 28, 18 26 C 15 25, 13 22, 14 19 Z"
-          stroke="#b8935a"
+          stroke="#b29362"
           strokeWidth="1.6"
           fill="none"
         />
@@ -30,7 +30,7 @@ export default function Logo({ dark = false, size = 22 }: { dark?: boolean; size
         }}
       >
         {clinicConfig.brand.name.en}
-        <span style={{ color: "#b8935a", letterSpacing: 0, marginLeft: 4 }}>·</span>
+        <span style={{ color: "#b29362", letterSpacing: 0, marginLeft: 4 }}>·</span>
       </span>
     </Link>
   );

@@ -33,8 +33,8 @@ export default function ServicesPage() {
             key={dept.num}
             className="section"
             style={{
-              background: idx % 2 === 0 ? "#f8f6f0" : "#fdfbf6",
-              borderTop: "1px dotted #9a7847",
+              background: idx % 2 === 0 ? "#f6f5f4" : "#ffffff",
+              borderTop: "1px dotted #8f7548",
               position: "relative",
               zIndex: 2,
             }}
@@ -65,7 +65,7 @@ export default function ServicesPage() {
                   style={{
                     marginTop: 22,
                     padding: "14px 18px",
-                    background: "#ede5d3",
+                    background: "#f0ece1",
                     borderRadius: 4,
                     display: "inline-block",
                   }}
@@ -75,7 +75,7 @@ export default function ServicesPage() {
                       fontSize: 10,
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
-                      color: "#6a7785",
+                      color: "#7f8487",
                       fontWeight: 600,
                     }}
                   >
@@ -89,7 +89,7 @@ export default function ServicesPage() {
 
               {/* Right: treatment list */}
               <div>
-                <div className="overline" style={{ color: "#b8935a", marginBottom: 18 }}>
+                <div className="overline" style={{ color: "#b29362", marginBottom: 18 }}>
                   Services ({dept.treatments.length})
                 </div>
                 {dept.treatments.map((treatment, i) => (
@@ -102,12 +102,12 @@ export default function ServicesPage() {
                       gap: 20,
                       alignItems: "baseline",
                       padding: "18px 0",
-                      borderTop: "1px solid #d4cdb8",
+                      borderTop: "1px solid #ece5d4",
                     }}
                   >
                     <span
                       className="font-mono"
-                      style={{ fontSize: 12, color: "#9a7847" }}
+                      style={{ fontSize: 12, color: "#8f7548" }}
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -147,14 +147,14 @@ export default function ServicesPage() {
           <div className="container-page">
             <div className="text-center" style={{ marginBottom: 48 }}>
               <ChapterMark roman="V" title="Technology" dark />
-              <h2 className="h-xl" style={{ color: "#fdfbf6", marginTop: 20 }}>
+              <h2 className="h-xl" style={{ color: "#ffffff", marginTop: 20 }}>
                 Equipment
                 <br />
-                <em style={{ fontStyle: "italic", color: "#b8935a" }}>we trust.</em>
+                <em style={{ fontStyle: "italic", color: "#b29362" }}>we trust.</em>
               </h2>
               <p
                 className="font-prose italic"
-                style={{ color: "#d4cdb8", fontSize: 18, marginTop: 16, maxWidth: 560, marginInline: "auto" }}
+                style={{ color: "#ece5d4", fontSize: 18, marginTop: 16, maxWidth: 560, marginInline: "auto" }}
               >
                 Internationally certified technology, chosen because it is effective and safe.
               </p>
@@ -178,12 +178,12 @@ export default function ServicesPage() {
                       fontFamily: "var(--font-source-serif), 'Source Serif 4', Georgia, serif",
                       fontWeight: 600,
                       fontSize: 18,
-                      color: "#fdfbf6",
+                      color: "#ffffff",
                     }}
                   >
                     {eq.name}
                   </div>
-                  <div style={{ marginTop: 8, fontSize: 14, color: "#d4cdb8", lineHeight: 1.55 }}>
+                  <div style={{ marginTop: 8, fontSize: 14, color: "#ece5d4", lineHeight: 1.55 }}>
                     {eq.description.en}
                   </div>
                 </div>

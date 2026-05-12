@@ -50,7 +50,7 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
         <section
           style={{
             padding: "72px 0 56px",
-            background: "linear-gradient(180deg, #f8f6f0 0%, #ede5d3 100%)",
+            background: "linear-gradient(180deg, #f6f5f4 0%, #f0ece1 100%)",
             position: "relative",
             zIndex: 2,
           }}
@@ -68,7 +68,7 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
             </ScrollReveal>
 
             <ScrollReveal variant="fade-up">
-              <div className="overline" style={{ color: "#b8935a", marginBottom: 14 }}>
+              <div className="overline" style={{ color: "#b29362", marginBottom: 14 }}>
                 ✦ {d.medicalSpecialty}
               </div>
               <h1 className="h-display" style={{ marginBottom: 18, lineHeight: 1.05 }}>
@@ -85,15 +85,15 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
                     alignItems: "center",
                     gap: 10,
                     padding: "10px 16px",
-                    background: "rgba(184,147,90,0.12)",
+                    background: "rgba(178,147,98,0.12)",
                     borderRadius: 6,
                     fontSize: 13,
                     color: "#0a1f2e",
                     marginBottom: 28,
                   }}
                 >
-                  <span style={{ color: "#b8935a" }}>✜</span>
-                  SCFHS Registered <code style={{ fontFamily: "var(--font-mono), monospace", color: "#9a7847" }}>№ {d.scfhsNumber}</code>
+                  <span style={{ color: "#b29362" }}>✜</span>
+                  SCFHS Registered <code style={{ fontFamily: "var(--font-mono), monospace", color: "#8f7548" }}>№ {d.scfhsNumber}</code>
                 </div>
               )}
 
@@ -128,12 +128,12 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
             <div className="container-page" style={{ maxWidth: 820 }}>
               <ScrollReveal variant="fade-up">
                 <h2 className="h-lg" style={{ marginBottom: 32 }}>
-                  Education &amp; <em style={{ fontStyle: "italic", color: "#b8935a" }}>credentials</em>
+                  Education &amp; <em style={{ fontStyle: "italic", color: "#b29362" }}>credentials</em>
                 </h2>
                 <div className="grid gap-8 mobile-stack" style={{ gridTemplateColumns: "1fr 1fr" }}>
                   {d.education && d.education.length > 0 && (
                     <div>
-                      <h3 className="font-serif" style={{ fontSize: 16, color: "#9a7847", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 14 }}>
+                      <h3 className="font-serif" style={{ fontSize: 16, color: "#8f7548", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 14 }}>
                         Education
                       </h3>
                       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -145,7 +145,7 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
                               fontSize: 17,
                               color: "#2a3f4f",
                               padding: "10px 0",
-                              borderTop: i === 0 ? "none" : "1px dotted rgba(184,147,90,0.4)",
+                              borderTop: i === 0 ? "none" : "1px dotted rgba(178,147,98,0.4)",
                             }}
                           >
                             {e}
@@ -156,7 +156,7 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
                   )}
                   {d.certifications && d.certifications.length > 0 && (
                     <div>
-                      <h3 className="font-serif" style={{ fontSize: 16, color: "#9a7847", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 14 }}>
+                      <h3 className="font-serif" style={{ fontSize: 16, color: "#8f7548", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 14 }}>
                         Certifications
                       </h3>
                       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -168,7 +168,7 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
                               fontSize: 17,
                               color: "#2a3f4f",
                               padding: "10px 0",
-                              borderTop: i === 0 ? "none" : "1px dotted rgba(184,147,90,0.4)",
+                              borderTop: i === 0 ? "none" : "1px dotted rgba(178,147,98,0.4)",
                             }}
                           >
                             {c}
@@ -185,9 +185,9 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
 
         {/* Goals served */}
         {goals.length > 0 && (
-          <section className="section-sm" style={{ background: "#f8f6f0", position: "relative", zIndex: 2 }}>
+          <section className="section-sm" style={{ background: "#f6f5f4", position: "relative", zIndex: 2 }}>
             <div className="container-page">
-              <div className="overline" style={{ color: "#b8935a", marginBottom: 14 }}>
+              <div className="overline" style={{ color: "#b29362", marginBottom: 14 }}>
                 ✦ Goals served
               </div>
               <div className="grid gap-4 mobile-stack" style={{ gridTemplateColumns: `repeat(${Math.min(goals.length, 4)}, 1fr)` }}>
@@ -204,7 +204,7 @@ export default async function DoctorPage(props: { params: Promise<{ slug: string
                     <div className="font-serif" style={{ fontSize: 19, marginTop: 8, color: "#0a1f2e" }}>
                       {g.name.en}
                     </div>
-                    <p className="font-prose italic" style={{ fontSize: 14, marginTop: 6, color: "#6a7785" }}>
+                    <p className="font-prose italic" style={{ fontSize: 14, marginTop: 6, color: "#7f8487" }}>
                       {g.tagline.en}
                     </p>
                   </Link>

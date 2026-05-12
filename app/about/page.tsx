@@ -33,8 +33,8 @@ export default function AboutPage() {
             key={chapter.n}
             className="section"
             style={{
-              background: idx % 2 === 0 ? "#f8f6f0" : "#fdfbf6",
-              borderTop: "1px dotted #9a7847",
+              background: idx % 2 === 0 ? "#f6f5f4" : "#ffffff",
+              borderTop: "1px dotted #8f7548",
               position: "relative",
               zIndex: 2,
             }}
@@ -91,10 +91,10 @@ export default function AboutPage() {
           <div className="container-page">
             <div className="text-center" style={{ marginBottom: 56 }}>
               <ChapterMark roman="V" title="Commitments" dark />
-              <h2 className="h-xl" style={{ color: "#fdfbf6", marginTop: 20 }}>
+              <h2 className="h-xl" style={{ color: "#ffffff", marginTop: 20 }}>
                 Four commitments,
                 <br />
-                <em style={{ fontStyle: "italic", color: "#b8935a" }}>we stand by.</em>
+                <em style={{ fontStyle: "italic", color: "#b29362" }}>we stand by.</em>
               </h2>
             </div>
             <div
@@ -108,16 +108,16 @@ export default function AboutPage() {
                 >
                   <span
                     className="font-prose italic"
-                    style={{ color: "#b8935a", fontSize: 14 }}
+                    style={{ color: "#b29362", fontSize: 14 }}
                   >
                     {v.n}.
                   </span>
-                  <h3 className="h-md" style={{ color: "#fdfbf6", marginTop: 10, fontSize: 22 }}>
+                  <h3 className="h-md" style={{ color: "#ffffff", marginTop: 10, fontSize: 22 }}>
                     {v.title.en}
                   </h3>
                   <p
                     className="font-prose"
-                    style={{ color: "#d4cdb8", fontSize: 15, marginTop: 10, lineHeight: 1.65 }}
+                    style={{ color: "#ece5d4", fontSize: 15, marginTop: 10, lineHeight: 1.65 }}
                   >
                     {v.description.en}
                   </p>
@@ -133,7 +133,7 @@ export default function AboutPage() {
           style={{ position: "relative", zIndex: 2 }}
         >
           <div className="container-page text-center">
-            <div className="overline" style={{ color: "#b8935a" }}>
+            <div className="overline" style={{ color: "#b29362" }}>
               {ap.location.eyebrow.en}
             </div>
             <h2 className="h-xl" style={{ marginTop: 16 }}>

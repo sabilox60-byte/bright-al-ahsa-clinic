@@ -11,12 +11,12 @@ export default function BookCtaDark({ headline, description }: BookCtaDarkProps)
   return (
     <section className="section section-dark" style={{ position: "relative", zIndex: 2 }}>
       <div className="container-page text-center">
-        <h2 className="h-xl" style={{ color: "#fdfbf6" }}>
+        <h2 className="h-xl" style={{ color: "#ffffff" }}>
           {h}
         </h2>
         <p
           className="font-prose italic"
-          style={{ color: "#d4cdb8", fontSize: 18, marginTop: 16, maxWidth: 560, marginInline: "auto" }}
+          style={{ color: "#ece5d4", fontSize: 18, marginTop: 16, maxWidth: 560, marginInline: "auto" }}
         >
           {d}
         </p>

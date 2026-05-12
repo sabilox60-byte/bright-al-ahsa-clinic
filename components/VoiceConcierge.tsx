@@ -83,8 +83,8 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
           left: locale === "ar" ? 24 : "auto",
           zIndex: 60,
           background: "linear-gradient(180deg, #14283a 0%, #0a1f2e 100%)",
-          color: "#fdfbf6",
-          border: "1px solid rgba(184,147,90,0.4)",
+          color: "#ffffff",
+          border: "1px solid rgba(178,147,98,0.4)",
           borderRadius: 999,
           padding: "12px 22px",
           fontSize: 13,
@@ -98,7 +98,7 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
           transition: "transform 220ms cubic-bezier(0.4,0,0.2,1)",
         }}
       >
-        <span aria-hidden style={{ color: "#b8935a", fontSize: 14 }}>
+        <span aria-hidden style={{ color: "#b29362", fontSize: 14 }}>
           ✦
         </span>
         {cfg.triggerLabel[locale]}
@@ -131,7 +131,7 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
           style={{
             position: "fixed",
             zIndex: 60,
-            background: "#fdfbf6",
+            background: "#ffffff",
             display: "flex",
             flexDirection: "column",
             overflow: "hidden",
@@ -142,7 +142,7 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
             width: 380,
             maxWidth: "calc(100vw - 48px)",
             maxHeight: "70vh",
-            border: "1px solid #d4cdb8",
+            border: "1px solid #ece5d4",
             borderRadius: 12,
             boxShadow: "0 24px 64px rgba(10,31,46,0.18)",
           }}
@@ -161,7 +161,7 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
               style={{
                 width: 40,
                 height: 4,
-                background: "rgba(184,147,90,0.5)",
+                background: "rgba(178,147,98,0.5)",
                 borderRadius: 999,
                 margin: "0 auto",
               }}
@@ -171,13 +171,13 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
           <header
             style={{
               padding: "16px 20px",
-              borderBottom: "1px dotted rgba(184,147,90,0.35)",
+              borderBottom: "1px dotted rgba(178,147,98,0.35)",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
             }}
           >
-            <span className="overline" style={{ color: "#9a7847", fontSize: 10 }}>
+            <span className="overline" style={{ color: "#8f7548", fontSize: 10 }}>
               ✦ {cfg.triggerLabel[locale]}
             </span>
             <button
@@ -188,7 +188,7 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
                 background: "none",
                 border: "none",
                 cursor: "pointer",
-                color: "#6a7785",
+                color: "#7f8487",
                 fontSize: 22,
                 lineHeight: 1,
                 width: 32,
@@ -224,8 +224,8 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
                       type="button"
                       onClick={() => ask(p[locale])}
                       style={{
-                        background: "rgba(184,147,90,0.08)",
-                        border: "1px solid rgba(184,147,90,0.25)",
+                        background: "rgba(178,147,98,0.08)",
+                        border: "1px solid rgba(178,147,98,0.25)",
                         borderRadius: 8,
                         padding: "12px 14px",
                         fontSize: 14,
@@ -253,8 +253,8 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
                       : locale === "ar"
                       ? "flex-end"
                       : "flex-start",
-                  background: m.from === "user" ? "#0a1f2e" : "rgba(212,205,184,0.4)",
-                  color: m.from === "user" ? "#fdfbf6" : "#0a1f2e",
+                  background: m.from === "user" ? "#0a1f2e" : "rgba(236,229,212,0.4)",
+                  color: m.from === "user" ? "#ffffff" : "#0a1f2e",
                   padding: "10px 14px",
                   borderRadius: 12,
                   fontSize: 14,
@@ -269,7 +269,7 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
               <div
                 style={{
                   alignSelf: "flex-start",
-                  color: "#6a7785",
+                  color: "#7f8487",
                   fontSize: 13,
                   fontStyle: "italic",
                 }}
@@ -279,7 +279,7 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
             )}
           </div>
 
-          <footer style={{ padding: 14, borderTop: "1px dotted rgba(184,147,90,0.35)" }}>
+          <footer style={{ padding: 14, borderTop: "1px dotted rgba(178,147,98,0.35)" }}>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -305,7 +305,7 @@ export default function VoiceConcierge({ locale = "en" }: { locale?: Locale }) {
             <p
               style={{
                 fontSize: 11,
-                color: "#6a7785",
+                color: "#7f8487",
                 marginTop: 8,
                 textAlign: "center",
               }}

@@ -26,7 +26,7 @@ export default function MaaroofRibbon({ locale = "en" }: { locale?: Locale }) {
         gap: 12,
         padding: "8px 14px",
         background: "rgba(253, 251, 246, 0.92)",
-        border: "1px solid rgba(184, 147, 90, 0.3)",
+        border: "1px solid rgba(178, 147, 98, 0.3)",
         borderRadius: 999,
         fontSize: 12,
         color: "#0a1f2e",
@@ -34,7 +34,7 @@ export default function MaaroofRibbon({ locale = "en" }: { locale?: Locale }) {
         transition: "all 200ms cubic-bezier(0.4,0,0.2,1)",
       }}
     >
-      <span style={{ color: "#9a7847", fontSize: 14 }} aria-hidden>
+      <span style={{ color: "#8f7548", fontSize: 14 }} aria-hidden>
         ❖
       </span>
       <span
@@ -43,21 +43,21 @@ export default function MaaroofRibbon({ locale = "en" }: { locale?: Locale }) {
           letterSpacing: "0.06em",
           textTransform: "uppercase",
           fontSize: 10,
-          color: "#9a7847",
+          color: "#8f7548",
         }}
       >
         {locale === "ar" ? "معروف الذهبية" : "Maaroof Golden"}
       </span>
-      <span style={{ color: "rgba(184,147,90,0.5)" }}>·</span>
+      <span style={{ color: "rgba(178,147,98,0.5)" }}>·</span>
       <span style={{ fontWeight: 500, color: "#0a1f2e" }}>
         {rating.ratingValue.toFixed(1)}
       </span>
-      <span style={{ color: "#6a7785", fontSize: 11 }}>
+      <span style={{ color: "#7f8487", fontSize: 11 }}>
         {locale === "ar"
           ? `من ${rating.reviewCount} تقييم موثَّق`
           : `${rating.reviewCount} verified reviews`}
       </span>
-      <span style={{ color: "#9a7847", fontSize: 10, marginLeft: 4 }} aria-hidden>
+      <span style={{ color: "#8f7548", fontSize: 10, marginLeft: 4 }} aria-hidden>
         ↗
       </span>
     </a>

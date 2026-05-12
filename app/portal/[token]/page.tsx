@@ -40,7 +40,7 @@ export default async function PortalPage(props: { params: Promise<{ token: strin
         <section className="section" style={{ position: "relative", zIndex: 2 }}>
           <div className="container-page" style={{ maxWidth: 760 }}>
             <ScrollReveal variant="fade-up">
-              <div className="overline" style={{ color: "#b8935a", marginBottom: 14 }}>
+              <div className="overline" style={{ color: "#b29362", marginBottom: 14 }}>
                 {cfg.hero.eyebrow.en}
               </div>
               <h1 className="h-display" style={{ marginBottom: 16, lineHeight: 1.1 }}>
@@ -108,12 +108,12 @@ export default async function PortalPage(props: { params: Promise<{ token: strin
                 style={{
                   marginTop: 40,
                   padding: 28,
-                  background: "rgba(184,147,90,0.08)",
+                  background: "rgba(178,147,98,0.08)",
                   borderRadius: 12,
                   textAlign: "center",
                 }}
               >
-                <div className="overline" style={{ color: "#b8935a", marginBottom: 12 }}>
+                <div className="overline" style={{ color: "#b29362", marginBottom: 12 }}>
                   ✦ Direct line
                 </div>
                 <p className="font-prose" style={{ fontSize: 18, color: "#2a3f4f", marginBottom: 18 }}>
@@ -144,7 +144,7 @@ function Section({ heading, warn = false, children }: { heading: string; warn?: 
         className="font-serif"
         style={{
           fontSize: 17,
-          color: warn ? "#9a3a3a" : "#9a7847",
+          color: warn ? "#9a3a3a" : "#8f7548",
           letterSpacing: "0.04em",
           textTransform: "uppercase",
           marginBottom: 12,

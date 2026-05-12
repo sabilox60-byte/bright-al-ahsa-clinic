@@ -57,7 +57,7 @@ export default function FaqPage() {
                 <ScrollReveal key={i} variant="fade-up" delay={i * 40}>
                   <details
                     style={{
-                      borderTop: "1px dotted rgba(184,147,90,0.45)",
+                      borderTop: "1px dotted rgba(178,147,98,0.45)",
                       padding: "22px 0",
                     }}
                   >
@@ -76,7 +76,7 @@ export default function FaqPage() {
                       }}
                     >
                       <span>{item.q.en}</span>
-                      <span aria-hidden style={{ color: "#b8935a", fontSize: 18, transition: "transform 200ms" }}>
+                      <span aria-hidden style={{ color: "#b29362", fontSize: 18, transition: "transform 200ms" }}>
                         +
                       </span>
                     </summary>
@@ -95,7 +95,7 @@ export default function FaqPage() {
                   </details>
                 </ScrollReveal>
               ))}
-              <div style={{ borderTop: "1px dotted rgba(184,147,90,0.45)" }} />
+              <div style={{ borderTop: "1px dotted rgba(178,147,98,0.45)" }} />
             </dl>
 
             <div style={{ marginTop: 64, textAlign: "center" }}>

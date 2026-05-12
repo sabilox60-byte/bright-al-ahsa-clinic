@@ -45,7 +45,7 @@ export default function TermsPage() {
               These terms are governed by the laws of the Kingdom of Saudi Arabia. Disputes are resolved through Saudi commercial mediation first, then Saudi courts.
             </Term>
             <Term title="8. Contact">
-              Questions about these terms — <a href={`mailto:${clinicConfig.contact.email}`} className="tlink" style={{ color: "#9a7847" }}>{clinicConfig.contact.email}</a>.
+              Questions about these terms — <a href={`mailto:${clinicConfig.contact.email}`} className="tlink" style={{ color: "#8f7548" }}>{clinicConfig.contact.email}</a>.
             </Term>
           </article>
         </section>
@@ -57,7 +57,7 @@ export default function TermsPage() {
 
 function Term({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section style={{ marginBottom: 28, paddingBottom: 28, borderBottom: "1px dotted rgba(184,147,90,0.4)" }}>
+    <section style={{ marginBottom: 28, paddingBottom: 28, borderBottom: "1px dotted rgba(178,147,98,0.4)" }}>
       <h3 className="font-serif" style={{ fontSize: 19, color: "#0a1f2e", marginBottom: 10, fontWeight: 600 }}>
         {title}
       </h3>

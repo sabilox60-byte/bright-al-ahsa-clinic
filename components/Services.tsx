@@ -7,7 +7,7 @@ export default function Services() {
     <section className="section" id="services" style={{ paddingTop: 48 }}>
       <div className="container-page">
         <div className="text-center" style={{ marginBottom: 56 }}>
-          <div className="overline" style={{ color: "#b8935a" }}>
+          <div className="overline" style={{ color: "#b29362" }}>
             {s.eyebrow.en}
           </div>
           <h2 className="h-xl" style={{ marginTop: 16 }}>
@@ -19,7 +19,7 @@ export default function Services() {
             className="font-prose"
             style={{
               fontSize: 18,
-              color: "#6a7785",
+              color: "#7f8487",
               marginTop: 16,
               maxWidth: 580,
               marginInline: "auto",
@@ -48,7 +48,7 @@ export default function Services() {
                   <h3 className="h-md">{item.name.en}</h3>
                   <span
                     className="font-mono"
-                    style={{ fontSize: 12, color: "#6a7785" }}
+                    style={{ fontSize: 12, color: "#7f8487" }}
                   >
                     № {item.num}
                   </span>
@@ -69,7 +69,7 @@ export default function Services() {
                   className="tlink"
                   style={{
                     fontSize: 13,
-                    color: "#b8935a",
+                    color: "#b29362",
                     marginTop: 10,
                     fontWeight: 600,
                     letterSpacing: "0.6px",

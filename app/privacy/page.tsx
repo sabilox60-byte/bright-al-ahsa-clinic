@@ -32,7 +32,7 @@ export default function PrivacyPage() {
               We collect what we need to schedule, treat, and follow up on your care — nothing more. We store your records on Saudi-hosted infrastructure. We never sell, trade, or transfer your data outside Saudi Arabia.
             </p>
             <p className="font-prose" style={{ fontSize: 18, lineHeight: 1.6, color: "#2a3f4f", marginBottom: 18 }}>
-              You can request a copy of your file, ask us to correct it, or ask us to delete it. Email <a href={`mailto:${clinicConfig.contact.email}`} className="tlink" style={{ color: "#9a7847" }}>{clinicConfig.contact.email}</a> with the subject &ldquo;Data request.&rdquo; We respond within 30 days.
+              You can request a copy of your file, ask us to correct it, or ask us to delete it. Email <a href={`mailto:${clinicConfig.contact.email}`} className="tlink" style={{ color: "#8f7548" }}>{clinicConfig.contact.email}</a> with the subject &ldquo;Data request.&rdquo; We respond within 30 days.
             </p>
 
             <hr className="rule-dotted" style={{ margin: "40px 0" }} />
@@ -67,7 +67,7 @@ export default function PrivacyPage() {
             </PolicySection>
 
             <PolicySection title="7. How to reach us">
-              Email <a href={`mailto:${clinicConfig.contact.email}`} className="tlink" style={{ color: "#9a7847" }}>{clinicConfig.contact.email}</a>. WhatsApp also works.
+              Email <a href={`mailto:${clinicConfig.contact.email}`} className="tlink" style={{ color: "#8f7548" }}>{clinicConfig.contact.email}</a>. WhatsApp also works.
             </PolicySection>
           </article>
         </section>

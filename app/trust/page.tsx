@@ -58,14 +58,14 @@ export default function TrustPage() {
         </section>
 
         {/* Badges grid */}
-        <section className="section" style={{ background: "#f8f6f0", position: "relative", zIndex: 2 }}>
+        <section className="section" style={{ background: "#f6f5f4", position: "relative", zIndex: 2 }}>
           <div className="container-page">
             <ScrollReveal variant="fade-up">
-              <div className="overline" style={{ color: "#b8935a", marginBottom: 14, textAlign: "center" }}>
+              <div className="overline" style={{ color: "#b29362", marginBottom: 14, textAlign: "center" }}>
                 ✦ Verified credentials
               </div>
               <h2 className="h-lg" style={{ textAlign: "center", marginBottom: 56, maxWidth: 640, marginLeft: "auto", marginRight: "auto" }}>
-                Every claim is <em style={{ fontStyle: "italic", color: "#b8935a" }}>independently checkable.</em>
+                Every claim is <em style={{ fontStyle: "italic", color: "#b29362" }}>independently checkable.</em>
               </h2>
             </ScrollReveal>
 
@@ -85,7 +85,7 @@ export default function TrustPage() {
         {/* Doctor SCFHS verifications */}
         <section className="section-sm" style={{ position: "relative", zIndex: 2 }}>
           <div className="container-page">
-            <div className="overline" style={{ color: "#b8935a", marginBottom: 14 }}>
+            <div className="overline" style={{ color: "#b29362", marginBottom: 14 }}>
               ✦ Clinician registrations
             </div>
             <h2 className="h-md" style={{ marginBottom: 32 }}>
@@ -97,7 +97,7 @@ export default function TrustPage() {
                   key={d.slug}
                   style={{
                     padding: 18,
-                    border: "1px dotted rgba(184,147,90,0.4)",
+                    border: "1px dotted rgba(178,147,98,0.4)",
                     borderRadius: 8,
                     display: "flex",
                     justifyContent: "space-between",
@@ -109,14 +109,14 @@ export default function TrustPage() {
                     <div className="font-serif" style={{ fontSize: 17, color: "#0a1f2e", fontWeight: 500 }}>
                       {d.nameEn}
                     </div>
-                    <div style={{ fontSize: 13, color: "#6a7785", marginTop: 4 }}>{d.medicalSpecialty}</div>
+                    <div style={{ fontSize: 13, color: "#7f8487", marginTop: 4 }}>{d.medicalSpecialty}</div>
                   </div>
                   {d.scfhsNumber && (
                     <code
                       style={{
                         fontFamily: "var(--font-mono), monospace",
                         fontSize: 12,
-                        color: "#9a7847",
+                        color: "#8f7548",
                         letterSpacing: "0.05em",
                         whiteSpace: "nowrap",
                       }}
@@ -134,10 +134,10 @@ export default function TrustPage() {
         {v.reviewsBlock.embedUrl && (
           <section className="section section-dark">
             <div className="container-page">
-              <div className="overline" style={{ color: "#b8935a", marginBottom: 14 }}>
+              <div className="overline" style={{ color: "#b29362", marginBottom: 14 }}>
                 {v.reviewsBlock.eyebrow.en}
               </div>
-              <h2 className="h-lg" style={{ color: "#fdfbf6", marginBottom: 32, maxWidth: 720 }}>
+              <h2 className="h-lg" style={{ color: "#ffffff", marginBottom: 32, maxWidth: 720 }}>
                 {v.reviewsBlock.headline.en}
               </h2>
               <iframe

@@ -14,7 +14,7 @@ export default function EidBanner({ locale = "en" }: { locale?: Locale }) {
   if (!occ) return null;
 
   const countdown = formatCountdown(occ);
-  const palette = occ.palette ?? { accent: "#b8935a", surface: "#0a1f2e" };
+  const palette = occ.palette ?? { accent: "#b29362", surface: "#0a1f2e" };
 
   return (
     <div
@@ -23,7 +23,7 @@ export default function EidBanner({ locale = "en" }: { locale?: Locale }) {
       className="eid-banner"
       style={{
         background: palette.surface,
-        color: "#fdfbf6",
+        color: "#ffffff",
         padding: "10px 0",
         borderBottom: `1px solid ${palette.accent}33`,
         position: "relative",
