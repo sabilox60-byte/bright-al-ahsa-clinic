@@ -3,15 +3,20 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Renders the hero background video with autoplay safety net.
+ * Hero background video with aggressive iOS Safari autoplay strategy.
  *
- * iOS Safari and some Android browsers won't honor the `autoplay` attribute
- * alone in every situation. This component:
- *  1. Programmatically calls play() on mount.
- *  2. Retries play() on the first user interaction if autoplay was denied.
- *  3. Catches and swallows AbortError silently (page navigated away mid-load).
+ * iOS Safari's autoplay-when-muted requirement is well documented but
+ * notoriously flaky in practice. Strategies layered:
+ *  1. preload="auto" — Safari needs enough buffered data before play() succeeds
+ *  2. muted + playsInline set as properties (not just attributes) in JS
+ *  3. webkit-playsinline + x-webkit-airplay attributes (older iOS)
+ *  4. Retry play() every 250ms for 4s (covers slow first-load buffering)
+ *  5. Trigger play() on every media-loading event (loadedmetadata, canplay,
+ *     loadeddata, canplaythrough) — first one to succeed wins
+ *  6. Fallback: first scroll/touch/click unblocks
  *
- * The CSS file (.hero-video) handles object-fit, opacity, and mobile crop.
+ * NOTE: Low Power Mode on iOS hard-blocks autoplay at the system level.
+ * No web-side fix can override it; user must disable LPM in Settings.
  */
 export default function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -20,34 +25,56 @@ export default function HeroVideo() {
     const v = videoRef.current;
     if (!v) return;
 
-    // muted + playsInline are required for autoplay on iOS — set as
-    // properties too (some Safari versions only check the property, not attr).
+    // Properties (not just attributes) — some Safari versions only check these
     v.muted = true;
+    v.defaultMuted = true;
     v.playsInline = true;
+    v.setAttribute("webkit-playsinline", "true");
+    v.setAttribute("x-webkit-airplay", "deny");
+
+    let cancelled = false;
 
     const tryPlay = () => {
+      if (cancelled || !v.paused) return;
       const p = v.play();
       if (p !== undefined) {
         p.catch(() => {
-          /* autoplay denied (likely Low Power Mode). Wait for user gesture. */
+          /* swallow — retry loop or user-gesture handler will fire again */
         });
       }
     };
 
+    // 1) Try immediately
     tryPlay();
 
-    // If autoplay was blocked, the first user gesture unblocks it.
+    // 2) Retry every 250ms for 4 seconds (8 attempts total) — handles cases
+    //    where iOS Safari hasn't buffered enough yet to start playback
+    const retryTimer = setInterval(tryPlay, 250);
+    const stopRetry = setTimeout(() => clearInterval(retryTimer), 4000);
+
+    // 3) Hook into every media-readiness event
+    const events = ["loadedmetadata", "loadeddata", "canplay", "canplaythrough"];
+    events.forEach((e) => v.addEventListener(e, tryPlay));
+
+    // 4) First user gesture unblocks if all else fails (LPM, Safari setting)
     const onGesture = () => {
       tryPlay();
-      document.removeEventListener("touchstart", onGesture);
-      document.removeEventListener("click", onGesture);
+      ["touchstart", "click", "scroll"].forEach((e) =>
+        document.removeEventListener(e, onGesture)
+      );
     };
-    document.addEventListener("touchstart", onGesture, { passive: true, once: true });
-    document.addEventListener("click", onGesture, { once: true });
+    document.addEventListener("touchstart", onGesture, { passive: true });
+    document.addEventListener("click", onGesture);
+    document.addEventListener("scroll", onGesture, { passive: true });
 
     return () => {
-      document.removeEventListener("touchstart", onGesture);
-      document.removeEventListener("click", onGesture);
+      cancelled = true;
+      clearInterval(retryTimer);
+      clearTimeout(stopRetry);
+      events.forEach((e) => v.removeEventListener(e, tryPlay));
+      ["touchstart", "click", "scroll"].forEach((e) =>
+        document.removeEventListener(e, onGesture)
+      );
     };
   }, []);
 
@@ -59,7 +86,7 @@ export default function HeroVideo() {
       muted
       loop
       playsInline
-      preload="metadata"
+      preload="auto"
       poster="/hero/bright-hero-poster.jpg"
       aria-hidden="true"
       style={{
@@ -72,7 +99,6 @@ export default function HeroVideo() {
         zIndex: 0,
       }}
     >
-      {/* H.265 MP4 first for Safari priority. Smaller than AV1 in our case. */}
       <source src="/hero/bright-hero.mp4#t=0.001" type='video/mp4; codecs="hvc1"' />
       <source src="/hero/bright-hero.webm#t=0.001" type='video/webm; codecs="av01"' />
       <source src="/hero/bright-hero-h264.mp4#t=0.001" type='video/mp4; codecs="avc1.4d4029"' />
