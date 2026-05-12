@@ -3,91 +3,152 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Hero background video — written as raw HTML to guarantee the `muted`
- * attribute is in the DOM at parse time.
+ * Hero background video — responsive (art-directed).
  *
- * THE BUG WE'RE FIXING: React's <video muted /> renders the muted state
- * as a JS property on the element, not always as an HTML attribute in the
- * parsed DOM. iOS Safari checks the attribute at HTML parse time to
- * decide whether to allow autoplay — if the attribute isn't there at
- * parse time, Safari decides "this video has audio, autoplay denied"
- * BEFORE React hydrates or our useEffect runs. No amount of JS .play()
- * can recover from that initial deny.
+ * Renders TWO videos:
+ *   - Mobile portrait (1080×1500) → shown on screens ≤ 767px
+ *   - Desktop landscape (1920×1080) → shown on screens ≥ 768px
  *
- * By using dangerouslySetInnerHTML, the <video> element is parsed by
- * the browser EXACTLY as written — autoplay + muted + playsinline are
- * all literal HTML attributes, satisfying Safari's parse-time check.
+ * Why this pattern (instead of one cropped video):
+ *   - Mobile portrait videos have perfect framing on iPhone (no crop loss)
+ *   - Decision-makers open on iPhone first — quality there is critical
+ *   - Premium sites (Apple, Tesla, etc.) art-direct hero media per device
  *
- * Source: https://medium.com/@BoltAssaults/autoplay-muted-html5-video-safari-ios-10-in-react-673ae50ba1f5
+ * Why dangerouslySetInnerHTML:
+ *   React's <video muted /> renders muted as a JS property but not always
+ *   as an HTML attribute at parse time. iOS Safari checks the literal
+ *   HTML attribute at parse time to decide autoplay eligibility — if
+ *   the attribute isn't there at parse, Safari denies autoplay forever.
+ *   Writing the raw HTML guarantees the attribute is present at parse.
+ *
+ * Why preload="none" on the hidden one:
+ *   Browser will still parse both <video> tags. Setting preload="none"
+ *   on both prevents wasted bandwidth before our JS picks the active
+ *   one and promotes it to preload="auto" + .load() + .play().
  */
 export default function HeroVideo() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const v = containerRef.current?.querySelector("video") as HTMLVideoElement | null;
-    if (!v) return;
+    const root = containerRef.current;
+    if (!root) return;
 
-    // Belt-and-braces: also set properties (some Safari edges only check these)
-    v.muted = true;
-    v.defaultMuted = true;
-    v.playsInline = true;
+    const mobileQuery = window.matchMedia("(max-width: 767px)");
+    const desktopVideo = root.querySelector<HTMLVideoElement>(".hero-video-desktop");
+    const mobileVideo = root.querySelector<HTMLVideoElement>(".hero-video-mobile");
 
-    let cancelled = false;
+    const activate = (active: HTMLVideoElement, inactive: HTMLVideoElement) => {
+      // Belt-and-braces property assignment for Safari edge cases
+      active.muted = true;
+      active.defaultMuted = true;
+      active.playsInline = true;
+      active.preload = "auto";
 
-    const tryPlay = () => {
-      if (cancelled || !v.paused) return;
-      const p = v.play();
-      if (p !== undefined) p.catch(() => {});
-    };
+      // Make sure the inactive one doesn't waste bandwidth
+      inactive.preload = "none";
+      inactive.pause();
+      // Strip src to fully release decoder buffer on iOS
+      inactive.removeAttribute("src");
+      inactive.load();
 
-    tryPlay();
-    const retryTimer = setInterval(tryPlay, 250);
-    const stopRetry = setTimeout(() => clearInterval(retryTimer), 4000);
+      // Reload the active one with preload=auto, then play
+      active.load();
 
-    const events = ["loadedmetadata", "loadeddata", "canplay", "canplaythrough"];
-    events.forEach((e) => v.addEventListener(e, tryPlay));
+      let cancelled = false;
+      const tryPlay = () => {
+        if (cancelled || !active.paused) return;
+        const p = active.play();
+        if (p !== undefined) p.catch(() => {});
+      };
 
-    const onGesture = () => {
       tryPlay();
-      ["touchstart", "click", "scroll"].forEach((e) =>
-        document.removeEventListener(e, onGesture)
-      );
+      const retryTimer = setInterval(tryPlay, 250);
+      const stopRetry = setTimeout(() => clearInterval(retryTimer), 4000);
+
+      const events = ["loadedmetadata", "loadeddata", "canplay", "canplaythrough"];
+      events.forEach((e) => active.addEventListener(e, tryPlay));
+
+      const onGesture = () => {
+        tryPlay();
+        ["touchstart", "click", "scroll"].forEach((e) =>
+          document.removeEventListener(e, onGesture)
+        );
+      };
+      document.addEventListener("touchstart", onGesture, { passive: true });
+      document.addEventListener("click", onGesture);
+      document.addEventListener("scroll", onGesture, { passive: true });
+
+      return () => {
+        cancelled = true;
+        clearInterval(retryTimer);
+        clearTimeout(stopRetry);
+        events.forEach((e) => active.removeEventListener(e, tryPlay));
+        ["touchstart", "click", "scroll"].forEach((e) =>
+          document.removeEventListener(e, onGesture)
+        );
+      };
     };
-    document.addEventListener("touchstart", onGesture, { passive: true });
-    document.addEventListener("click", onGesture);
-    document.addEventListener("scroll", onGesture, { passive: true });
+
+    if (!desktopVideo || !mobileVideo) return;
+    let cleanup: (() => void) | undefined;
+
+    const applyForCurrent = () => {
+      cleanup?.();
+      if (mobileQuery.matches) {
+        cleanup = activate(mobileVideo, desktopVideo);
+      } else {
+        cleanup = activate(desktopVideo, mobileVideo);
+      }
+    };
+
+    applyForCurrent();
+    mobileQuery.addEventListener("change", applyForCurrent);
 
     return () => {
-      cancelled = true;
-      clearInterval(retryTimer);
-      clearTimeout(stopRetry);
-      events.forEach((e) => v.removeEventListener(e, tryPlay));
-      ["touchstart", "click", "scroll"].forEach((e) =>
-        document.removeEventListener(e, onGesture)
-      );
+      cleanup?.();
+      mobileQuery.removeEventListener("change", applyForCurrent);
     };
   }, []);
+
+  // Render both videos as raw HTML so iOS Safari sees muted+autoplay+
+  // playsinline as parse-time attributes (React property rendering is
+  // unreliable for this iOS Safari check).
+  const html = `
+    <video
+      class="hero-video hero-video-desktop"
+      src="/hero/bright-hero-h264.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="/hero/bright-hero-poster.jpg"
+      aria-hidden="true"
+      webkit-playsinline="true"
+      x-webkit-airplay="deny"
+      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center right;z-index:0;"
+    ></video>
+    <video
+      class="hero-video hero-video-mobile"
+      src="/hero/bright-hero-mobile.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="/hero/bright-hero-mobile-poster.jpg"
+      aria-hidden="true"
+      webkit-playsinline="true"
+      x-webkit-airplay="deny"
+      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0;"
+    ></video>
+  `;
 
   return (
     <div
       ref={containerRef}
       style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}
-      dangerouslySetInnerHTML={{
-        __html: `<video
-          class="hero-video"
-          src="/hero/bright-hero-h264.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          poster="/hero/bright-hero-poster.jpg"
-          aria-hidden="true"
-          webkit-playsinline="true"
-          x-webkit-airplay="deny"
-          style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center right;z-index:0;"
-        ></video>`,
-      }}
+      dangerouslySetInnerHTML={{ __html: html }}
     />
   );
 }

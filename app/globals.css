@@ -520,6 +520,22 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
 .hero-video {
   opacity: 1;
 }
+
+/* Responsive hero video — art direction
+   Mobile (≤767px): show portrait video, hide desktop
+   Desktop (≥768px): show landscape video, hide mobile */
+.hero-video-mobile {
+  display: none;
+}
+@media (max-width: 767px) {
+  .hero-video-desktop {
+    display: none !important;
+  }
+  .hero-video-mobile {
+    display: block !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
     /* poster image stays as fallback when autoplay is suppressed */
