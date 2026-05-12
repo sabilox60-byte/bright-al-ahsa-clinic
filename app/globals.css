@@ -555,39 +555,17 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
   .hero-twilight-glow { animation: none; }
 }
 
-/* Hero text readability — soft cream halo behind navy text so it reads
-   over any frame of the background video. No washed-out overlay needed. */
+/* Hero text readability — DARK navy halo behind WHITE hero text so it
+   reads cleanly over any frame of the video (bright/dark/colored). */
 .hero-textreadable .h-display,
 .hero-textreadable .h-display em,
 .hero-textreadable .hero-lead-italic,
 .hero-textreadable .hero-lead,
 .hero-textreadable .overline {
   text-shadow:
-    0 0 18px rgba(246, 245, 244, 0.92),
-    0 0 6px rgba(246, 245, 244, 0.85),
-    0 1px 2px rgba(246, 245, 244, 0.6);
-}
-
-/* Floating Est. badge + pull-quote card — luxury micro-rise on load */
-.hero-est-badge,
-.hero-quote-card {
-  animation: fadeUp 900ms var(--ease-standard) 600ms both;
-}
-
-/* Tablet (768–1023): keep cards visible but pull them closer to edge */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .hero-est-badge {
-    top: 100px !important;
-    right: 24px !important;
-    width: 78px !important;
-    height: 78px !important;
-  }
-  .hero-quote-card {
-    bottom: 64px !important;
-    right: 24px !important;
-    max-width: 260px !important;
-    font-size: 14px !important;
-  }
+    0 0 24px rgba(10, 31, 46, 0.65),
+    0 0 8px rgba(10, 31, 46, 0.55),
+    0 2px 3px rgba(10, 31, 46, 0.45);
 }
 
 
@@ -826,10 +804,6 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
     );
     pointer-events: none;
   }
-
-  /* Hide floating overlay cards on mobile — they would collide with content */
-  .hero-est-badge,
-  .hero-quote-card { display: none !important; }
 
   /* Shrink twilight glow on mobile so it doesn't overwhelm */
   .hero-twilight-glow {
