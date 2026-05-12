@@ -515,31 +515,26 @@ html[dir="rtl"] .chip { letter-spacing: 0.04em; }
    HERO VIDEO — full-width ambient background (Bright Al Ahsa signature)
    Drop bright-hero.mp4 + bright-hero-poster.jpg into /public/hero/
    ═══════════════════════════════════════════════════════════════════════ */
-/* IMPORTANT: never set opacity: 0 on the video — iOS Safari refuses
-   to autoplay videos that start invisible. Keep visible from frame 0. */
-.hero-video {
-  opacity: 1;
-}
-
-/* Responsive hero video — art direction
-   Mobile (≤767px): show portrait video, hide desktop
-   Desktop (≥768px): show landscape video, hide mobile */
-.hero-video-mobile {
-  display: none;
+/* Hero video stage — shows poster as CSS background for instant LCP,
+   then JS injects the <video> on top once mounted. Background poster
+   switches based on viewport so mobile gets the portrait poster. */
+.hero-video-stage {
+  background-image: url("/hero/bright-hero-poster.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
 }
 @media (max-width: 767px) {
-  .hero-video-desktop {
-    display: none !important;
-  }
-  .hero-video-mobile {
-    display: block !important;
+  .hero-video-stage {
+    background-image: url("/hero/bright-hero-mobile-poster.jpg");
+    background-position: center center;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-video {
-    /* poster image stays as fallback when autoplay is suppressed */
-  }
+/* Video element (injected by JS) — never set opacity:0; iOS Safari
+   refuses autoplay on invisible videos. */
+.hero-video {
+  opacity: 1;
 }
 
 /* Bright's signature twilight-purple ambient glow (matches night facade) */
