@@ -8,8 +8,8 @@ export default function Logo({
   dark?: boolean;
   size?: number;
 }) {
-  // Full bilingual lockup needs ~1.9x the size token to read both lines cleanly.
-  const displayHeight = Math.round(size * 1.9);
+  // Full bilingual lockup — 2.5x token so both Arabic + Latin lines read with presence.
+  const displayHeight = Math.round(size * 2.5);
 
   return (
     <Link
