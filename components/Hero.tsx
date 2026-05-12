@@ -1,4 +1,3 @@
-import HeroIllustration from "./HeroIllustration";
 import MaaroofRibbon from "./MaaroofRibbon";
 import SisterShare from "./SisterShare";
 import ScrollIndicator from "./ScrollIndicator";
@@ -34,9 +33,54 @@ function StatMark({ num, label }: { num: string; label: string }) {
 
 export default function Hero() {
   return (
-    <section className="relative" style={{ padding: "72px 0 96px", minHeight: "calc(100vh - 80px)", overflow: "hidden" }}>
-      {/* Bright building's night-purple ambient glow — left-side, behind text */}
-      <span className="hero-twilight-glow" aria-hidden style={{ top: "12%", left: "-15%" }} />
+    <section
+      className="relative hero-section"
+      style={{
+        minHeight: "calc(100vh - 80px)",
+        overflow: "hidden",
+        background: "#f8f6f0",
+      }}
+    >
+      {/* ── Full-width background video (autoplay + mute + loop) ─────────── */}
+      {/* Drop bright-hero.mp4 into /public/hero/ to activate. */}
+      {/* Poster image shows while loading, freezes for prefers-reduced-motion. */}
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/hero/bright-hero-poster.jpg"
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center right",
+          zIndex: 0,
+        }}
+      >
+        <source src="/hero/bright-hero.mp4" type="video/mp4" />
+        <source src="/hero/bright-hero.webm" type="video/webm" />
+      </video>
+
+      {/* ── Readability overlay — gradient ensures text stays legible ───── */}
+      <div
+        aria-hidden
+        style={{
+          position: "absolute",
+          inset: 0,
+          background:
+            "linear-gradient(90deg, rgba(248,246,240,0.96) 0%, rgba(248,246,240,0.88) 35%, rgba(248,246,240,0.55) 60%, rgba(248,246,240,0.15) 100%)",
+          zIndex: 1,
+        }}
+      />
+
+      {/* ── Bright building's night-purple ambient glow ──────────────────── */}
+      <span className="hero-twilight-glow" aria-hidden style={{ top: "12%", left: "-15%", zIndex: 2 }} />
       <span
         className="hero-twilight-glow"
         aria-hidden
@@ -46,15 +90,22 @@ export default function Hero() {
           width: 360,
           height: 360,
           animationDelay: "-3s",
+          zIndex: 2,
         }}
       />
 
       <ScrollIndicator locale="en" />
+
+      {/* ── Main content (text + CTAs + stats) — overlaid on left 50% ──── */}
       <div
-        className="container-page grid items-center gap-16 mobile-stack relative"
-        style={{ gridTemplateColumns: "1.1fr 0.9fr", zIndex: 1 }}
+        className="container-page relative hero-content"
+        style={{
+          zIndex: 3,
+          paddingTop: 72,
+          paddingBottom: 96,
+        }}
       >
-        <div className="fade-up">
+        <div className="fade-up" style={{ maxWidth: 620 }}>
           <div className="overline" style={{ color: "#b8935a", marginBottom: 18 }}>
             {clinicConfig.hero.eyebrow.en}
           </div>
@@ -78,7 +129,7 @@ export default function Hero() {
               fontSize: 22,
               lineHeight: 1.5,
               color: "#2a3f4f",
-              marginTop: 56,
+              marginTop: 48,
               maxWidth: 540,
             }}
           >
@@ -89,9 +140,9 @@ export default function Hero() {
             style={{
               fontSize: 18,
               lineHeight: 1.6,
-              color: "#6a7785",
+              color: "#2a3f4f",
               marginTop: 18,
-              marginBottom: 36,
+              marginBottom: 32,
               maxWidth: 540,
             }}
           >
@@ -127,26 +178,57 @@ export default function Hero() {
               </div>
             ))}
           </div>
-        </div>
-        <div className="relative flex justify-end hero-illustration">
-          <HeroIllustration maxSize={460} />
+
+          {/* ── Floating Est. badge (was on illustration, now floats over video) ── */}
           <div
+            className="hero-est-badge"
             style={{
               position: "absolute",
-              bottom: 28,
-              left: -24,
+              top: 80,
+              right: 60,
+              background: "#0a1f2e",
+              color: "#fdfbf6",
+              borderRadius: 999,
+              width: 84,
+              height: 84,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+              boxShadow: "0 0 0 4px #f8f6f0, 0 12px 32px rgba(10,31,46,0.2)",
+              zIndex: 4,
+            }}
+          >
+            <span
+              className="font-prose italic"
+              style={{ fontSize: 11, color: "#b8935a" }}
+            >
+              est.
+            </span>
+            <span className="font-serif" style={{ fontSize: 24, fontWeight: 600 }}>
+              {clinicConfig.brand.established}
+            </span>
+          </div>
+
+          {/* ── Floating pull-quote card (was on illustration, now floats bottom-right) ── */}
+          <div
+            className="hero-quote-card"
+            style={{
+              position: "absolute",
+              bottom: 60,
+              right: 60,
+              maxWidth: 280,
               background: "#fdfbf6",
               borderRadius: 14,
-              padding: "14px 18px",
-              boxShadow: "0 0 0 1px #d4cdb8, 0 8px 24px rgba(10,31,46,0.08)",
+              padding: "16px 20px",
+              boxShadow: "0 0 0 1px #d4cdb8, 0 12px 32px rgba(10,31,46,0.12)",
               fontSize: 13,
-              maxWidth: 240,
-              zIndex: 3,
+              zIndex: 4,
             }}
           >
             <div
               className="font-prose italic"
-              style={{ color: "#0a1f2e", fontSize: 16, lineHeight: 1.4 }}
+              style={{ color: "#0a1f2e", fontSize: 15, lineHeight: 1.45 }}
             >
               {clinicConfig.hero.pullQuote.en}
             </div>
@@ -161,34 +243,6 @@ export default function Hero() {
             >
               {clinicConfig.hero.pullQuoteAttribution.en}
             </div>
-          </div>
-          <div
-            style={{
-              position: "absolute",
-              top: -12,
-              right: -12,
-              background: "#0a1f2e",
-              color: "#fdfbf6",
-              borderRadius: 999,
-              width: 84,
-              height: 84,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-              boxShadow: "0 0 0 4px #f8f6f0",
-              zIndex: 3,
-            }}
-          >
-            <span
-              className="font-prose italic"
-              style={{ fontSize: 11, color: "#b8935a" }}
-            >
-              est.
-            </span>
-            <span className="font-serif" style={{ fontSize: 24, fontWeight: 600 }}>
-              {clinicConfig.brand.established}
-            </span>
           </div>
         </div>
       </div>
