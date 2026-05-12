@@ -3,20 +3,24 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Hero background video with aggressive iOS Safari autoplay strategy.
+ * Hero background video — simplified to single H.264 source for maximum
+ * iOS Safari autoplay reliability.
  *
- * iOS Safari's autoplay-when-muted requirement is well documented but
- * notoriously flaky in practice. Strategies layered:
- *  1. preload="auto" — Safari needs enough buffered data before play() succeeds
- *  2. muted + playsInline set as properties (not just attributes) in JS
- *  3. webkit-playsinline + x-webkit-airplay attributes (older iOS)
- *  4. Retry play() every 250ms for 4s (covers slow first-load buffering)
- *  5. Trigger play() on every media-loading event (loadedmetadata, canplay,
- *     loadeddata, canplaythrough) — first one to succeed wins
- *  6. Fallback: first scroll/touch/click unblocks
+ * Why the simplification (after 3 failed attempts with multi-source):
+ *  - Multiple <source> children with codec hints (av01, hvc1, avc1) can
+ *    confuse iOS Safari into picking a source it cannot reliably decode,
+ *    and Safari does NOT always fall back to the next source on decode
+ *    failure — it just stalls.
+ *  - Single H.264 .mp4 via direct `src` attribute is the pattern Apple,
+ *    Tesla, and most premium sites use because it has the strongest
+ *    autoplay-on-iOS track record.
  *
- * NOTE: Low Power Mode on iOS hard-blocks autoplay at the system level.
- * No web-side fix can override it; user must disable LPM in Settings.
+ * H.264 file is 7.5 MB (vs 3.9 MB H.265) — extra 3.6 MB is the price for
+ * guaranteed autoplay. Vercel CDN caches it 30 days so subsequent visits
+ * are instant.
+ *
+ * JS retry loop kept as defense against slow buffering / LPM / strict
+ * Safari "Auto-Play" setting.
  */
 export default function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -25,7 +29,7 @@ export default function HeroVideo() {
     const v = videoRef.current;
     if (!v) return;
 
-    // Properties (not just attributes) — some Safari versions only check these
+    // Properties (not just attributes) — Safari edge cases need these set in JS
     v.muted = true;
     v.defaultMuted = true;
     v.playsInline = true;
@@ -38,25 +42,20 @@ export default function HeroVideo() {
       if (cancelled || !v.paused) return;
       const p = v.play();
       if (p !== undefined) {
-        p.catch(() => {
-          /* swallow — retry loop or user-gesture handler will fire again */
-        });
+        p.catch(() => {});
       }
     };
 
-    // 1) Try immediately
+    // Immediate + repeated attempts during first 4 seconds
     tryPlay();
-
-    // 2) Retry every 250ms for 4 seconds (8 attempts total) — handles cases
-    //    where iOS Safari hasn't buffered enough yet to start playback
     const retryTimer = setInterval(tryPlay, 250);
     const stopRetry = setTimeout(() => clearInterval(retryTimer), 4000);
 
-    // 3) Hook into every media-readiness event
+    // Hook every readiness event
     const events = ["loadedmetadata", "loadeddata", "canplay", "canplaythrough"];
     events.forEach((e) => v.addEventListener(e, tryPlay));
 
-    // 4) First user gesture unblocks if all else fails (LPM, Safari setting)
+    // Final fallback: first interaction unblocks
     const onGesture = () => {
       tryPlay();
       ["touchstart", "click", "scroll"].forEach((e) =>
@@ -82,6 +81,7 @@ export default function HeroVideo() {
     <video
       ref={videoRef}
       className="hero-video"
+      src="/hero/bright-hero-h264.mp4"
       autoPlay
       muted
       loop
@@ -98,10 +98,6 @@ export default function HeroVideo() {
         objectPosition: "center right",
         zIndex: 0,
       }}
-    >
-      <source src="/hero/bright-hero.mp4#t=0.001" type='video/mp4; codecs="hvc1"' />
-      <source src="/hero/bright-hero.webm#t=0.001" type='video/webm; codecs="av01"' />
-      <source src="/hero/bright-hero-h264.mp4#t=0.001" type='video/mp4; codecs="avc1.4d4029"' />
-    </video>
+    />
   );
 }
