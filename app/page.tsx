@@ -1,7 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import MarqueeBand from "@/components/MarqueeBand";
-import Founder from "@/components/Founder";
 import Services from "@/components/Services";
 import TailoredCare from "@/components/TailoredCare";
 import OutcomeCompass from "@/components/OutcomeCompass";
@@ -22,7 +21,6 @@ export default function Home() {
         <LivingPulse locale="en" />
         <Hero />
         <MarqueeBand />
-        <Founder />
         <OutcomeCompass locale="en" />
         <Services />
         <TailoredCare />
