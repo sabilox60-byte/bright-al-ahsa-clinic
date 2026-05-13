@@ -963,7 +963,7 @@ export const clinicExtras: ClinicExtras = {
   social: {
     instagram: "@bright_k_1",
     snapchat: "@bright-clinics",
-    tiktok: "@bright.alahsa",
+    tiktok: "@bright_k_1",
     twitter: "@bright_supportk",
     facebook: "bright.khobar",
   },

@@ -198,7 +198,7 @@ export const clinicConfig: ClinicConfig = {
     items: [
       { key: "services", label: { en: "Departments", ar: "الأقسام" }, href: "/services" },
       { key: "doctors", label: { en: "Our Clinicians", ar: "أطبّاؤنا" }, href: "/doctors" },
-      { key: "branches", label: { en: "Branches", ar: "الفروع" }, href: "/about" },
+      { key: "gallery", label: { en: "Before & After", ar: "قبل وبعد" }, href: "/gallery" },
       { key: "trust", label: { en: "Trust", ar: "موثوقية" }, href: "/trust" },
       { key: "journal", label: { en: "Journal", ar: "المجلّة" }, href: "/journal" },
       { key: "contact", label: { en: "Contact", ar: "تواصل" }, href: "/booking" },
@@ -253,23 +253,23 @@ export const clinicConfig: ClinicConfig = {
 
   // ══ HOMEPAGE SECTIONS ═══════════════════════════════════════════════════
   hero: {
-    eyebrow: { en: "✦ Al Khobar · Since 2018", ar: "✦ الخبر · منذ ٢٠١٨" },
-    headlinePartA: { en: "Excellence", ar: "للتميّز" },
-    headlineEm: { en: "is our only title.", ar: "عنوانٌ واحد." },
+    eyebrow: { en: "✦ Al Khobar · Bright Specialized Clinics · Since 2018", ar: "✦ الخبر · عيادات برايت التخصصية · منذ ٢٠١٨" },
+    headlinePartA: { en: "The Khobar clinic", ar: "العيادة التي" },
+    headlineEm: { en: "women have trusted since 2018.", ar: "اختارتها سيدات الخبر منذ ٢٠١٨." },
     headlinePartB: { en: "", ar: "" },
-    leadItalic: { en: "Ten specialty departments. One quiet roof. One standard.", ar: "عشرة أقسام تخصّصية. سقفٌ هادئٌ واحد. ومعيارٌ واحد." },
+    leadItalic: { en: "1,500+ reviews. Six named clinicians. One quiet roof.", ar: "أكثر من ١٬٥٠٠ تقييم. ستّة أطبّاء بأسمائهم. سقفٌ هادئٌ واحد." },
     lead: {
-      en: "Dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric and more — on Prince Faisal Bin Fahd Road in Al Khobar, since 2018.",
-      ar: "الجلدية وجراحة التجميل وتجميل الأسنان والنساء والولادة وطب الأطفال وجراحة السمنة — على شارع الأمير فيصل بن فهد بالخبر، منذ ٢٠١٨.",
+      en: "Dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric and laser — on Prince Faisal Bin Fahd Road in Al Hada. Women-only sessions on request. Same-day WhatsApp confirmation.",
+      ar: "الجلدية وجراحة التجميل وتجميل الأسنان والنساء والولادة وطب الأطفال وجراحة السمنة والليزر — على شارع الأمير فيصل بن فهد بحي الهدا. جلسات نسائية فقط عند الطلب. تأكيد عبر واتساب في نفس اليوم.",
     },
     primaryCta: { en: "Book on WhatsApp", ar: "احجزي عبر واتساب" },
-    secondaryCta: { en: "Our departments", ar: "أقسامنا" },
+    secondaryCta: { en: "Meet our clinicians", ar: "تعرّفي على أطبّائنا" },
     pullQuote: { en: "\"They explained three options, then said the simplest one suited me best.\"", ar: "«شرحوا لي ثلاث خيارات، ثم قالوا إنّ الخيار الأبسط هو الأنسب لي.»" },
     pullQuoteAttribution: { en: "Patient · Al Khobar", ar: "مريضة · الخبر" },
     stats: [
-      { value: { en: "10 departments", ar: "١٠ أقسام" }, label: { en: "Under one roof", ar: "تحت سقفٍ واحد" } },
-      { value: { en: "4.4 ★", ar: "٤٫٤ ★" }, label: { en: "1,500+ patient reviews", ar: "أكثر من ١٬٥٠٠ تقييم" } },
-      { value: { en: "Since 2018", ar: "منذ ٢٠١٨" }, label: { en: "Al Hada · Al Khobar", ar: "الهدا · الخبر" } },
+      { value: { en: "4.4 ★", ar: "٤٫٤ ★" }, label: { en: "1,500+ verified Google reviews", ar: "أكثر من ١٬٥٠٠ تقييم جوجل" } },
+      { value: { en: "6 named", ar: "٦ بأسمائهم" }, label: { en: "Clinicians, verifiable credentials", ar: "أطبّاء بشهادات قابلة للتحقّق" } },
+      { value: { en: "Women-only", ar: "نسائي فقط" }, label: { en: "Sessions on request", ar: "جلسات عند الطلب" } },
     ],
   },
   marqueeStrip: {

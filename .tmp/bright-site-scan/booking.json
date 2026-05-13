@@ -1,0 +1,205 @@
+{
+  "url": "https://bright-al-ahsa-clinic.vercel.app/booking",
+  "title": "Bright Specialized Clinics — Al Khobar, Saudi Arabia",
+  "h1": [
+    "Book a visit,or write to us."
+  ],
+  "headings": [
+    "Book a visit,or write to us.",
+    "What brings you in?",
+    "Or reach us directly."
+  ],
+  "links": [
+    {
+      "text": "Skip to content",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/booking#main"
+    },
+    {
+      "text": "Reserve Eid time →",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/booking"
+    },
+    {
+      "text": "",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/"
+    },
+    {
+      "text": "Departments",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/services"
+    },
+    {
+      "text": "Our Clinicians",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/doctors"
+    },
+    {
+      "text": "Branches",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/about"
+    },
+    {
+      "text": "Trust",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/trust"
+    },
+    {
+      "text": "Journal",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/journal"
+    },
+    {
+      "text": "Contact",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/booking"
+    },
+    {
+      "text": "Book on WhatsApp",
+      "href": "https://wa.me/966557337555"
+    },
+    {
+      "text": "Book",
+      "href": "https://wa.me/966557337555"
+    },
+    {
+      "text": "",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/"
+    },
+    {
+      "text": "Dermatology & Laser",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/services"
+    },
+    {
+      "text": "Plastic Surgery",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/services"
+    },
+    {
+      "text": "Cosmetic Dentistry",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/services"
+    },
+    {
+      "text": "OB/GYN",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/services"
+    },
+    {
+      "text": "Paediatrics",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/services"
+    },
+    {
+      "text": "Bariatric Surgery",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/services"
+    },
+    {
+      "text": "About",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/about"
+    },
+    {
+      "text": "Our Clinicians",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/doctors"
+    },
+    {
+      "text": "Trust & Credentials",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/trust"
+    },
+    {
+      "text": "Journal",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/journal"
+    },
+    {
+      "text": "Book on WhatsApp",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/booking"
+    },
+    {
+      "text": "Visit us · Al Hada",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/about"
+    },
+    {
+      "text": "Call 920024428",
+      "href": "tel:920024428"
+    },
+    {
+      "text": "WhatsApp 0557337555",
+      "href": "https://wa.me/966557337555"
+    },
+    {
+      "text": "✦Vision 2030aligned",
+      "href": "https://www.vision2030.gov.sa/"
+    },
+    {
+      "text": "Privacy",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/privacy"
+    },
+    {
+      "text": "Terms",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/terms"
+    },
+    {
+      "text": "Accessibility",
+      "href": "https://bright-al-ahsa-clinic.vercel.app/accessibility"
+    },
+    {
+      "text": "☏",
+      "href": "tel:920024428"
+    },
+    {
+      "text": "✦Book on WhatsApp",
+      "href": "https://wa.me/966557337555"
+    }
+  ],
+  "media": [
+    {
+      "tag": "img",
+      "alt": "Bright Medical Center",
+      "src": "https://bright-al-ahsa-clinic.vercel.app/_next/image?url=%2Fbrand%2Fbright-logo.png&w=640&q=75",
+      "poster": ""
+    },
+    {
+      "tag": "img",
+      "alt": "Bright Medical Center",
+      "src": "https://bright-al-ahsa-clinic.vercel.app/_next/image?url=%2Fbrand%2Fbright-logo.png&w=640&q=75",
+      "poster": ""
+    }
+  ],
+  "portraitPlaceholders": 1,
+  "sections": [
+    {
+      "index": 0,
+      "tag": "nav",
+      "id": "top",
+      "className": "sticky top-0 z-50",
+      "heading": "",
+      "text": "Departments Our Clinicians Branches Trust Journal Contact BOOK ON WHATSAPP",
+      "portraitCount": 0,
+      "imgCount": 1,
+      "videoCount": 0
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "id": "",
+      "className": "",
+      "heading": "Book a visit,or write to us.",
+      "text": "Chapter I. ✦ BOOK Book a visit, or write to us. Three short steps. We confirm by SMS right away.",
+      "portraitCount": 1,
+      "imgCount": 0,
+      "videoCount": 0
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "id": "",
+      "className": "section",
+      "heading": "Step 1 of 3 · Choose a treatment",
+      "text": "STEP 1 OF 3 · CHOOSE A TREATMENT What brings you in? Free consultation 30 min · free Hydrafacial 45 min Full-face Filler 60 min Lip Filler 30 min Botox 30 min Hollywood Smile · Veneers 2 hr Teeth Whitening 60 min Laser Hair Removal 45 min Plasma / PRP 45 min OB/GYN consultation (female-only) 30 min ← BACK CONTINUE → Chapter II. CONTACT Or reach us directly. WHATSAPP +966 55 733 7555 PHONE 920024428 EMAIL info@brightclinics.sa ADDRESS Prince Faisal Bin Fahd Rd, Al Hada District, Al Khobar 34439 HOURS Sat – Thu · 9 AM – 11 PM · Friday after Asr prayer \"Most patients reach us on WhatsApp. Messages are read the same day.\"",
+      "portraitCount": 0,
+      "imgCount": 0,
+      "videoCount": 0
+    },
+    {
+      "index": 3,
+      "tag": "footer",
+      "id": "",
+      "className": "",
+      "heading": "Departments",
+      "text": "Ten specialty departments. One quiet roof in Al Khobar. One promise: excellence as the only standard. MOH LICENSED AL KHOBAR · EASTERN PROVINCE DEPARTMENTS Dermatology & Laser Plastic Surgery Cosmetic Dentistry OB/GYN Paediatrics Bariatric Surgery THE CLINIC About Our Clinicians Trust & Credentials Journal REACH US Book on WhatsApp Visit us · Al Hada Call 920024428 WhatsApp 0557337555 © 2026 Bright Specialized Clinics — Bright Specialized Clinics — Al-Maha Bright Skin Medical Complex. ✦ VISION 2030 aligned Privacy·Terms·Accessibility",
+      "portraitCount": 0,
+      "imgCount": 1,
+      "videoCount": 0
+    }
+  ],
+  "bodyText": "Skip to content ✦ EID AL-ADHA — FAST-TRACK BOOKING — 19 days until Eid. Slots filling — same-day confirmation. 14 days · 5 hours RESERVE EID TIME → Departments Our Clinicians Branches Trust Journal Contact BOOK ON WHATSAPP Chapter I. ✦ BOOK Book a visit, or write to us. Three short steps. We confirm by SMS right away. STEP 1 OF 3 · CHOOSE A TREATMENT What brings you in? Free consultation 30 min · free Hydrafacial 45 min Full-face Filler 60 min Lip Filler 30 min Botox 30 min Hollywood Smile · Veneers 2 hr Teeth Whitening 60 min Laser Hair Removal 45 min Plasma / PRP 45 min OB/GYN consultation (female-only) 30 min ← BACK CONTINUE → Chapter II. CONTACT Or reach us directly. WHATSAPP +966 55 733 7555 PHONE 920024428 EMAIL info@brightclinics.sa ADDRESS Prince Faisal Bin Fahd Rd, Al Hada District, Al Khobar 34439 HOURS Sat – Thu · 9 AM – 11 PM · Friday after Asr prayer \"Most patients reach us on WhatsApp. Messages are read the same day.\" Ten specialty departments. One quiet roof in Al Khobar. One promise: excellence as the only standard. MOH LICENSED AL KHOBAR · EASTERN PROVINCE DEPARTMENTS Dermatology & Laser Plastic Surgery Cosmetic Dentistry OB/GYN Paediatrics Bariatric Surgery THE CLINIC About Our Clinicians Trust & Credentials Journal REACH US Book on WhatsApp Visit us · Al Hada Call 920024428 WhatsApp 0557337555 © 2026 Bright Specialized Clinics — Bright Specialized Clinics — Al-Maha Bright Skin Medical Complex. ✦ VISION 2030 aligned Privacy·Terms·Accessibility ✦ Ask Bright",
+  "scrollHeight": 1912
+}

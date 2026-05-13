@@ -1,0 +1,262 @@
+[
+  {
+    "route": "/",
+    "title": "Bright Specialized Clinics — Al Khobar, Saudi Arabia",
+    "h1": [
+      "Excellenceis our only title."
+    ],
+    "portraits": 16,
+    "sections": 15,
+    "media": 3
+  },
+  {
+    "route": "/services",
+    "title": "Departments — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Ten specialties,one quiet building."
+    ],
+    "portraits": 11,
+    "sections": 15,
+    "media": 2
+  },
+  {
+    "route": "/doctors",
+    "title": "Clinicians — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Named clinicians.Verifiable credentials."
+    ],
+    "portraits": 7,
+    "sections": 5,
+    "media": 2
+  },
+  {
+    "route": "/about",
+    "title": "About — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Al Khobar, since 2018.One standard."
+    ],
+    "portraits": 5,
+    "sections": 9,
+    "media": 2
+  },
+  {
+    "route": "/trust",
+    "title": "Trust & Credentials — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Every claim,checkable."
+    ],
+    "portraits": 1,
+    "sections": 13,
+    "media": 2
+  },
+  {
+    "route": "/gallery",
+    "title": "Bright Specialized Clinics — Al Khobar, Saudi Arabia",
+    "h1": [
+      "Momentsof honest change."
+    ],
+    "portraits": 13,
+    "sections": 6,
+    "media": 2
+  },
+  {
+    "route": "/reviews",
+    "title": "Reviews — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Their words,not ours."
+    ],
+    "portraits": 7,
+    "sections": 6,
+    "media": 2
+  },
+  {
+    "route": "/journal",
+    "title": "Bright Specialized Clinics — Al Khobar, Saudi Arabia",
+    "h1": [
+      "Notesfrom our clinicians."
+    ],
+    "portraits": 8,
+    "sections": 5,
+    "media": 2
+  },
+  {
+    "route": "/booking",
+    "title": "Bright Specialized Clinics — Al Khobar, Saudi Arabia",
+    "h1": [
+      "Book a visit,or write to us."
+    ],
+    "portraits": 1,
+    "sections": 4,
+    "media": 2
+  },
+  {
+    "route": "/contact",
+    "title": "Contact — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Reach usthe way you prefer."
+    ],
+    "portraits": 1,
+    "sections": 4,
+    "media": 2
+  },
+  {
+    "route": "/faq",
+    "title": "Frequently Asked Questions — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Direct answers.No jargon."
+    ],
+    "portraits": 1,
+    "sections": 4,
+    "media": 2
+  },
+  {
+    "route": "/goals/glow",
+    "title": "Glow — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "For the skin that feelstired of hiding."
+    ],
+    "portraits": 3,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/goals/smile",
+    "title": "Smile — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "The smile we buildis the smile you keep."
+    ],
+    "portraits": 2,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/goals/family",
+    "title": "Family — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "One clinicfor the whole family."
+    ],
+    "portraits": 3,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/goals/restore",
+    "title": "Restore — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "After the noise,the quiet work."
+    ],
+    "portraits": 3,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/goals/diagnose",
+    "title": "Diagnose — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Diagnosis first,treatment second."
+    ],
+    "portraits": 2,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/services/full-face-filler",
+    "title": "Full-Face Filler — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Full-Face Filler"
+    ],
+    "portraits": 1,
+    "sections": 7,
+    "media": 2
+  },
+  {
+    "route": "/services/lip-filler",
+    "title": "Lip Filler — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Lip Filler"
+    ],
+    "portraits": 1,
+    "sections": 7,
+    "media": 2
+  },
+  {
+    "route": "/services/botox",
+    "title": "Botox — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Botox"
+    ],
+    "portraits": 1,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/services/hydrafacial",
+    "title": "Hydrafacial — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Hydrafacial"
+    ],
+    "portraits": 1,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/services/veneers",
+    "title": "Hollywood Smile · Veneers — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Hollywood Smile · Veneers"
+    ],
+    "portraits": 1,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/services/teeth-whitening",
+    "title": "Teeth Whitening — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Teeth Whitening"
+    ],
+    "portraits": 1,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/services/laser-hair-removal",
+    "title": "Laser Hair Removal — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Laser Hair Removal"
+    ],
+    "portraits": 1,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/services/plasma-prp",
+    "title": "Plasma / PRP Therapy — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Plasma / PRP Therapy"
+    ],
+    "portraits": 1,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/services/dental-implants",
+    "title": "Dental Implants — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Dental Implants"
+    ],
+    "portraits": 1,
+    "sections": 8,
+    "media": 2
+  },
+  {
+    "route": "/services/gummy-smile",
+    "title": "Gummy Smile Correction — Bright Specialized Clinics — Bright Specialized Clinics",
+    "h1": [
+      "Gummy Smile Correction"
+    ],
+    "portraits": 1,
+    "sections": 8,
+    "media": 2
+  }
+]
