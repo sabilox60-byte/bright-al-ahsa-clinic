@@ -61,3 +61,4 @@ public/brand/*.webm
 public/brand/*.mkv
 public/brand/*.avi
 
+.tmp/
