@@ -253,15 +253,12 @@ export const clinicConfig: ClinicConfig = {
 
   // ══ HOMEPAGE SECTIONS ═══════════════════════════════════════════════════
   hero: {
-    eyebrow: { en: "✦ Al Khobar · Bright Specialized Clinics · Since 2018", ar: "✦ الخبر · عيادات برايت التخصصية · منذ ٢٠١٨" },
-    headlinePartA: { en: "The Khobar clinic", ar: "العيادة التي" },
-    headlineEm: { en: "women have trusted since 2018.", ar: "اختارتها سيدات الخبر منذ ٢٠١٨." },
+    eyebrow: { en: "Bright Specialized Clinics · Al Khobar · Since 2018", ar: "عيادات برايت التخصصية · الخبر · منذ ٢٠١٨" },
+    headlinePartA: { en: "Excellence,", ar: "للتميّز" },
+    headlineEm: { en: "deliberated.", ar: "عنوانٌ واحد." },
     headlinePartB: { en: "", ar: "" },
-    leadItalic: { en: "1,500+ reviews. Six named clinicians. One quiet roof.", ar: "أكثر من ١٬٥٠٠ تقييم. ستّة أطبّاء بأسمائهم. سقفٌ هادئٌ واحد." },
-    lead: {
-      en: "Dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric and laser — on Prince Faisal Bin Fahd Road in Al Hada. Women-only sessions on request. Same-day WhatsApp confirmation.",
-      ar: "الجلدية وجراحة التجميل وتجميل الأسنان والنساء والولادة وطب الأطفال وجراحة السمنة والليزر — على شارع الأمير فيصل بن فهد بحي الهدا. جلسات نسائية فقط عند الطلب. تأكيد عبر واتساب في نفس اليوم.",
-    },
+    leadItalic: { en: "", ar: "" },
+    lead: { en: "", ar: "" },
     primaryCta: { en: "Book on WhatsApp", ar: "احجزي عبر واتساب" },
     secondaryCta: { en: "Meet our clinicians", ar: "تعرّفي على أطبّائنا" },
     pullQuote: { en: "\"They explained three options, then said the simplest one suited me best.\"", ar: "«شرحوا لي ثلاث خيارات، ثم قالوا إنّ الخيار الأبسط هو الأنسب لي.»" },
