@@ -197,7 +197,7 @@ export const clinicConfig: ClinicConfig = {
   },
   navigation: {
     items: [
-      { key: "services", label: { en: "Departments", ar: "الأقسام" }, href: "/services" },
+      { key: "services", label: { en: "Services", ar: "الخدمات" }, href: "/services" },
       { key: "doctors", label: { en: "Our Clinicians", ar: "أطبّاؤنا" }, href: "/doctors" },
       { key: "gallery", label: { en: "Before & After", ar: "قبل وبعد" }, href: "/gallery" },
       { key: "reviews", label: { en: "Reviews", ar: "الآراء" }, href: "/reviews" },
