@@ -976,7 +976,7 @@ export const clinicExtras: ClinicExtras = {
 ## Authoritative pages
 - [Departments](/services): ten specialty departments — dermatology, plastic surgery, cosmetic dentistry, OB/GYN, paediatrics, bariatric, day surgery, laser, interventional radiology, psychiatry
 - [Doctors](/doctors): six named clinicians with verifiable credentials — Dr. Hassan Nazzal (RCSI Fellowship, senior partner), Dr. Marina Naddaf (AAD member since 2004), Dr. Doaa Goda, Dr. Nadeen Kabboura, Dr. Amirah Mohannadi, Dr. Dina Abdul Halim
-- [Trust](/trust): MOH licensed, RCSI Fellowship verifiable, AAD membership verifiable, SFDA-registered devices, PDPL-compliant, Tabby+Tamara SAMA-licensed BNPL, Vision 2030 aligned
+- [Reviews](/reviews): 4.4★ from 1,500+ Google reviews. Trust credentials (MOH-licensed, RCSI Fellowship verifiable, AAD membership verifiable, SFDA-registered devices, PDPL-compliant, Tabby+Tamara SAMA-licensed BNPL, Vision 2030 aligned) shown as a banner strip at the top of the same page.
 - [Goals](/goals/glow): outcome-led navigation — Glow, Smile, Family, Restore, Diagnose
 - [Booking](/booking): same-day WhatsApp confirmation on 0557337555
 - [Contact](/contact): unified hotline 920024428
