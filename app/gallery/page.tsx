@@ -26,6 +26,7 @@ export default function GalleryPage() {
           titleEm={gp.hero.titleEm.en}
           sub={gp.hero.sub.en}
           variant="sand"
+          image="/media/heros/gallery-hero.webp"
         />
 
         {/* Filter tabs */}
