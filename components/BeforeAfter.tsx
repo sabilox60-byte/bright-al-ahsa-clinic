@@ -1,42 +1,44 @@
-import Portrait from "./Portrait";
+import Image from "next/image";
 import ChapterMark from "./ChapterMark";
 import ScrollReveal from "./ScrollReveal";
 import { clinicConfig } from "@/lib/clinic-config";
 
 /**
- * Bright Before/After — COMPLIANT visual contrast.
+ * Bright Before/After — real patient photos with written consent.
  *
- * Constraint: NO patient face photos (PDPL + SFDA hard line).
- * Solution: Two-state visual contrast using ambient mood plates +
- * inline patient testimonials with time anchors.
- *
- *  Left mood plate (Before, sand variant)  →  Right mood plate (After, terracotta)
- *  Each plate carries: chip label, time marker, treatment caption.
- *  Below: 2 anonymous testimonials in letterpress format.
- *  Below that: explicit disclaimer (privacy by default).
- *
- * This restores the visual two-state psychology premium clinics rely on,
- * without ever showing a patient face.
+ * Each case shows two real photos (day 1 vs day 10) anchored with short
+ * Arabic captions on the image, followed by long-form Arabic testimonials
+ * in letterpress cards. PDPL-aligned: faces shown only when patient has
+ * signed written consent + the disclaimer below confirms that.
  */
 
-const testimonials = [
+type Testimonial = {
+  patientNumber: string;
+  quote: string;
+  initials: string;
+  location: string;
+  treatment: string;
+  days: string;
+};
+
+const testimonials: Testimonial[] = [
   {
-    patientNumber: "№ 247",
+    patientNumber: "№ 014",
     quote:
-      "I waited three months before booking. I waited 24 hours after the first session to call my sister.",
-    initials: "A.M.",
-    location: "Khobar",
-    treatment: "Three Hydrafacial sessions · Dr. Marina Naddaf",
-    days: "Day 1 · Day 28 · Day 90",
+      "كنت أحسّ بشرتي باهتة وفيها تعب واضح، وحتى ملامحي ما كانت طالعة مرتاحة. كنت مترددة بالبداية، بس لما شفت حالتي بالصور فهمت قد إني كنت محتاجة عناية صحيحة ومناسبة لبشرتي.",
+    initials: "م. ع.",
+    location: "الخبر",
+    treatment: "تجديد البشرة · يوم ١",
+    days: "اليوم ١ · الاستشارة",
   },
   {
-    patientNumber: "№ 392",
+    patientNumber: "№ 014",
     quote:
-      "My mother came with me to the first visit. By the third, she had booked her own.",
-    initials: "R.K.",
-    location: "Khobar",
-    treatment: "Filler · Dr. Doaa Goda",
-    days: "Day 1 · Day 14",
+      "بعد عشرة أيام فقط، ملامحي رجعت مرتاحة وبشرتي صافية وفيها إشراقة طبيعية. ما توقّعت إنّ التجربة تكون بهالسرعة وبهالجودة، والفريق كان متفهّم وكل خطوة شرحوها لي قبل ما يبدوون.",
+    initials: "م. ع.",
+    location: "الخبر",
+    treatment: "تجديد البشرة · اليوم العاشر",
+    days: "اليوم ١٠ · النتيجة",
   },
 ];
 
@@ -86,13 +88,14 @@ export default function BeforeAfter() {
                 maxWidth: 380,
               }}
             >
-              We show the journey, not the face. Compliant with Saudi PDPL and
-              SFDA — every visual here is symbolic, every word is a real patient.
+              Real patient photos, shared with written consent. Saudi privacy
+              respected — every visible patient signed a release. Names withheld
+              by request.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Visual two-state contrast — ambient mood plates */}
+        {/* Two-state contrast — REAL photos with Arabic captions */}
         <ScrollReveal variant="fade-up" delay={100}>
           <div
             className="grid gap-6 mobile-stack"
@@ -103,19 +106,23 @@ export default function BeforeAfter() {
             }}
           >
             {/* BEFORE */}
-            <div className="relative">
-              <Portrait
-                variant="sand"
-                style={{ width: "100%", height: 380 }}
-                rounded={16}
+            <div className="relative" style={{ borderRadius: 16, overflow: "hidden" }}>
+              <Image
+                src="/media/gallery/skin-rejuvenation-before.webp"
+                alt="Before — initial consultation"
+                width={1400}
+                height={1045}
+                priority
+                style={{ width: "100%", height: 380, objectFit: "cover", display: "block" }}
               />
               <span
                 className="chip"
                 style={{ position: "absolute", top: 16, left: 16 }}
               >
-                {b.beforeLabel.en}
+                قبل
               </span>
               <div
+                dir="rtl"
                 style={{
                   position: "absolute",
                   bottom: 16,
@@ -127,13 +134,29 @@ export default function BeforeAfter() {
                   borderRadius: 8,
                   fontSize: 13,
                   color: "#0a1f2e",
+                  textAlign: "right",
                 }}
               >
-                <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: 10, color: "#8f7548", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-                  Day 1 · Consultation
+                <span
+                  style={{
+                    fontFamily: "var(--font-mono), monospace",
+                    fontSize: 10,
+                    color: "#8f7548",
+                    letterSpacing: "0.08em",
+                  }}
+                >
+                  اليوم الأول · الاستشارة
                 </span>
-                <div style={{ marginTop: 4, fontFamily: "var(--font-source-serif), serif", fontSize: 15, fontStyle: "italic" }}>
-                  &ldquo;I wanted something that doesn&rsquo;t shout.&rdquo;
+                <div
+                  style={{
+                    marginTop: 4,
+                    fontFamily: "var(--font-amiri), serif",
+                    fontSize: 15,
+                    fontStyle: "italic",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  «كنت مترددة بالبداية.»
                 </div>
               </div>
             </div>
@@ -141,20 +164,24 @@ export default function BeforeAfter() {
             {/* AFTER */}
             <div
               className="relative"
-              style={{ marginTop: 40 }}
+              style={{ marginTop: 40, borderRadius: 16, overflow: "hidden" }}
             >
-              <Portrait
-                variant="terracotta"
-                style={{ width: "100%", height: 380 }}
-                rounded={16}
+              <Image
+                src="/media/gallery/skin-rejuvenation-after.webp"
+                alt="After — 10 days follow-up"
+                width={1400}
+                height={1045}
+                priority
+                style={{ width: "100%", height: 380, objectFit: "cover", display: "block" }}
               />
               <span
                 className="chip chip-dark"
                 style={{ position: "absolute", top: 16, left: 16 }}
               >
-                {b.afterLabel.en}
+                بعد · ١٠ أيام
               </span>
               <div
+                dir="rtl"
                 style={{
                   position: "absolute",
                   bottom: 16,
@@ -166,20 +193,36 @@ export default function BeforeAfter() {
                   borderRadius: 8,
                   fontSize: 13,
                   color: "#0a1f2e",
+                  textAlign: "right",
                 }}
               >
-                <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: 10, color: "#8f7548", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-                  Day 28 · Follow-up
+                <span
+                  style={{
+                    fontFamily: "var(--font-mono), monospace",
+                    fontSize: 10,
+                    color: "#8f7548",
+                    letterSpacing: "0.08em",
+                  }}
+                >
+                  اليوم العاشر · النتيجة
                 </span>
-                <div style={{ marginTop: 4, fontFamily: "var(--font-source-serif), serif", fontSize: 15, fontStyle: "italic" }}>
-                  &ldquo;My sister noticed. Then she booked.&rdquo;
+                <div
+                  style={{
+                    marginTop: 4,
+                    fontFamily: "var(--font-amiri), serif",
+                    fontSize: 15,
+                    fontStyle: "italic",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  «ملامحي طالعة مرتاحة.»
                 </div>
               </div>
             </div>
           </div>
         </ScrollReveal>
 
-        {/* Letterpress testimonial cards — voice layer */}
+        {/* Letterpress testimonial cards — voice layer, Arabic */}
         <div
           className="grid gap-8 mobile-stack"
           style={{
@@ -190,6 +233,7 @@ export default function BeforeAfter() {
           {testimonials.map((t, i) => (
             <ScrollReveal key={i} variant="fade-up" delay={i * 100}>
               <article
+                dir="rtl"
                 style={{
                   background: "#ffffff",
                   borderRadius: 12,
@@ -197,6 +241,7 @@ export default function BeforeAfter() {
                   boxShadow:
                     "0 0 0 1px rgba(178,147,98,0.25), 0 18px 56px rgba(10,31,46,0.08)",
                   padding: 28,
+                  textAlign: "right",
                 }}
               >
                 <header
@@ -218,7 +263,7 @@ export default function BeforeAfter() {
                       textTransform: "uppercase",
                     }}
                   >
-                    ✦ Patient {t.patientNumber}
+                    ✦ مريضة {t.patientNumber}
                   </span>
                   <span
                     className="font-mono"
@@ -234,11 +279,12 @@ export default function BeforeAfter() {
                 <blockquote
                   className="font-prose italic"
                   style={{
-                    fontSize: 19,
-                    lineHeight: 1.5,
+                    fontSize: 18,
+                    lineHeight: 1.7,
                     color: "#0a1f2e",
                     margin: 0,
                     position: "relative",
+                    fontFamily: "var(--font-amiri), serif",
                   }}
                 >
                   <span
@@ -246,7 +292,7 @@ export default function BeforeAfter() {
                     style={{
                       position: "absolute",
                       top: -16,
-                      left: -8,
+                      right: -8,
                       fontSize: 48,
                       color: "rgba(178,147,98,0.35)",
                       fontFamily: "var(--font-source-serif), serif",
@@ -272,7 +318,7 @@ export default function BeforeAfter() {
                       fontWeight: 500,
                     }}
                   >
-                    — {t.initials}, {t.location}
+                    — {t.initials} · {t.location}
                   </div>
                   <div
                     style={{
@@ -314,10 +360,10 @@ export default function BeforeAfter() {
                 margin: 0,
               }}
             >
-              All testimonials shared with written consent. Names withheld at
-              patient request — Saudi privacy by default. Visual plates are
-              symbolic compositions, never patient photographs. Results vary
-              by person, treatment, and follow-through.
+              All photos and testimonials shared with written consent. Patient
+              initials and case numbers used in place of full names by request —
+              Saudi privacy by default. Results vary by person, treatment plan,
+              and follow-through.
             </p>
             <a
               href="/gallery"
