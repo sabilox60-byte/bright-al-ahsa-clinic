@@ -49,14 +49,26 @@ export default function PageHero({
           style={{ objectFit: "cover", objectPosition: imagePosition }}
         />
 
-        {/* Subtle cinematic gradient — light top vignette, stronger bottom fade for text legibility */}
+        {/* Layer 1 — soft white haze across the whole banner (premium, dream-like) */}
         <div
           aria-hidden
           style={{
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(180deg, rgba(10,31,46,0.18) 0%, rgba(10,31,46,0) 28%, rgba(10,31,46,0.18) 55%, rgba(10,31,46,0.72) 100%)",
+              "linear-gradient(180deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.10) 35%, rgba(255,255,255,0.05) 65%, rgba(255,255,255,0) 100%)",
+            pointerEvents: "none",
+          }}
+        />
+
+        {/* Layer 2 — dark bottom fade for white-text legibility */}
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, rgba(10,31,46,0) 0%, rgba(10,31,46,0) 50%, rgba(10,31,46,0.22) 75%, rgba(10,31,46,0.65) 100%)",
             pointerEvents: "none",
           }}
         />
