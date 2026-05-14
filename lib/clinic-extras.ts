@@ -160,6 +160,8 @@ export interface Goal {
   /** Color accent override for this goal page (CSS color) */
   accentColor?: string;
   variant: PortraitVariant;
+  /** Optional thumbnail image rendered in card corner (webp recommended, ~144×144 source) */
+  image?: string;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -686,6 +688,7 @@ export const clinicExtras: ClinicExtras = {
       ],
       accentColor: "#d4b899",
       variant: "sand",
+      image: "/media/goals/glow.webp",
     },
     {
       slug: "smile",
@@ -712,6 +715,7 @@ export const clinicExtras: ClinicExtras = {
       ],
       accentColor: "#8f7548",
       variant: "sand",
+      image: "/media/goals/smile.webp",
     },
     {
       slug: "family",
@@ -738,6 +742,7 @@ export const clinicExtras: ClinicExtras = {
       ],
       accentColor: "#b8956d",
       variant: "terracotta",
+      image: "/media/goals/family.webp",
     },
     {
       slug: "restore",
@@ -764,6 +769,7 @@ export const clinicExtras: ClinicExtras = {
       ],
       accentColor: "#7a8471",
       variant: "sage",
+      image: "/media/goals/restore.webp",
     },
     {
       slug: "diagnose",
@@ -790,6 +796,7 @@ export const clinicExtras: ClinicExtras = {
       ],
       accentColor: "#3a5466",
       variant: "dark",
+      image: "/media/goals/diagnose.webp",
     },
   ],
 
