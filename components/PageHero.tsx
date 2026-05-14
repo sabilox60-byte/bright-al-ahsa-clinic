@@ -30,61 +30,72 @@ export default function PageHero({
     return (
       <section
         style={{
-          background: "#f6f5f4",
-          borderBottom: "1px solid #ece5d4",
           position: "relative",
+          width: "100%",
+          aspectRatio: "21 / 8",
+          minHeight: 520,
+          overflow: "hidden",
+          background: "#0a1f2e",
+          borderBottom: "1px solid #ece5d4",
           zIndex: 2,
         }}
       >
-        {/* Cinematic 21:8 banner */}
+        <Image
+          src={image}
+          alt=""
+          fill
+          sizes="100vw"
+          priority
+          style={{ objectFit: "cover", objectPosition: imagePosition }}
+        />
+
+        {/* Subtle cinematic gradient — light top vignette, stronger bottom fade for text legibility */}
         <div
+          aria-hidden
           style={{
-            position: "relative",
-            width: "100%",
-            aspectRatio: "21 / 8",
-            overflow: "hidden",
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, rgba(10,31,46,0.18) 0%, rgba(10,31,46,0) 28%, rgba(10,31,46,0.18) 55%, rgba(10,31,46,0.72) 100%)",
+            pointerEvents: "none",
+          }}
+        />
+
+        {/* Text overlay — bottom-left, on the gradient */}
+        <div
+          className="container-page"
+          style={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            bottom: 0,
+            padding: "0 0 56px",
+            color: "#ffffff",
           }}
         >
-          <Image
-            src={image}
-            alt=""
-            fill
-            sizes="100vw"
-            priority
-            style={{ objectFit: "cover", objectPosition: imagePosition }}
-          />
-          {/* Soft top + bottom gradient — keeps subject crisp, eases transition to text */}
-          <div
-            aria-hidden
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(180deg, rgba(10,31,46,0.12) 0%, rgba(10,31,46,0) 22%, rgba(10,31,46,0) 70%, rgba(246,245,244,0.55) 100%)",
-              pointerEvents: "none",
-            }}
-          />
-        </div>
-
-        {/* Title block — sits below banner */}
-        <div className="container-page" style={{ padding: "56px 0 64px" }}>
-          <ChapterMark roman={roman} title={eyebrow} />
+          <ChapterMark roman={roman} title={eyebrow} dark />
           <h1
             className="h-display"
-            style={{ marginTop: 20, fontSize: "clamp(40px, 5.6vw, 68px)" }}
+            style={{
+              marginTop: 18,
+              fontSize: "clamp(40px, 5.6vw, 68px)",
+              color: "#ffffff",
+              textShadow: "0 2px 24px rgba(10,31,46,0.45)",
+            }}
           >
             {title}
             <br />
-            <em style={{ fontStyle: "italic", color: "#b29362" }}>{titleEm}</em>
+            <em style={{ fontStyle: "italic", color: "#d4b899" }}>{titleEm}</em>
           </h1>
           <p
             className="font-prose italic"
             style={{
               fontSize: 19,
-              color: "#2a3f4f",
-              marginTop: 20,
+              color: "rgba(255,255,255,0.92)",
+              marginTop: 18,
               maxWidth: 720,
               lineHeight: 1.55,
+              textShadow: "0 1px 12px rgba(10,31,46,0.4)",
             }}
           >
             {sub}
