@@ -4,43 +4,122 @@ import ScrollReveal from "./ScrollReveal";
 import { clinicConfig } from "@/lib/clinic-config";
 
 /**
- * Bright Before/After — real patient photos with written consent.
+ * Bright Before/After — single real-case storytelling.
  *
- * Each case shows two real photos (day 1 vs day 10) anchored with short
- * Arabic captions on the image, followed by long-form Arabic testimonials
- * in letterpress cards. PDPL-aligned: faces shown only when patient has
- * signed written consent + the disclaimer below confirms that.
+ * Pattern: photo + day-label chip + caption card directly below each photo.
+ * No duplicated testimonial section. Arabic Khaleeji review on each card.
+ * The full gallery (other cases) is one tap away via the CTA button below.
+ *
+ * Saudi privacy: faces shown only when patient has signed written consent —
+ * acknowledged in the footer disclaimer.
  */
 
-type Testimonial = {
-  patientNumber: string;
-  quote: string;
-  initials: string;
-  location: string;
-  treatment: string;
-  days: string;
+const beforeCard = {
+  chipLabel: "قبل",
+  dayLabel: "اليوم الأول · الاستشارة",
+  quote:
+    "كنت أشوف بشرتي باهتة ومتعبة، بس ما كنت متوقّعة إنّ الفرق بيكون واضح لهالدرجة لما أشوف الصور.",
 };
 
-const testimonials: Testimonial[] = [
-  {
-    patientNumber: "№ 014",
-    quote:
-      "كنت أحسّ بشرتي باهتة وفيها تعب واضح، وحتى ملامحي ما كانت طالعة مرتاحة. كنت مترددة بالبداية، بس لما شفت حالتي بالصور فهمت قد إني كنت محتاجة عناية صحيحة ومناسبة لبشرتي.",
-    initials: "م. ع.",
-    location: "الخبر",
-    treatment: "تجديد البشرة · يوم ١",
-    days: "اليوم ١ · الاستشارة",
-  },
-  {
-    patientNumber: "№ 014",
-    quote:
-      "بعد عشرة أيام فقط، ملامحي رجعت مرتاحة وبشرتي صافية وفيها إشراقة طبيعية. ما توقّعت إنّ التجربة تكون بهالسرعة وبهالجودة، والفريق كان متفهّم وكل خطوة شرحوها لي قبل ما يبدوون.",
-    initials: "م. ع.",
-    location: "الخبر",
-    treatment: "تجديد البشرة · اليوم العاشر",
-    days: "اليوم ١٠ · النتيجة",
-  },
-];
+const afterCard = {
+  chipLabel: "بعد · ١٠ أيام",
+  dayLabel: "اليوم العاشر · النتيجة",
+  quote:
+    "بصراحة النتيجة صدمتني بطريقة حلوة. بشرتي صارت أصفى، أنعم، وفيها نضارة طبيعية بدون أي مبالغة. أكثر شي عجبني إنّ شكلي ظلّ أنا، بس بنسخة أرتب وأنضر. شكراً د. Marina Naddaf.",
+};
+
+function CaseCard({
+  src,
+  alt,
+  chipLabel,
+  chipDark,
+  dayLabel,
+  quote,
+}: {
+  src: string;
+  alt: string;
+  chipLabel: string;
+  chipDark?: boolean;
+  dayLabel: string;
+  quote: string;
+}) {
+  return (
+    <div
+      style={{
+        background: "#ffffff",
+        borderRadius: 16,
+        overflow: "hidden",
+        boxShadow:
+          "0 0 0 1px rgba(178,147,98,0.18), 0 18px 56px rgba(10,31,46,0.06)",
+      }}
+    >
+      <div className="relative">
+        <Image
+          src={src}
+          alt={alt}
+          width={1400}
+          height={1045}
+          priority
+          style={{ width: "100%", height: 420, objectFit: "cover", display: "block" }}
+        />
+        <span
+          className={chipDark ? "chip chip-dark" : "chip"}
+          style={{ position: "absolute", top: 16, left: 16 }}
+        >
+          {chipLabel}
+        </span>
+      </div>
+      <div
+        dir="rtl"
+        style={{
+          padding: "22px 26px 26px",
+          textAlign: "right",
+        }}
+      >
+        <div
+          className="font-mono"
+          style={{
+            fontSize: 11,
+            color: "#8f7548",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            marginBottom: 12,
+          }}
+        >
+          {dayLabel}
+        </div>
+        <p
+          className="font-prose"
+          style={{
+            fontFamily: "var(--font-amiri), serif",
+            fontSize: 17,
+            lineHeight: 1.85,
+            color: "#0a1f2e",
+            margin: 0,
+            position: "relative",
+            paddingTop: 4,
+          }}
+        >
+          <span
+            aria-hidden
+            style={{
+              position: "absolute",
+              top: -22,
+              right: -6,
+              fontSize: 56,
+              color: "rgba(178,147,98,0.3)",
+              fontFamily: "var(--font-source-serif), serif",
+              lineHeight: 1,
+            }}
+          >
+            &ldquo;
+          </span>
+          {quote}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function BeforeAfter() {
   const b = clinicConfig.beforeAfter;
@@ -95,246 +174,33 @@ export default function BeforeAfter() {
           </div>
         </ScrollReveal>
 
-        {/* Two-state contrast — REAL photos with Arabic captions */}
+        {/* Two-state case storytelling — photo + caption card per side */}
         <ScrollReveal variant="fade-up" delay={100}>
           <div
             className="grid gap-6 mobile-stack"
             style={{
               gridTemplateColumns: "1fr 1fr",
               marginTop: 56,
-              alignItems: "center",
+              alignItems: "start",
             }}
           >
-            {/* BEFORE */}
-            <div className="relative" style={{ borderRadius: 16, overflow: "hidden" }}>
-              <Image
-                src="/media/gallery/skin-rejuvenation-before.webp"
-                alt="Before — initial consultation"
-                width={1400}
-                height={1045}
-                priority
-                style={{ width: "100%", height: 380, objectFit: "cover", display: "block" }}
-              />
-              <span
-                className="chip"
-                style={{ position: "absolute", top: 16, left: 16 }}
-              >
-                قبل
-              </span>
-              <div
-                dir="rtl"
-                style={{
-                  position: "absolute",
-                  bottom: 16,
-                  left: 16,
-                  right: 16,
-                  background: "rgba(253, 251, 246, 0.94)",
-                  backdropFilter: "blur(4px)",
-                  padding: "12px 16px",
-                  borderRadius: 8,
-                  fontSize: 13,
-                  color: "#0a1f2e",
-                  textAlign: "right",
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: "var(--font-mono), monospace",
-                    fontSize: 10,
-                    color: "#8f7548",
-                    letterSpacing: "0.08em",
-                  }}
-                >
-                  اليوم الأول · الاستشارة
-                </span>
-                <div
-                  style={{
-                    marginTop: 4,
-                    fontFamily: "var(--font-amiri), serif",
-                    fontSize: 15,
-                    fontStyle: "italic",
-                    lineHeight: 1.5,
-                  }}
-                >
-                  «كنت مترددة بالبداية.»
-                </div>
-              </div>
-            </div>
-
-            {/* AFTER */}
-            <div
-              className="relative"
-              style={{ marginTop: 40, borderRadius: 16, overflow: "hidden" }}
-            >
-              <Image
-                src="/media/gallery/skin-rejuvenation-after.webp"
-                alt="After — 10 days follow-up"
-                width={1400}
-                height={1045}
-                priority
-                style={{ width: "100%", height: 380, objectFit: "cover", display: "block" }}
-              />
-              <span
-                className="chip chip-dark"
-                style={{ position: "absolute", top: 16, left: 16 }}
-              >
-                بعد · ١٠ أيام
-              </span>
-              <div
-                dir="rtl"
-                style={{
-                  position: "absolute",
-                  bottom: 16,
-                  left: 16,
-                  right: 16,
-                  background: "rgba(253, 251, 246, 0.94)",
-                  backdropFilter: "blur(4px)",
-                  padding: "12px 16px",
-                  borderRadius: 8,
-                  fontSize: 13,
-                  color: "#0a1f2e",
-                  textAlign: "right",
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: "var(--font-mono), monospace",
-                    fontSize: 10,
-                    color: "#8f7548",
-                    letterSpacing: "0.08em",
-                  }}
-                >
-                  اليوم العاشر · النتيجة
-                </span>
-                <div
-                  style={{
-                    marginTop: 4,
-                    fontFamily: "var(--font-amiri), serif",
-                    fontSize: 15,
-                    fontStyle: "italic",
-                    lineHeight: 1.5,
-                  }}
-                >
-                  «ملامحي طالعة مرتاحة.»
-                </div>
-              </div>
-            </div>
+            <CaseCard
+              src="/media/gallery/skin-rejuvenation-before.webp"
+              alt="Before — initial consultation"
+              chipLabel={beforeCard.chipLabel}
+              dayLabel={beforeCard.dayLabel}
+              quote={beforeCard.quote}
+            />
+            <CaseCard
+              src="/media/gallery/skin-rejuvenation-after.webp"
+              alt="After — 10 days follow-up"
+              chipLabel={afterCard.chipLabel}
+              chipDark
+              dayLabel={afterCard.dayLabel}
+              quote={afterCard.quote}
+            />
           </div>
         </ScrollReveal>
-
-        {/* Letterpress testimonial cards — voice layer, Arabic */}
-        <div
-          className="grid gap-8 mobile-stack"
-          style={{
-            gridTemplateColumns: "1fr 1fr",
-            marginTop: 56,
-          }}
-        >
-          {testimonials.map((t, i) => (
-            <ScrollReveal key={i} variant="fade-up" delay={i * 100}>
-              <article
-                dir="rtl"
-                style={{
-                  background: "#ffffff",
-                  borderRadius: 12,
-                  overflow: "hidden",
-                  boxShadow:
-                    "0 0 0 1px rgba(178,147,98,0.25), 0 18px 56px rgba(10,31,46,0.08)",
-                  padding: 28,
-                  textAlign: "right",
-                }}
-              >
-                <header
-                  style={{
-                    paddingBottom: 14,
-                    borderBottom: "1px dotted rgba(178,147,98,0.4)",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "baseline",
-                    marginBottom: 18,
-                  }}
-                >
-                  <span
-                    className="font-mono"
-                    style={{
-                      fontSize: 11,
-                      color: "#8f7548",
-                      letterSpacing: "0.08em",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    ✦ مريضة {t.patientNumber}
-                  </span>
-                  <span
-                    className="font-mono"
-                    style={{
-                      fontSize: 10,
-                      color: "#7f8487",
-                      letterSpacing: "0.06em",
-                    }}
-                  >
-                    {t.days}
-                  </span>
-                </header>
-                <blockquote
-                  className="font-prose italic"
-                  style={{
-                    fontSize: 18,
-                    lineHeight: 1.7,
-                    color: "#0a1f2e",
-                    margin: 0,
-                    position: "relative",
-                    fontFamily: "var(--font-amiri), serif",
-                  }}
-                >
-                  <span
-                    aria-hidden
-                    style={{
-                      position: "absolute",
-                      top: -16,
-                      right: -8,
-                      fontSize: 48,
-                      color: "rgba(178,147,98,0.35)",
-                      fontFamily: "var(--font-source-serif), serif",
-                      lineHeight: 1,
-                    }}
-                  >
-                    &ldquo;
-                  </span>
-                  <span style={{ position: "relative" }}>{t.quote}</span>
-                </blockquote>
-                <footer
-                  style={{
-                    borderTop: "1px dotted rgba(178,147,98,0.4)",
-                    paddingTop: 14,
-                    marginTop: 18,
-                  }}
-                >
-                  <div
-                    className="font-serif"
-                    style={{
-                      fontSize: 14,
-                      color: "#0a1f2e",
-                      fontWeight: 500,
-                    }}
-                  >
-                    — {t.initials} · {t.location}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: 11,
-                      color: "#7f8487",
-                      marginTop: 4,
-                      letterSpacing: "0.04em",
-                    }}
-                  >
-                    {t.treatment}
-                  </div>
-                </footer>
-              </article>
-            </ScrollReveal>
-          ))}
-        </div>
 
         {/* CTA + disclaimer */}
         <ScrollReveal variant="fade-up" delay={200}>
@@ -360,10 +226,9 @@ export default function BeforeAfter() {
                 margin: 0,
               }}
             >
-              All photos and testimonials shared with written consent. Patient
-              initials and case numbers used in place of full names by request —
-              Saudi privacy by default. Results vary by person, treatment plan,
-              and follow-through.
+              All photos and testimonials shared with written consent. Results
+              vary by person, treatment plan, and follow-through. Saudi privacy
+              by default — patient names withheld by request.
             </p>
             <a
               href="/gallery"
