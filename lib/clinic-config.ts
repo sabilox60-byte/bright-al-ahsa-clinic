@@ -265,7 +265,7 @@ export const clinicConfig: ClinicConfig = {
     pullQuote: { en: "\"They explained three options, then said the simplest one suited me best.\"", ar: "«شرحوا لي ثلاث خيارات، ثم قالوا إنّ الخيار الأبسط هو الأنسب لي.»" },
     pullQuoteAttribution: { en: "Patient · Al Khobar", ar: "مريضة · الخبر" },
     stats: [
-      { value: { en: "4.4 ★", ar: "٤٫٤ ★" }, label: { en: "1,500+ verified Google reviews", ar: "أكثر من ١٬٥٠٠ تقييم جوجل" } },
+      { value: { en: "Since 2018", ar: "منذ ٢٠١٨" }, label: { en: "Eastern Province · trusted name", ar: "المنطقة الشرقية · اسمٌ موثوق" } },
       { value: { en: "6 named", ar: "٦ بأسمائهم" }, label: { en: "Clinicians, verifiable credentials", ar: "أطبّاء بشهادات قابلة للتحقّق" } },
       { value: { en: "Women-only", ar: "نسائي فقط" }, label: { en: "Sessions on request", ar: "جلسات عند الطلب" } },
     ],
